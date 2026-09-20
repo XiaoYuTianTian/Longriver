@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: changhe
+      POSTGRES_USER: changhe
+      POSTGRES_PASSWORD: changhe-local
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U changhe -d changhe"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - changhe-postgres:/var/lib/postgresql/data
+
+volumes:
+  changhe-postgres:

@@ -1,0 +1,9 @@
+Django<5.3,>=5.2.6
+djangorestframework<3.17,>=3.16
+dj-database-url<4,>=3.0
+psycopg[binary]<3.3,>=3.2
+
+[dev]
+pytest<9,>=8.4
+pytest-django<5,>=4.11
+ruff<0.14,>=0.13

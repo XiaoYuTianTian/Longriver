@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+.cursor/
+.superpowers/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.env
+.venv/
+backend/db.sqlite3
