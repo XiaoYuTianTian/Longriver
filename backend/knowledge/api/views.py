@@ -24,11 +24,14 @@ class YearSliceView(APIView):
             region_ids=values["region"],
             topic_slugs=values["topic"],
         )
+        requested_region_ids = set(values["region"])
 
         grouped = {}
         for claim in claims:
             serialized_claim = ClaimSerializer(claim).data
             for region in claim.regions.all():
+                if requested_region_ids and region.id not in requested_region_ids:
+                    continue
                 region_group = grouped.setdefault(
                     region.id,
                     {

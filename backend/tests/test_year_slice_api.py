@@ -84,6 +84,40 @@ def test_year_slice_api_accepts_repeated_region_and_topic_filters(client):
 
 
 @pytest.mark.django_db
+def test_year_slice_api_region_filter_limits_grouped_regions(client):
+    topic = Topic.objects.create(name="政治", slug="politics")
+    claim = make_claim()
+    requested_region = claim.regions.get()
+    unrequested_region = Region.objects.create(
+        name="Unrequested Region",
+        slug="unrequested-region",
+        sort_order=10,
+    )
+    claim.regions.add(unrequested_region)
+    claim.topics.add(topic)
+    add_citation(claim)
+    publish_claim(
+        claim=claim,
+        reviewer=make_staff_user(),
+        reason="Verified",
+    )
+
+    response = client.get(
+        reverse("knowledge_api:year-slice"),
+        {
+            "year": "1520",
+            "region": [str(requested_region.id), str(requested_region.id)],
+            "topic": ["politics", "politics"],
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert [region["slug"] for region in payload["regions"]] == ["test-region"]
+    assert [claim["id"] for claim in payload["regions"][0]["claims"]] == [claim.id]
+
+
+@pytest.mark.django_db
 def test_year_slice_api_groups_regions_in_deterministic_order(client):
     claim = make_claim()
     low_priority_region = claim.regions.get()
