@@ -18,7 +18,7 @@ def test_time_span_rejects_reversed_range():
 
 
 @pytest.mark.django_db
-def test_citation_requires_locator_or_url():
+def test_citation_requires_locator_or_url_on_full_clean():
     source = Source.objects.create(
         title="Synthetic test source",
         kind="book",
@@ -29,3 +29,17 @@ def test_citation_requires_locator_or_url():
 
     with pytest.raises(ValidationError):
         citation.full_clean()
+
+
+@pytest.mark.django_db
+def test_citation_rejects_empty_locator_and_url_on_create():
+    source = Source.objects.create(
+        title="Synthetic test source",
+        kind="book",
+        license_status="metadata_only",
+    )
+    edition = Edition.objects.create(source=source, label="Test edition")
+
+    with pytest.raises(IntegrityError):
+        with transaction.atomic():
+            Citation.objects.create(edition=edition, locator="", stable_url="")

@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models import Q
 
 from .enums import LicenseStatus, SourceKind
 
@@ -46,6 +47,12 @@ class Citation(models.Model):
 
     class Meta:
         ordering = ["edition_id", "locator", "id"]
+        constraints = [
+            models.CheckConstraint(
+                condition=~Q(locator="", stable_url=""),
+                name="knowledge_citation_locator_or_url",
+            )
+        ]
 
     def clean(self):
         super().clean()
