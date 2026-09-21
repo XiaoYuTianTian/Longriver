@@ -1,4 +1,5 @@
 from django.contrib import admin, messages
+from django.core.exceptions import PermissionDenied, ValidationError
 
 from knowledge.models import (
     Citation,
@@ -35,18 +36,30 @@ def approve_reviewed(_modeladmin, _request, queryset):
 @admin.action(description="Publish selected approved claims")
 def publish_approved(modeladmin, request, queryset):
     published_count = 0
+    failed_count = 0
     for claim in queryset.filter(workflow_state=WorkflowState.APPROVED):
-        publish_claim(
-            claim=claim,
-            reviewer=request.user,
-            reason="Published through reviewed admin action.",
-        )
+        try:
+            publish_claim(
+                claim=claim,
+                reviewer=request.user,
+                reason="Published through reviewed admin action.",
+            )
+        except (ValidationError, PermissionDenied):
+            failed_count += 1
+            continue
         published_count += 1
-    modeladmin.message_user(
-        request,
-        f"Published {published_count} claims.",
-        level=messages.SUCCESS,
-    )
+    if published_count:
+        modeladmin.message_user(
+            request,
+            f"Published {published_count} claims.",
+            level=messages.SUCCESS,
+        )
+    if failed_count:
+        modeladmin.message_user(
+            request,
+            f"Failed to publish {failed_count} claims.",
+            level=messages.ERROR,
+        )
 
 
 @admin.register(Claim)
@@ -62,12 +75,36 @@ class ClaimAdmin(admin.ModelAdmin):
     def short_text(self, obj):
         return obj.text[:80]
 
+    def get_readonly_fields(self, request, obj=None):
+        readonly = list(super().get_readonly_fields(request, obj))
+        if obj is not None and obj.workflow_state == WorkflowState.PUBLISHED:
+            for field in [
+                "text",
+                "timespan",
+                "certainty",
+                "ai_generated",
+                "regions",
+                "polities",
+                "topics",
+                "event",
+                "snapshot",
+                "citations",
+            ]:
+                if field not in readonly:
+                    readonly.append(field)
+        return readonly
+
+    def has_delete_permission(self, request, obj=None):
+        if obj is not None and obj.workflow_state == WorkflowState.PUBLISHED:
+            return False
+        return super().has_delete_permission(request, obj)
+
 
 @admin.register(Source)
 class SourceAdmin(admin.ModelAdmin):
     list_display = ["title", "kind", "license_status", "accessed_on"]
     list_filter = ["kind", "license_status"]
-    search_fields = ["title", "creators", "canonical_url"]
+    search_fields = ["title", "canonical_url"]
 
 
 @admin.register(Citation)
@@ -128,4 +165,21 @@ class PersonAdmin(admin.ModelAdmin):
     search_fields = ["name"]
 
 
-admin.site.register([ClaimRevision, HistoricalTimeSpan])
+@admin.register(ClaimRevision)
+class ClaimRevisionAdmin(admin.ModelAdmin):
+    list_display = ["id", "claim", "reviewer", "from_state", "to_state", "created_at"]
+    list_filter = ["from_state", "to_state"]
+    search_fields = ["reason", "text_snapshot"]
+    readonly_fields = [field.name for field in ClaimRevision._meta.fields]
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+admin.site.register(HistoricalTimeSpan)

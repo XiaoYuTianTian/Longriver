@@ -14,10 +14,10 @@
 
 ## 本地运行
 
-要求：Python 3.13、Docker Desktop、PowerShell。
+要求：Python 3.13、Docker Desktop、PowerShell。在仓库根目录执行下列命令。
 
 ```powershell
-docker compose up -d db
+docker compose up -d db --wait
 cd backend
 py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
@@ -35,6 +35,8 @@ $env:DATABASE_URL = "postgresql://changhe:changhe-local@localhost:5432/changhe"
 - 年度切片：http://127.0.0.1:8000/api/v1/timeline/year-slice/?year=1520
 
 ## 验证
+
+在仓库根目录执行：
 
 ```powershell
 cd backend

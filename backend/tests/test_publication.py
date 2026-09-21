@@ -28,6 +28,18 @@ def test_publish_claim_requires_staff_reviewer(django_user_model):
 
 
 @pytest.mark.django_db
+def test_publish_claim_checks_staff_before_locking(django_user_model):
+    claim = make_claim()
+    add_citation(claim)
+    reviewer = django_user_model.objects.create_user(username="reader")
+
+    with patch("knowledge.services.publication.Claim.objects.select_for_update") as lock:
+        with pytest.raises(PermissionDenied):
+            publish_claim(claim=claim, reviewer=reviewer, reason="Not authorized")
+        lock.assert_not_called()
+
+
+@pytest.mark.django_db
 def test_publish_claim_requires_approved_claim():
     claim = make_claim(workflow_state="draft")
     add_citation(claim)
@@ -48,19 +60,25 @@ def test_publish_claim_requires_non_blank_reason():
 
 
 @pytest.mark.django_db
-def test_publish_claim_rejects_whitespace_only_citation_locator():
+def test_publish_claim_rejects_metadata_only_quotation_over_limit():
+    from knowledge.models.source import MAX_METADATA_ONLY_QUOTATION_LENGTH
+
     claim = make_claim()
     source = Source.objects.create(
-        title="Whitespace citation source",
+        title="Metadata-only quotation source",
         kind="book",
         license_status="metadata_only",
     )
-    edition = Edition.objects.create(source=source, label="Whitespace edition")
-    citation = Citation.objects.create(edition=edition, locator="   ", stable_url="")
+    edition = Edition.objects.create(source=source, label="Quotation edition")
+    citation = Citation.objects.create(
+        edition=edition,
+        locator="p. 1",
+        quotation="x" * (MAX_METADATA_ONLY_QUOTATION_LENGTH + 1),
+    )
     claim.citations.add(citation)
     reviewer = make_staff_user()
 
-    with pytest.raises(ValidationError, match="Citation requires"):
+    with pytest.raises(ValidationError, match="quotations longer than"):
         publish_claim(claim=claim, reviewer=reviewer, reason="Reviewed against source")
 
 

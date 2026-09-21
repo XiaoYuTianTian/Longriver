@@ -4,6 +4,8 @@ from django.db.models import Q
 
 from .enums import LicenseStatus, SourceKind
 
+MAX_METADATA_ONLY_QUOTATION_LENGTH = 2000
+
 
 class Source(models.Model):
     title = models.CharField(max_length=512)
@@ -49,7 +51,7 @@ class Citation(models.Model):
         ordering = ["edition_id", "locator", "id"]
         constraints = [
             models.CheckConstraint(
-                condition=~Q(locator="", stable_url=""),
+                condition=Q(locator__regex=r"\S") | Q(stable_url__regex=r"\S"),
                 name="knowledge_citation_locator_or_url",
             )
         ]
@@ -58,6 +60,15 @@ class Citation(models.Model):
         super().clean()
         if not self.locator.strip() and not self.stable_url.strip():
             raise ValidationError("Citation requires a locator or stable URL.")
+        if (
+            self.edition_id
+            and self.edition.source.license_status == LicenseStatus.METADATA_ONLY
+            and len(self.quotation) > MAX_METADATA_ONLY_QUOTATION_LENGTH
+        ):
+            raise ValidationError(
+                "Metadata-only sources may not store quotations longer than "
+                f"{MAX_METADATA_ONLY_QUOTATION_LENGTH} characters."
+            )
 
     def __str__(self):  # noqa: DJ012
         return f"{self.edition}: {self.locator or self.stable_url}"

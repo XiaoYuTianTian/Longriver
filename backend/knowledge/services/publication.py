@@ -8,10 +8,10 @@ from knowledge.models.enums import WorkflowState
 
 @transaction.atomic
 def publish_claim(*, claim: Claim, reviewer, reason: str) -> Claim:
-    locked_claim = Claim.objects.select_for_update().get(pk=claim.pk)
-
     if not reviewer.is_staff:
         raise PermissionDenied("Only staff reviewers can publish claims.")
+
+    locked_claim = Claim.objects.select_for_update().get(pk=claim.pk)
     if locked_claim.workflow_state != WorkflowState.APPROVED:
         raise ValidationError("Claim must be approved before publication.")
     if not reason.strip():

@@ -18,6 +18,14 @@ def make_staff_user(username="editor"):
     )
 
 
+def make_superuser(username="admin"):
+    return get_user_model().objects.create_superuser(
+        username=username,
+        email=f"{username}@example.test",
+        password="test-password",
+    )
+
+
 def make_claim(*, workflow_state="approved"):
     span = HistoricalTimeSpan.objects.create(
         start_year=1520,
