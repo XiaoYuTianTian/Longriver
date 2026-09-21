@@ -99,6 +99,17 @@ class ClaimAdmin(admin.ModelAdmin):
             return False
         return super().has_delete_permission(request, obj)
 
+    def get_actions(self, request):
+        actions = super().get_actions(request)
+        actions.pop("delete_selected", None)
+        return actions
+
+    def delete_queryset(self, request, queryset):
+        super().delete_queryset(
+            request,
+            queryset.exclude(workflow_state=WorkflowState.PUBLISHED),
+        )
+
 
 @admin.register(Source)
 class SourceAdmin(admin.ModelAdmin):

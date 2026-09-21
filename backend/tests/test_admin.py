@@ -179,6 +179,27 @@ def test_claim_admin_unpublished_records_keep_content_editable(workflow_state):
 
 
 @pytest.mark.django_db
+def test_claim_admin_get_actions_omits_delete_selected():
+    request = make_admin_request(make_superuser())
+    claim_admin = admin.site._registry[Claim]
+
+    assert "delete_selected" not in claim_admin.get_actions(request)
+
+
+@pytest.mark.django_db
+def test_claim_admin_delete_queryset_preserves_published_claims():
+    request = make_admin_request(make_superuser())
+    claim_admin = admin.site._registry[Claim]
+    published = make_claim(workflow_state="published")
+    draft = make_claim(workflow_state="draft")
+
+    claim_admin.delete_queryset(request, Claim.objects.filter(pk__in=[published.pk, draft.pk]))
+
+    assert Claim.objects.filter(pk=published.pk).exists()
+    assert not Claim.objects.filter(pk=draft.pk).exists()
+
+
+@pytest.mark.django_db
 def test_publish_approved_calls_publish_claim_instead_of_bulk_publishing():
     claim = make_claim(workflow_state="approved")
     request = make_admin_request(make_staff_user())
