@@ -1,4 +1,3 @@
-
 from django.contrib import admin, messages
 
 from knowledge.models import (
@@ -74,19 +73,59 @@ class SourceAdmin(admin.ModelAdmin):
 @admin.register(Citation)
 class CitationAdmin(admin.ModelAdmin):
     list_display = ["edition", "locator", "stable_url"]
+    list_filter = ["edition__source__kind", "edition__source__license_status"]
     search_fields = ["edition__source__title", "locator", "quotation", "stable_url"]
 
 
-admin.site.register(
-    [
-        ClaimRevision,
-        Edition,
-        Event,
-        HistoricalTimeSpan,
-        Person,
-        Polity,
-        Region,
-        Snapshot,
-        Topic,
-    ]
-)
+@admin.register(Edition)
+class EditionAdmin(admin.ModelAdmin):
+    list_display = ["label", "source", "publisher", "publication_year"]
+    list_filter = ["source__kind", "source__license_status", "publication_year"]
+    search_fields = ["label", "publisher", "isbn", "external_id", "source__title"]
+
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ["title", "timespan"]
+    list_filter = ["topics", "regions"]
+    search_fields = ["title"]
+    filter_horizontal = ["regions", "polities", "people", "topics"]
+
+
+@admin.register(Snapshot)
+class SnapshotAdmin(admin.ModelAdmin):
+    list_display = ["label", "region", "polity", "dimension", "timespan"]
+    list_filter = ["dimension", "region"]
+    search_fields = ["label", "region__name", "region__slug"]
+
+
+@admin.register(Region)
+class RegionAdmin(admin.ModelAdmin):
+    list_display = ["name", "slug", "parent", "sort_order"]
+    list_filter = ["parent"]
+    search_fields = ["name", "slug"]
+
+
+@admin.register(Polity)
+class PolityAdmin(admin.ModelAdmin):
+    list_display = ["name", "slug"]
+    list_filter = ["regions"]
+    search_fields = ["name", "slug"]
+    filter_horizontal = ["regions"]
+
+
+@admin.register(Topic)
+class TopicAdmin(admin.ModelAdmin):
+    list_display = ["name", "slug"]
+    list_filter = ["slug"]
+    search_fields = ["name", "slug"]
+
+
+@admin.register(Person)
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ["name"]
+    list_filter = ["events"]
+    search_fields = ["name"]
+
+
+admin.site.register([ClaimRevision, HistoricalTimeSpan])
