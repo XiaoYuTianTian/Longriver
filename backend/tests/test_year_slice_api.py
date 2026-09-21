@@ -144,3 +144,11 @@ def test_year_slice_api_groups_regions_in_deterministic_order(client):
         "a-region",
         "test-region",
     ]
+
+
+@pytest.mark.django_db
+def test_year_slice_api_does_not_require_login(client):
+    response = client.get(reverse("knowledge_api:year-slice"), {"year": "1520"})
+
+    assert response.status_code == 200
+    assert response.json() == {"year": 1520, "regions": []}
