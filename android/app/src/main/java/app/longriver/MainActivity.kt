@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package app.changhe
+package app.longriver
 
 import android.app.Activity
 import android.app.Application
@@ -85,13 +85,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import app.changhe.data.BookmarkKind
-import app.changhe.data.ClaimEntity
-import app.changhe.data.EventEntity
-import app.changhe.data.KnowledgeRepository
-import app.changhe.data.PersonEntity
-import app.changhe.data.RegionEntity
-import app.changhe.data.regionIdList
+import app.longriver.data.BookmarkKind
+import app.longriver.data.ClaimEntity
+import app.longriver.data.EventEntity
+import app.longriver.data.KnowledgeRepository
+import app.longriver.data.PersonEntity
+import app.longriver.data.RegionEntity
+import app.longriver.data.regionIdList
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -104,7 +104,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
-        setContent { ChangheTheme { ChangheApp() } }
+        setContent { LongriverTheme { LongriverApp() } }
     }
 }
 
@@ -115,7 +115,7 @@ sealed interface AtlasFocus {
     data class Polity(val id: Long) : AtlasFocus
 }
 
-class ChangheViewModel(app: Application) : AndroidViewModel(app) {
+class LongriverViewModel(app: Application) : AndroidViewModel(app) {
     private val repository = KnowledgeRepository(app, BuildConfig.API_BASE_URL)
     val rangeStart = MutableStateFlow(1521)
     val rangeEnd = MutableStateFlow(1521)
@@ -243,7 +243,7 @@ private val tabs = listOf(
 )
 
 @Composable
-fun ChangheApp(model: ChangheViewModel = viewModel()) {
+fun LongriverApp(model: LongriverViewModel = viewModel()) {
     val context = LocalContext.current
     val nav = rememberNavController()
     val destination = nav.currentBackStackEntryAsState().value?.destination?.route
@@ -278,7 +278,7 @@ fun ChangheApp(model: ChangheViewModel = viewModel()) {
                             when {
                                 destination == "browse" -> "览"
                                 destination == "mine" -> "我的"
-                                destination == "about" -> "关于长河"
+                                destination == "about" -> "关于 Longriver"
                                 destination?.startsWith("piece/") == true -> "查阅"
                                 destination?.startsWith("person/") == true -> "人物"
                                 destination == "legal/privacy" -> "隐私政策"
@@ -425,7 +425,7 @@ fun ChangheApp(model: ChangheViewModel = viewModel()) {
 
 @Composable
 private fun DetailScreen(
-    model: ChangheViewModel,
+    model: LongriverViewModel,
     claimId: Long,
     goAtlas: () -> Unit,
     openPerson: (Long) -> Unit,

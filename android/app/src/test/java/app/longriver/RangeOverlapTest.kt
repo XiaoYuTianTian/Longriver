@@ -1,7 +1,7 @@
-package app.changhe
+package app.longriver
 
-import app.changhe.data.ClaimEntity
-import app.changhe.data.RegionEntity
+import app.longriver.data.ClaimEntity
+import app.longriver.data.RegionEntity
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -33,7 +33,7 @@ class RangeOverlapTest {
 
     @Test
     fun personWithBothYearsAppearsInEachOverlappingSpan() {
-        val person = app.changhe.data.PersonEntity(id = 1, name = "跨代", birthYear = 850, deathYear = 960)
+        val person = app.longriver.data.PersonEntity(id = 1, name = "跨代", birthYear = 850, deathYear = 960)
         assertTrue(person.visibleDuring(618, 907))
         assertTrue(person.visibleDuring(960, 1279))
         assertFalse(person.visibleDuring(1368, 1644))
@@ -41,7 +41,7 @@ class RangeOverlapTest {
 
     @Test
     fun personWithoutDeathYearStaysOnTheBirthYear() {
-        val person = app.changhe.data.PersonEntity(id = 2, name = "只知生年", birthYear = 701, deathYear = null)
+        val person = app.longriver.data.PersonEntity(id = 2, name = "只知生年", birthYear = 701, deathYear = null)
         assertTrue(person.visibleDuring(701, 701))
         assertTrue(person.visibleDuring(618, 907))
         assertFalse(person.visibleDuring(800, 800))

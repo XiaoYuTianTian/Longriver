@@ -26,7 +26,7 @@ def load_places() -> list[dict]:
 
 
 class Command(BaseCommand):
-    help = "Load Changhe regions and timeline topics."
+    help = "Load Longriver regions and timeline topics."
 
     @no_translations
     def handle(self, *args, **options):

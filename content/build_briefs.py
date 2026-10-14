@@ -30,7 +30,7 @@ SEEDS = [
     CONTENT / "seed" / "modern-china.json",
 ]
 HELD_BATCHES = {"china-1949-plus"}
-USER_AGENT = "ChangheContentBuild/0.4 (historical atlas app; encyclopedia extracts)"
+USER_AGENT = "LongriverContentBuild/0.4 (historical atlas app; encyclopedia extracts)"
 KEEP = ("背景", "起因", "经过", "經過", "过程", "過程", "结果", "結果", "影响", "影響", "意义", "意義", "后果", "後果")
 SKIP = (
     "参考文献", "參考文獻", "参考资料", "參考資料", "参见", "參見",

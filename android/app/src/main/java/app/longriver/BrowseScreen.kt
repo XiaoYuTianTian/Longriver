@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package app.changhe
+package app.longriver
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -30,15 +30,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import app.changhe.data.ClaimEntity
-import app.changhe.data.EventEntity
-import app.changhe.data.PersonEntity
-import app.changhe.data.RegionEntity
-import app.changhe.data.regionIdList
+import app.longriver.data.ClaimEntity
+import app.longriver.data.EventEntity
+import app.longriver.data.PersonEntity
+import app.longriver.data.RegionEntity
+import app.longriver.data.regionIdList
 
 @Composable
 fun BrowseScreen(
-    model: ChangheViewModel,
+    model: LongriverViewModel,
     openClaim: (Long) -> Unit,
     openPerson: (Long) -> Unit,
     goAtlas: () -> Unit,
@@ -195,7 +195,7 @@ private fun EventBrowseRow(
     events: Map<Long, EventEntity>,
     openClaim: (Long) -> Unit,
     goAtlas: () -> Unit,
-    model: ChangheViewModel,
+    model: LongriverViewModel,
 ) {
     val place = claim.regionIdList().firstOrNull()?.let { byId[it] }
     val title = claim.eventId?.let { events[it]?.title }

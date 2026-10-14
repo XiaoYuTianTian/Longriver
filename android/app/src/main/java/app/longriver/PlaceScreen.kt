@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package app.changhe
+package app.longriver
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -25,12 +25,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.changhe.data.BookmarkKind
-import app.changhe.data.ClaimEntity
-import app.changhe.data.EventEntity
-import app.changhe.data.PersonEntity
-import app.changhe.data.RegionEntity
-import app.changhe.data.regionIdList
+import app.longriver.data.BookmarkKind
+import app.longriver.data.ClaimEntity
+import app.longriver.data.EventEntity
+import app.longriver.data.PersonEntity
+import app.longriver.data.RegionEntity
+import app.longriver.data.regionIdList
 
 @Composable
 internal fun PlaceResults(
@@ -142,7 +142,7 @@ fun ReadingPieceScreen(pieceId: String) {
 }
 
 @Composable
-fun PersonScreen(model: ChangheViewModel, personId: Long, openClaim: (Long) -> Unit, goAtlas: () -> Unit) {
+fun PersonScreen(model: LongriverViewModel, personId: Long, openClaim: (Long) -> Unit, goAtlas: () -> Unit) {
     val people by model.allPeople.collectAsState()
     val events by model.allEvents.collectAsState()
     val claims by model.allClaims.collectAsState()

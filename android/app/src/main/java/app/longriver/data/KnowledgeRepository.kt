@@ -1,4 +1,4 @@
-package app.changhe.data
+package app.longriver.data
 
 import android.content.Context
 import androidx.room.Room
@@ -12,7 +12,7 @@ class KnowledgeRepository(context: Context, private val baseUrl: String) {
     private val database = Room.databaseBuilder(
         context.applicationContext,
         KnowledgeDatabase::class.java,
-        "changhe.db",
+        "longriver.db",
     ).addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5).build()
     private val dao = database.dao()
     private val prefs = context.applicationContext.getSharedPreferences("seed", Context.MODE_PRIVATE)

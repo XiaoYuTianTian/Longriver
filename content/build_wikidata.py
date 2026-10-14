@@ -32,7 +32,7 @@ OUT_SEED = CONTENT / "seed" / "wikidata.json"
 
 ENDPOINT = "https://qlever.dev/api/wikidata"
 OFFICIAL = "https://query.wikidata.org/sparql"
-USER_AGENT = "ChangheContentBuild/0.3 (historical atlas app; content pipeline)"
+USER_AGENT = "LongriverContentBuild/0.3 (historical atlas app; content pipeline)"
 PREFIX = """PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wikibase: <http://wikiba.se/ontology#>

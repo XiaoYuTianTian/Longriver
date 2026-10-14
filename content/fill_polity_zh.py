@@ -28,7 +28,7 @@ ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
 TABLE = CONTENT / "polity_names_zh.json"
 POLITIES = ASSETS / "polities.json"
 CACHE = CONTENT / "raw" / "wikidata"
-USER_AGENT = "ChangheContentBuild/0.3 (historical atlas; Chinese labels)"
+USER_AGENT = "LongriverContentBuild/0.3 (historical atlas; Chinese labels)"
 HAN = re.compile(r"[\u4e00-\u9fff]")
 
 # Extra names Wikidata often misses or labels poorly.

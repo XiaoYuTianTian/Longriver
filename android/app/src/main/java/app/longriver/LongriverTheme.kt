@@ -1,4 +1,4 @@
-package app.changhe
+package app.longriver
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -55,7 +55,7 @@ private val DarkColors = darkColorScheme(
     onSurfaceVariant = Color(0xFFC8BEB0),
 )
 
-private val ChangheTypography = Typography(
+private val LongriverTypography = Typography(
     displaySmall = TextStyle(
         fontFamily = FontFamily.Serif,
         fontWeight = FontWeight.Medium,
@@ -88,7 +88,7 @@ private val ChangheTypography = Typography(
     labelMedium = TextStyle(fontFamily = FontFamily.SansSerif, fontSize = 12.sp),
 )
 
-private val ChangheShapes = Shapes(
+private val LongriverShapes = Shapes(
     extraSmall = RoundedCornerShape(8.dp),
     small = RoundedCornerShape(12.dp),
     medium = RoundedCornerShape(16.dp),
@@ -109,11 +109,11 @@ fun regionAccent(slug: String): Color = when (slug) {
 }
 
 @Composable
-fun ChangheTheme(content: @Composable () -> Unit) {
+fun LongriverTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = if (isSystemInDarkTheme()) DarkColors else LightColors,
-        typography = ChangheTypography,
-        shapes = ChangheShapes,
+        typography = LongriverTypography,
+        shapes = LongriverShapes,
         content = content,
     )
 }

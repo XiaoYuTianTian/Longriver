@@ -1,4 +1,4 @@
-package app.changhe
+package app.longriver
 
 import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
@@ -71,7 +71,7 @@ fun MineScreen(
     ) {
         item {
             Column(Modifier.padding(vertical = 8.dp)) {
-                Text("长河", style = MaterialTheme.typography.headlineMedium)
+                Text("Longriver", style = MaterialTheme.typography.headlineMedium)
                 Text(
                     "版本 ${BuildConfig.VERSION_NAME} · 世界史地图集",
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -118,7 +118,7 @@ fun MineScreen(
             }
         }
         item { HorizontalDivider(Modifier.padding(vertical = 8.dp)) }
-        item { TextButton(onClick = openAbout) { Text("关于长河") } }
+        item { TextButton(onClick = openAbout) { Text("关于 Longriver") } }
         item { TextButton(onClick = openPrivacy) { Text("隐私政策") } }
         item { TextButton(onClick = openTerms) { Text("用户协议") } }
         item {
@@ -134,7 +134,7 @@ fun MineScreen(
 }
 
 @Composable
-fun AboutScreen(model: ChangheViewModel) {
+fun AboutScreen(model: LongriverViewModel) {
     val claims by model.allClaims.collectAsState()
     val people by model.allPeople.collectAsState()
     val regions by model.regions.collectAsState()
@@ -144,7 +144,7 @@ fun AboutScreen(model: ChangheViewModel) {
         contentPadding = PaddingValues(20.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        item { Text("长河是一张会随年代变化的世界史地图。先选定年份，再在地图上读当时的疆域、事件和人物。", style = MaterialTheme.typography.bodyLarge) }
+        item { Text("Longriver 是一张会随年代变化的世界史地图。先选定年份，再在地图上读当时的疆域、事件和人物。", style = MaterialTheme.typography.bodyLarge) }
         item {
             Text("收录范围", style = MaterialTheme.typography.titleMedium)
         }
@@ -196,10 +196,10 @@ fun ConsentDialog(
     AlertDialog(
         onDismissRequest = {},
         properties = DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false),
-        title = { Text("欢迎使用长河") },
+        title = { Text("欢迎使用 Longriver") },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("使用前请阅读《隐私政策》和《用户协议》。长河不收集你的个人信息，收藏只保存在本机；只有更新知识库时才会联网。")
+                Text("使用前请阅读《隐私政策》和《用户协议》。Longriver 不收集你的个人信息，收藏只保存在本机；只有更新知识库时才会联网。")
                 Row {
                     TextButton(onClick = openPrivacy) { Text("《隐私政策》") }
                     TextButton(onClick = openTerms) { Text("《用户协议》") }
@@ -212,7 +212,7 @@ fun ConsentDialog(
 }
 
 private val onboardPages = listOf(
-    "长河是什么" to "一张会随年代变化的世界史地图。选定一年，就能看到当时的疆域、事件和人物。",
+    "Longriver 是什么" to "一张会随年代变化的世界史地图。选定一年，就能看到当时的疆域、事件和人物。",
     "怎么用" to "拖动底部时间轴换年份，点色带可选整个朝代。点疆域看政权，点地名看当地收录。「览」里按时代、人物、事件、地点翻已收录的内容。界面为简体中文。",
     "内容怎么来" to "开放数据加人工审核。每条记述有出处和可信度。受版权保护的书只列书目，不提供全文。",
 )

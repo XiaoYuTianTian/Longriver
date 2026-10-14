@@ -1,6 +1,6 @@
-# 长河
+# Longriver
 
-长河是一款离线可用的世界历史地图。拖动时间，疆域、事件和人物一起变化。点开一条记述，看到的是一张档案：地图、事实、摘录、同时代的其他事件、相关人物和出处。
+Longriver 是一款离线可用的世界历史地图。拖动时间，疆域、事件和人物一起变化。点开一条记述，看到的是一张档案：地图、事实、摘录、同时代的其他事件、相关人物和出处。
 
 ## 亮点
 
@@ -37,7 +37,7 @@
 - `android/app/src/main/assets/media/`：体积很大的配图文件
 - `content/raw/`：维基数据查询缓存
 
-Django 的默认 `SECRET_KEY` 只用于本机开发。对外部署时改用环境变量 `DJANGO_SECRET_KEY`。数据库口令 `changhe-local` 只存在于本机 Postgres 的 `compose.yaml`。
+Django 的默认 `SECRET_KEY` 只用于本机开发。对外部署时改用环境变量 `DJANGO_SECRET_KEY`。数据库口令 `longriver-local` 只存在于本机 Postgres 的 `compose.yaml`。
 
 应用不收集姓名、手机号、位置或设备标识，也不接入广告和统计 SDK。
 
@@ -47,7 +47,7 @@ Django 的默认 `SECRET_KEY` 只用于本机开发。对外部署时改用环�
 
 ```properties
 sdk.dir=C:\\Android\\Sdk
-changhe.apiBaseUrl=http://10.0.2.2:8000
+longriver.apiBaseUrl=http://10.0.2.2:8000
 tianditu.key=
 ```
 
@@ -76,7 +76,7 @@ docker compose up -d db --wait
 cd backend
 py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-$env:DATABASE_URL = "postgresql://changhe:changhe-local@localhost:5432/changhe"
+$env:DATABASE_URL = "postgresql://longriver:longriver-local@localhost:5432/longriver"
 .\.venv\Scripts\python.exe manage.py migrate
 .\.venv\Scripts\python.exe manage.py load_reference_data
 .\.venv\Scripts\python.exe manage.py runserver

@@ -34,7 +34,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "changhe_server.urls"
+ROOT_URLCONF = "longriver_server.urls"
 
 TEMPLATES = [
     {
@@ -51,8 +51,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "changhe_server.wsgi.application"
-ASGI_APPLICATION = "changhe_server.asgi.application"
+WSGI_APPLICATION = "longriver_server.wsgi.application"
+ASGI_APPLICATION = "longriver_server.asgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(

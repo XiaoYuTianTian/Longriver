@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package app.changhe
+package app.longriver
 
 import android.graphics.Paint
 import androidx.compose.foundation.Canvas

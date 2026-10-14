@@ -30,7 +30,7 @@ MANIFEST = CONTENT / "media_manifest.json"
 SKIPPED = CONTENT / "media_skipped.json"
 SUMMARIES = CONTENT / "wiki_summaries.json"
 socket.setdefaulttimeout(25)
-USER_AGENT = "ChangheContentBuild/0.3 (historical atlas app; media pipeline)"
+USER_AGENT = "LongriverContentBuild/0.3 (historical atlas app; media pipeline)"
 THUMB_WIDTH = 330
 WEBP_QUALITY = 72
 ALLOWED = re.compile(r"^(public domain|pd\b|pd-|cc0|cc[- ]by(-sa)?[- ]\d)", re.IGNORECASE)

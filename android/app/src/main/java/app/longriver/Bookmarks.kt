@@ -1,4 +1,4 @@
-﻿package app.changhe
+﻿package app.longriver
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,8 +30,8 @@ import androidx.compose.ui.graphics.vector.addPathNodes
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import app.changhe.data.BookmarkKind
-import app.changhe.data.regionIdList
+import app.longriver.data.BookmarkKind
+import app.longriver.data.regionIdList
 
 internal val BookmarkGold = Color(0xFFC9962B)
 
@@ -90,7 +90,7 @@ private val kindLabels = listOf(
 
 @Composable
 internal fun BookmarkSection(
-    model: ChangheViewModel,
+    model: LongriverViewModel,
     openClaim: (Long) -> Unit,
     openPerson: (Long) -> Unit,
     goAtlas: () -> Unit,

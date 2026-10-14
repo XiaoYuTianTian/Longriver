@@ -1,10 +1,10 @@
-package app.changhe
+package app.longriver
 
-import app.changhe.data.ClaimEntity
-import app.changhe.data.PersonEntity
-import app.changhe.data.RegionEntity
-import app.changhe.data.regionIdList
-import app.changhe.data.topicSlugList
+import app.longriver.data.ClaimEntity
+import app.longriver.data.PersonEntity
+import app.longriver.data.RegionEntity
+import app.longriver.data.regionIdList
+import app.longriver.data.topicSlugList
 import kotlin.math.abs
 
 private val levelRank = mapOf("region" to 0, "country" to 1, "province" to 2, "city" to 3)

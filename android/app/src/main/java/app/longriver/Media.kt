@@ -1,4 +1,4 @@
-package app.changhe
+package app.longriver
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

@@ -1,4 +1,4 @@
-package app.changhe
+package app.longriver
 
 import android.content.Context
 import kotlinx.serialization.Serializable

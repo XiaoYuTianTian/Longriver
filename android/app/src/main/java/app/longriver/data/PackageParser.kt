@@ -1,4 +1,4 @@
-package app.changhe.data
+package app.longriver.data
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json

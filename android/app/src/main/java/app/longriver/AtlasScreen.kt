@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package app.changhe
+package app.longriver
 
 import android.graphics.Paint
 import android.graphics.RectF
@@ -69,13 +69,13 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import app.changhe.data.BookmarkKind
-import app.changhe.data.ClaimEntity
-import app.changhe.data.EventEntity
-import app.changhe.data.PersonEntity
-import app.changhe.data.RegionEntity
-import app.changhe.data.politiesAt
-import app.changhe.data.regionIdList
+import app.longriver.data.BookmarkKind
+import app.longriver.data.ClaimEntity
+import app.longriver.data.EventEntity
+import app.longriver.data.PersonEntity
+import app.longriver.data.RegionEntity
+import app.longriver.data.politiesAt
+import app.longriver.data.regionIdList
 import kotlin.math.cos
 import kotlin.math.pow
 import kotlin.math.roundToInt
@@ -101,7 +101,7 @@ private data class MapBubble(
 
 @Composable
 fun AtlasScreen(
-    model: ChangheViewModel,
+    model: LongriverViewModel,
     openClaim: (Long) -> Unit,
     openPerson: (Long) -> Unit,
     openPiece: (String) -> Unit,

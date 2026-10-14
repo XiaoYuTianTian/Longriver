@@ -1,4 +1,4 @@
-package app.changhe.data
+package app.longriver.data
 
 import androidx.room.Dao
 import androidx.room.Database

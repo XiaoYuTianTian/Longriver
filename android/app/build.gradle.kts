@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    namespace = "app.changhe"
+    namespace = "app.longriver"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "app.changhe"
+        applicationId = "app.longriver"
         minSdk = 26
         targetSdk = 35
         versionCode = 4
@@ -22,9 +22,9 @@ android {
         val local = Properties().apply {
             rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use(::load)
         }
-        val apiBase = local.getProperty("changhe.apiBaseUrl", "http://10.0.2.2:8000")
+        val apiBase = local.getProperty("longriver.apiBaseUrl", "http://10.0.2.2:8000")
         buildConfigField("String", "API_BASE_URL", "\"$apiBase\"")
-        buildConfigField("String", "MEDIA_BASE_URL", "\"${local.getProperty("changhe.mediaBaseUrl", "$apiBase/media/")}\"")
+        buildConfigField("String", "MEDIA_BASE_URL", "\"${local.getProperty("longriver.mediaBaseUrl", "$apiBase/media/")}\"")
         buildConfigField("String", "TIANDITU_KEY", "\"${local.getProperty("tianditu.key", "")}\"")
         val seed = file("src/main/assets/knowledge-package.json")
         val seedRevision = CRC32().apply { if (seed.exists()) update(seed.readBytes()) }.value.toInt()

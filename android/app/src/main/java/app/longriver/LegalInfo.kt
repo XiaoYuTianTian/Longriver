@@ -1,4 +1,4 @@
-package app.changhe
+package app.longriver
 
 object LegalInfo {
     const val CONSENT_VERSION = 1
@@ -9,7 +9,7 @@ object LegalInfo {
     /** 完成 APP 备案后填入。 */
     const val appFilingNumber = ""
 
-    const val operatorName = "长河（运营主体待填写）"
+    const val operatorName = "Longriver（运营主体待填写）"
     const val contactEmail = "待填写联系邮箱"
     const val effectiveDate = "2026年9月29日"
 
@@ -72,7 +72,7 @@ object LegalInfo {
     val privacyPolicy = """
         生效日期：$effectiveDate
 
-        $operatorName（以下称“我们”）重视你的个人信息保护。本政策说明长河如何处理信息。
+        $operatorName（以下称“我们”）重视你的个人信息保护。本政策说明 Longriver 如何处理信息。
 
         一、我们处理的信息
         1. 收藏与备注只保存在你的手机本地，我们不上传，也无法查看。
@@ -101,10 +101,10 @@ object LegalInfo {
     val userAgreement = """
         生效日期：$effectiveDate
 
-        欢迎使用长河。使用本应用即表示你同意本协议。
+        欢迎使用 Longriver。使用本应用即表示你同意本协议。
 
         一、服务内容
-        长河提供按时间和地图浏览的世界史资料。每条记述附有出处、时间精度与可信度标注，内容经人工审核，但不保证完全无误。学术引用请核对原始出处。
+        Longriver 提供按时间和地图浏览的世界史资料。每条记述附有出处、时间精度与可信度标注，内容经人工审核，但不保证完全无误。学术引用请核对原始出处。
 
         二、地图说明
         历史疆域为依据公开学术数据绘制的近似示意，不代表对任何现实边界的认定。未取得审图号的版本仅供内部测试，不得对外传播截图。

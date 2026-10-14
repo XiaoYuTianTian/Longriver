@@ -23,6 +23,6 @@ if (-not $ready) {
     Write-Error "手机未就绪。请解锁手机并允许 USB 调试。当前：`n$($devices -join "`n")"
 }
 
-& $adb push "app\build\outputs\apk\debug\app-debug.apk" "/sdcard/Download/Changhe-debug.apk"
+& $adb push "app\build\outputs\apk\debug\app-debug.apk" "/sdcard/Download/Longriver-debug.apk"
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-Write-Output "已复制到手机下载目录：Changhe-debug.apk"
+Write-Output "已复制到手机下载目录：Longriver-debug.apk"

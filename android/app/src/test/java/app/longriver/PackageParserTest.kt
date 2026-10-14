@@ -1,6 +1,6 @@
-package app.changhe
+package app.longriver
 
-import app.changhe.data.PackageParser
+import app.longriver.data.PackageParser
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

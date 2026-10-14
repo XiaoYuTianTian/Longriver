@@ -1,4 +1,4 @@
-# Changhe Knowledge Backend Vertical Slice Implementation Plan
+# Longriver Knowledge Backend Vertical Slice Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -34,7 +34,7 @@ This plan covers only the knowledge-backend vertical slice. Follow-up plans shou
 ## Planned File Map
 
 ```text
-Changhe/
+Longriver/
 ├── .editorconfig
 ├── .gitignore
 ├── README.md
@@ -42,7 +42,7 @@ Changhe/
 └── backend/
     ├── pyproject.toml
     ├── manage.py
-    ├── changhe_server/
+    ├── longriver_server/
     │   ├── __init__.py
     │   ├── asgi.py
     │   ├── settings.py
@@ -98,11 +98,11 @@ Changhe/
 - Create: `compose.yaml`
 - Create: `backend/pyproject.toml`
 - Create through Django scaffold: `backend/manage.py`
-- Create through Django scaffold: `backend/changhe_server/*`
+- Create through Django scaffold: `backend/longriver_server/*`
 - Create through Django scaffold: `backend/knowledge/apps.py`
 - Create: `backend/tests/test_health.py`
-- Modify: `backend/changhe_server/settings.py`
-- Modify: `backend/changhe_server/urls.py`
+- Modify: `backend/longriver_server/settings.py`
+- Modify: `backend/longriver_server/urls.py`
 
 **Interfaces:**
 - Produces: Django project configured by `DATABASE_URL`, `DJANGO_SECRET_KEY`, `DJANGO_DEBUG`, and `DJANGO_ALLOWED_HOSTS`.
@@ -161,7 +161,7 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "changhe-backend"
+name = "longriver-backend"
 version = "0.1.0"
 requires-python = ">=3.13,<3.14"
 dependencies = [
@@ -179,12 +179,12 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "changhe_server.settings"
+DJANGO_SETTINGS_MODULE = "longriver_server.settings"
 python_files = ["test_*.py"]
 testpaths = ["tests"]
 
 [tool.setuptools.packages.find]
-include = ["changhe_server*", "knowledge*"]
+include = ["longriver_server*", "knowledge*"]
 
 [tool.ruff]
 line-length = 100
@@ -201,21 +201,21 @@ services:
   db:
     image: postgres:17
     environment:
-      POSTGRES_DB: changhe
-      POSTGRES_USER: changhe
-      POSTGRES_PASSWORD: changhe-local
+      POSTGRES_DB: longriver
+      POSTGRES_USER: longriver
+      POSTGRES_PASSWORD: longriver-local
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U changhe -d changhe"]
+      test: ["CMD-SHELL", "pg_isready -U longriver -d longriver"]
       interval: 5s
       timeout: 3s
       retries: 10
     volumes:
-      - changhe-postgres:/var/lib/postgresql/data
+      - longriver-postgres:/var/lib/postgresql/data
 
 volumes:
-  changhe-postgres:
+  longriver-postgres:
 ```
 
 - [ ] **Step 3: Create the virtual environment and Django scaffold**
@@ -226,13 +226,13 @@ Run from `backend/`:
 py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-.\.venv\Scripts\django-admin.exe startproject changhe_server .
+.\.venv\Scripts\django-admin.exe startproject longriver_server .
 .\.venv\Scripts\python.exe manage.py startapp knowledge
 New-Item -ItemType Directory -Force tests
 New-Item -ItemType File -Force tests\__init__.py
 ```
 
-Expected: dependency installation succeeds and `manage.py`, `changhe_server/`, `knowledge/`, and `tests/` exist.
+Expected: dependency installation succeeds and `manage.py`, `longriver_server/`, `knowledge/`, and `tests/` exist.
 
 - [ ] **Step 4: Write the failing health endpoint test**
 
@@ -262,7 +262,7 @@ Expected: FAIL because `/health/` returns 404.
 
 - [ ] **Step 6: Configure Django and implement the health endpoint**
 
-Replace the generated database, locale, and app settings in `backend/changhe_server/settings.py` with:
+Replace the generated database, locale, and app settings in `backend/longriver_server/settings.py` with:
 
 ```python
 import os
@@ -301,7 +301,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "changhe_server.urls"
+ROOT_URLCONF = "longriver_server.urls"
 
 TEMPLATES = [
     {
@@ -318,8 +318,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "changhe_server.wsgi.application"
-ASGI_APPLICATION = "changhe_server.asgi.application"
+WSGI_APPLICATION = "longriver_server.wsgi.application"
+ASGI_APPLICATION = "longriver_server.asgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(
@@ -342,7 +342,7 @@ REST_FRAMEWORK = {
 }
 ```
 
-Replace `backend/changhe_server/urls.py` with:
+Replace `backend/longriver_server/urls.py` with:
 
 ```python
 from django.contrib import admin
@@ -386,7 +386,7 @@ Expected: one passing test, no Ruff errors, and `System check identified no issu
 
 ```powershell
 git add .gitignore .editorconfig README.md compose.yaml backend
-git commit -m "chore: bootstrap Changhe Django backend"
+git commit -m "chore: bootstrap Longriver Django backend"
 ```
 
 ---
@@ -1635,7 +1635,7 @@ TOPICS = [
 
 
 class Command(BaseCommand):
-    help = "Load Changhe regions and timeline topics."
+    help = "Load Longriver regions and timeline topics."
 
     @no_translations
     def handle(self, *args, **options):
@@ -1704,9 +1704,9 @@ Expected: all year-slice API tests pass.
 Replace `README.md` with:
 
 ````markdown
-# 长河
+# Longriver
 
-长河是一款以全球并行时间线和可追溯史料为核心的 Android 历史浏览应用。
+Longriver 是一款以全球并行时间线和可追溯史料为核心的 Android 历史浏览应用。
 
 ## 当前实现
 
@@ -1727,7 +1727,7 @@ docker compose up -d db
 cd backend
 py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-$env:DATABASE_URL = "postgresql://changhe:changhe-local@localhost:5432/changhe"
+$env:DATABASE_URL = "postgresql://longriver:longriver-local@localhost:5432/longriver"
 .\.venv\Scripts\python.exe manage.py migrate
 .\.venv\Scripts\python.exe manage.py load_reference_data
 .\.venv\Scripts\python.exe manage.py createsuperuser
@@ -1744,7 +1744,7 @@ $env:DATABASE_URL = "postgresql://changhe:changhe-local@localhost:5432/changhe"
 
 ```powershell
 cd backend
-$env:DATABASE_URL = "postgresql://changhe:changhe-local@localhost:5432/changhe"
+$env:DATABASE_URL = "postgresql://longriver:longriver-local@localhost:5432/longriver"
 .\.venv\Scripts\python.exe manage.py check
 .\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m ruff check .
@@ -1765,7 +1765,7 @@ Run from repository root:
 ```powershell
 docker compose up -d db
 cd backend
-$env:DATABASE_URL = "postgresql://changhe:changhe-local@localhost:5432/changhe"
+$env:DATABASE_URL = "postgresql://longriver:longriver-local@localhost:5432/longriver"
 .\.venv\Scripts\python.exe manage.py migrate
 .\.venv\Scripts\python.exe manage.py check
 .\.venv\Scripts\python.exe -m pytest -q
