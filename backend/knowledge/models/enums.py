@@ -56,3 +56,14 @@ class SnapshotDimension(models.TextChoices):
     SOCIETY = "society", "社会"
     TECHNOLOGY = "technology", "科技"
     CULTURE = "culture", "文化"
+
+
+class ReleaseStatus(models.TextChoices):
+    PUBLISHED = "published", "已发布"
+    SUPERSEDED = "superseded", "已替代"
+    WITHDRAWN = "withdrawn", "已撤回"
+
+
+class FeedbackStatus(models.TextChoices):
+    OPEN = "open", "待处理"
+    RESOLVED = "resolved", "已处理"

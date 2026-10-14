@@ -12,3 +12,14 @@ htmlcov/
 .venv/
 *.egg-info/
 backend/db.sqlite3
+android/.gradle/
+android/**/build/
+android/local.properties
+android/.idea/
+android/.kotlin/
+content/raw/
+android/app/src/main/assets/media/
+android/keystore.properties
+*.jks
+
+backend/media/

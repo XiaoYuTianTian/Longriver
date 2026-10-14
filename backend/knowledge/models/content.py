@@ -18,6 +18,16 @@ class Topic(models.Model):
 class Person(models.Model):
     name = models.CharField(max_length=160)
     alternate_names = models.JSONField(default=list, blank=True)
+    wikidata_id = models.CharField(max_length=24, null=True, blank=True, unique=True)
+    birth_year = models.IntegerField(null=True, blank=True)
+    death_year = models.IntegerField(null=True, blank=True)
+    description = models.TextField(blank=True)
+    primary_region = models.ForeignKey(
+        "Region", null=True, blank=True, on_delete=models.SET_NULL, related_name="people"
+    )
+    image = models.ForeignKey(
+        "MediaAsset", null=True, blank=True, on_delete=models.SET_NULL, related_name="people"
+    )
 
     class Meta:
         ordering = ["name", "id"]
@@ -83,6 +93,8 @@ class Claim(models.Model):
         default=WorkflowState.DRAFT,
     )
     ai_generated = models.BooleanField(default=False)
+    review_batch = models.CharField(max_length=64, blank=True, db_index=True)
+    wikidata_id = models.CharField(max_length=24, blank=True, db_index=True)
     regions = models.ManyToManyField("Region", related_name="claims")
     polities = models.ManyToManyField("Polity", related_name="claims", blank=True)
     topics = models.ManyToManyField(Topic, related_name="claims", blank=True)

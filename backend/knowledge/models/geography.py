@@ -12,6 +12,14 @@ class Region(models.Model):
         related_name="children",
     )
     sort_order = models.PositiveIntegerField(default=0)
+    level = models.CharField(max_length=16, default="region")
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
+    wikidata_id = models.CharField(max_length=24, blank=True)
+    description = models.TextField(blank=True)
+    image = models.ForeignKey(
+        "MediaAsset", null=True, blank=True, on_delete=models.SET_NULL, related_name="regions"
+    )
 
     class Meta:
         ordering = ["sort_order", "name"]

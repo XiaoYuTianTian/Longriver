@@ -1,0 +1,1097 @@
+{
+  "source": {
+    "title": "维基百科",
+    "kind": "dataset",
+    "license_status": "metadata_only",
+    "canonical_url": "https://zh.wikipedia.org/",
+    "license_note": "只保存条目链接和自撰短陈述，不保存词条正文。这些是待核查候选，发布前需要人工对照原文。"
+  },
+  "claims": [
+    {
+      "text": "1457年，明英宗复辟，改元天顺，史称夺门之变。",
+      "start_year": 1457,
+      "end_year": 1457,
+      "precision": "year",
+      "display_text": "1457",
+      "region_slugs": [
+        "beijing"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "明英宗"
+      ],
+      "event_title": "夺门之变",
+      "snapshot_label": "明朝皇位再次更迭",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/夺门之变"
+      }
+    },
+    {
+      "text": "1455年至1485年，英格兰王位在兰开斯特与约克两支之间反复争夺，后世称为玫瑰战争。",
+      "start_year": 1455,
+      "end_year": 1485,
+      "precision": "range",
+      "display_text": "1455–1485",
+      "region_slugs": [
+        "england"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "玫瑰战争",
+      "snapshot_label": "英格兰王位争夺",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/玫瑰战争"
+      }
+    },
+    {
+      "text": "约1455年，《古腾堡圣经》印成，金属活字印刷在欧洲的书籍生产中开始发挥作用。",
+      "start_year": 1455,
+      "end_year": 1455,
+      "precision": "circa",
+      "display_text": "约1455",
+      "region_slugs": [
+        "mainz"
+      ],
+      "topic_slugs": [
+        "technology",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "约翰内斯·古腾堡"
+      ],
+      "event_title": "印成《古腾堡圣经》",
+      "snapshot_label": "活字印刷进入欧洲书籍生产",
+      "snapshot_dimension": "technology",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/古腾堡圣经"
+      }
+    },
+    {
+      "text": "1453年，奥斯曼军队攻陷君士坦丁堡，拜占庭帝国灭亡。",
+      "start_year": 1453,
+      "end_year": 1453,
+      "precision": "year",
+      "display_text": "1453",
+      "region_slugs": [
+        "constantinople"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "穆罕默德二世"
+      ],
+      "event_title": "君士坦丁堡陷落",
+      "snapshot_label": "奥斯曼控扼博斯普鲁斯海峡",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/君士坦丁堡的陷落"
+      }
+    },
+    {
+      "text": "1451年至1481年，穆罕默德二世在位，奥斯曼帝国把都城迁到君士坦丁堡。",
+      "start_year": 1451,
+      "end_year": 1481,
+      "precision": "range",
+      "display_text": "1451–1481",
+      "region_slugs": [
+        "ottoman"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "穆罕默德二世"
+      ],
+      "event_title": "穆罕默德二世在位",
+      "snapshot_label": "奥斯曼帝国定都君士坦丁堡",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/穆罕默德二世"
+      }
+    },
+    {
+      "text": "1492年，哥伦布船队到达加勒比海岛屿，欧洲与美洲的持续接触由此展开。",
+      "start_year": 1492,
+      "end_year": 1492,
+      "precision": "year",
+      "display_text": "1492",
+      "region_slugs": [
+        "san-salvador"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "克里斯托弗·哥伦布"
+      ],
+      "event_title": "哥伦布到达加勒比",
+      "snapshot_label": "欧洲与美洲开始持续接触",
+      "snapshot_dimension": "society",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/克里斯托弗·哥伦布"
+      }
+    },
+    {
+      "text": "1494年，西班牙与葡萄牙签订《托尔德西里亚斯条约》，在欧洲以外划分势力范围。",
+      "start_year": 1494,
+      "end_year": 1494,
+      "precision": "year",
+      "display_text": "1494",
+      "region_slugs": [
+        "tordesillas"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "签订《托尔德西里亚斯条约》",
+      "snapshot_label": "西葡划分海外势力范围",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/托德西利亚斯条约"
+      }
+    },
+    {
+      "text": "1500年，卡布拉尔船队抵达南美东岸，葡萄牙随后据此主张巴西。",
+      "start_year": 1500,
+      "end_year": 1500,
+      "precision": "year",
+      "display_text": "1500",
+      "region_slugs": [
+        "porto-seguro"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "佩德罗·阿尔瓦雷斯·卡布拉尔"
+      ],
+      "event_title": "卡布拉尔抵达巴西沿岸",
+      "snapshot_label": "葡萄牙接触南美东岸",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/佩德罗·阿尔瓦雷斯·卡布拉尔"
+      }
+    },
+    {
+      "text": "1501年，伊斯玛仪一世称王，萨法维王朝在伊朗高原建立。",
+      "start_year": 1501,
+      "end_year": 1501,
+      "precision": "year",
+      "display_text": "1501",
+      "region_slugs": [
+        "tabriz"
+      ],
+      "topic_slugs": [
+        "politics",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "伊斯玛仪一世"
+      ],
+      "event_title": "萨法维王朝建立",
+      "snapshot_label": "萨法维王朝兴起",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/伊斯玛仪一世"
+      }
+    },
+    {
+      "text": "1514年，奥斯曼军队在查尔迪兰击败萨法维军队。",
+      "start_year": 1514,
+      "end_year": 1514,
+      "precision": "year",
+      "display_text": "1514",
+      "region_slugs": [
+        "chaldiran"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "塞利姆一世",
+        "伊斯玛仪一世"
+      ],
+      "event_title": "查尔迪兰战役",
+      "snapshot_label": "奥斯曼与萨法维争夺安纳托利亚东部",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/查尔迪兰战役"
+      }
+    },
+    {
+      "text": "1516年至1517年，奥斯曼帝国击败马穆鲁克苏丹国，控制叙利亚和埃及。",
+      "start_year": 1516,
+      "end_year": 1517,
+      "precision": "range",
+      "display_text": "1516–1517",
+      "region_slugs": [
+        "cairo"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "塞利姆一世"
+      ],
+      "event_title": "奥斯曼征服马穆鲁克",
+      "snapshot_label": "奥斯曼控制埃及与叙利亚",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/奥斯曼-马穆鲁克战争_(1516年-1517年)"
+      }
+    },
+    {
+      "text": "1519年，查理五世当选神圣罗马皇帝，西班牙与中欧的统治连成一片。",
+      "start_year": 1519,
+      "end_year": 1519,
+      "precision": "year",
+      "display_text": "1519",
+      "region_slugs": [
+        "frankfurt"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "查理五世"
+      ],
+      "event_title": "查理五世当选皇帝",
+      "snapshot_label": "哈布斯堡统治连接西班牙与中欧",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/查理五世_(神圣罗马帝国)"
+      }
+    },
+    {
+      "text": "1521年，沃尔姆斯会议要求马丁·路德放弃主张，路德拒绝。",
+      "start_year": 1521,
+      "end_year": 1521,
+      "precision": "year",
+      "display_text": "1521",
+      "region_slugs": [
+        "worms"
+      ],
+      "topic_slugs": [
+        "culture",
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "马丁·路德"
+      ],
+      "event_title": "沃尔姆斯会议",
+      "snapshot_label": "宗教改革与帝国权威对峙",
+      "snapshot_dimension": "culture",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/沃尔姆斯会议"
+      }
+    },
+    {
+      "text": "1521年至1567年，明世宗在位，年号嘉靖。",
+      "start_year": 1521,
+      "end_year": 1567,
+      "precision": "range",
+      "display_text": "1521–1567",
+      "region_slugs": [
+        "china"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "明世宗"
+      ],
+      "event_title": "嘉靖年间",
+      "snapshot_label": "明朝嘉靖年间",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/明世宗"
+      }
+    },
+    {
+      "text": "1529年，奥斯曼军队围攻维也纳，未能攻克。",
+      "start_year": 1529,
+      "end_year": 1529,
+      "precision": "year",
+      "display_text": "1529",
+      "region_slugs": [
+        "vienna"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "苏莱曼一世"
+      ],
+      "event_title": "第一次维也纳之围",
+      "snapshot_label": "奥斯曼军队抵达中欧",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/维也纳之围"
+      }
+    },
+    {
+      "text": "1532年至1533年，西班牙远征者俘虏并处死阿塔瓦尔帕，印加帝国的中央政权瓦解。",
+      "start_year": 1532,
+      "end_year": 1533,
+      "precision": "range",
+      "display_text": "1532–1533",
+      "region_slugs": [
+        "cajamarca"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "弗朗西斯科·皮萨罗",
+        "阿塔瓦尔帕"
+      ],
+      "event_title": "西班牙征服印加帝国",
+      "snapshot_label": "安第斯中央政权瓦解",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/西班牙征服印加帝国"
+      }
+    },
+    {
+      "text": "1532年至1572年，印加残余政权继续抵抗，1572年比尔卡班巴陷落。",
+      "start_year": 1532,
+      "end_year": 1572,
+      "precision": "range",
+      "display_text": "1532–1572",
+      "region_slugs": [
+        "vilcabamba"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "比尔卡班巴陷落",
+      "snapshot_label": "印加残余抵抗持续",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/西班牙征服印加帝国"
+      }
+    },
+    {
+      "text": "1543年，哥白尼的《天体运行论》出版，提出日心体系。",
+      "start_year": 1543,
+      "end_year": 1543,
+      "precision": "year",
+      "display_text": "1543",
+      "region_slugs": [
+        "nuremberg"
+      ],
+      "topic_slugs": [
+        "technology",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "尼古拉·哥白尼"
+      ],
+      "event_title": "出版《天体运行论》",
+      "snapshot_label": "日心说进入欧洲学术讨论",
+      "snapshot_dimension": "culture",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/天体运行论"
+      }
+    },
+    {
+      "text": "1545年，西班牙殖民者在波托西大规模开采银矿，白银由此流向欧洲和亚洲贸易。",
+      "start_year": 1545,
+      "end_year": 1545,
+      "precision": "year",
+      "display_text": "1545",
+      "region_slugs": [
+        "potosi"
+      ],
+      "topic_slugs": [
+        "economy"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "波托西银矿大规模开采",
+      "snapshot_label": "安第斯白银进入全球贸易",
+      "snapshot_dimension": "economy",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/波托西"
+      }
+    },
+    {
+      "text": "1555年，《奥格斯堡和约》承认神圣罗马帝国诸侯可以选择天主教或路德宗。",
+      "start_year": 1555,
+      "end_year": 1555,
+      "precision": "year",
+      "display_text": "1555",
+      "region_slugs": [
+        "augsburg"
+      ],
+      "topic_slugs": [
+        "politics",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "奥格斯堡和约",
+      "snapshot_label": "帝国诸侯选择教派",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/奥格斯堡和约"
+      }
+    },
+    {
+      "text": "1557年，葡萄牙人开始在澳门长期居留，并以此连接印度洋与东亚贸易。",
+      "start_year": 1557,
+      "end_year": 1557,
+      "precision": "year",
+      "display_text": "1557",
+      "region_slugs": [
+        "macau"
+      ],
+      "topic_slugs": [
+        "economy",
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "葡萄牙人居留澳门",
+      "snapshot_label": "澳门成为欧亚贸易据点",
+      "snapshot_dimension": "economy",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/澳门历史"
+      }
+    },
+    {
+      "text": "1571年，西班牙与威尼斯等组成的舰队在勒班陀击败奥斯曼海军。",
+      "start_year": 1571,
+      "end_year": 1571,
+      "precision": "year",
+      "display_text": "1571",
+      "region_slugs": [
+        "lepanto"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "勒班陀战役",
+      "snapshot_label": "地中海海战改变海军均势",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/勒班陀战役"
+      }
+    },
+    {
+      "text": "1572年，法国天主教徒在巴黎等地屠杀胡格诺派，称为圣巴托洛缪大屠杀。",
+      "start_year": 1572,
+      "end_year": 1572,
+      "precision": "year",
+      "display_text": "1572",
+      "region_slugs": [
+        "paris"
+      ],
+      "topic_slugs": [
+        "society",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "圣巴托洛缪大屠杀",
+      "snapshot_label": "法国宗教冲突激化",
+      "snapshot_dimension": "society",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/圣巴托洛缪大屠杀"
+      }
+    },
+    {
+      "text": "1572年至1620年，明神宗在位，年号万历。",
+      "start_year": 1572,
+      "end_year": 1620,
+      "precision": "range",
+      "display_text": "1572–1620",
+      "region_slugs": [
+        "china"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "明神宗"
+      ],
+      "event_title": "万历年间",
+      "snapshot_label": "明朝万历年间",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/万历帝"
+      }
+    },
+    {
+      "text": "1588年，西班牙无敌舰队远征英格兰失败。",
+      "start_year": 1588,
+      "end_year": 1588,
+      "precision": "year",
+      "display_text": "1588",
+      "region_slugs": [
+        "england"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "无敌舰队远征失败",
+      "snapshot_label": "英格兰抵挡西班牙海上远征",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/西班牙无敌舰队"
+      }
+    },
+    {
+      "text": "1592年至1598年，日本入侵朝鲜，明朝出兵援助朝鲜，战争以日本撤军结束。",
+      "start_year": 1592,
+      "end_year": 1598,
+      "precision": "range",
+      "display_text": "1592–1598",
+      "region_slugs": [
+        "hanseong"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "丰臣秀吉"
+      ],
+      "event_title": "万历朝鲜之役",
+      "snapshot_label": "东亚三国卷入朝鲜战争",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/万历朝鲜之役"
+      }
+    },
+    {
+      "text": "1600年，关原之战决定日本政权归向德川家康。",
+      "start_year": 1600,
+      "end_year": 1600,
+      "precision": "year",
+      "display_text": "1600",
+      "region_slugs": [
+        "sekigahara"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "德川家康"
+      ],
+      "event_title": "关原之战",
+      "snapshot_label": "日本政权转向德川氏",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/关原之战"
+      }
+    },
+    {
+      "text": "1603年，德川家康就任征夷大将军，江户幕府建立。",
+      "start_year": 1603,
+      "end_year": 1603,
+      "precision": "year",
+      "display_text": "1603",
+      "region_slugs": [
+        "edo"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "德川家康"
+      ],
+      "event_title": "江户幕府建立",
+      "snapshot_label": "江户幕府建立",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/德川幕府"
+      }
+    },
+    {
+      "text": "1607年，英格兰殖民者在詹姆斯敦建立永久定居点。",
+      "start_year": 1607,
+      "end_year": 1607,
+      "precision": "year",
+      "display_text": "1607",
+      "region_slugs": [
+        "jamestown"
+      ],
+      "topic_slugs": [
+        "society",
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "建立詹姆斯敦",
+      "snapshot_label": "英格兰在北美建立永久定居点",
+      "snapshot_dimension": "society",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/詹姆斯敦"
+      }
+    },
+    {
+      "text": "1616年，努尔哈赤在赫图阿拉称汗，建立后金。",
+      "start_year": 1616,
+      "end_year": 1616,
+      "precision": "year",
+      "display_text": "1616",
+      "region_slugs": [
+        "hetu-ala"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "努尔哈赤"
+      ],
+      "event_title": "后金建立",
+      "snapshot_label": "后金在东北建立",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/努尔哈赤"
+      }
+    },
+    {
+      "text": "1618年至1648年，欧洲多国卷入三十年战争，中欧人口和城镇受到严重破坏。",
+      "start_year": 1618,
+      "end_year": 1648,
+      "precision": "range",
+      "display_text": "1618–1648",
+      "region_slugs": [
+        "germany"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "三十年战争",
+      "snapshot_label": "中欧陷入长期战争",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/三十年战争"
+      }
+    },
+    {
+      "text": "1620年，五月花号乘客在普利茅斯建立定居点。",
+      "start_year": 1620,
+      "end_year": 1620,
+      "precision": "year",
+      "display_text": "1620",
+      "region_slugs": [
+        "plymouth"
+      ],
+      "topic_slugs": [
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "建立普利茅斯定居点",
+      "snapshot_label": "英格兰移民进入新英格兰",
+      "snapshot_dimension": "society",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/五月花号"
+      }
+    },
+    {
+      "text": "1635年，江户幕府禁止日本人擅自出海，并限制外国船只靠港。",
+      "start_year": 1635,
+      "end_year": 1635,
+      "precision": "year",
+      "display_text": "1635",
+      "region_slugs": [
+        "japan"
+      ],
+      "topic_slugs": [
+        "politics",
+        "economy"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "江户幕府限制出海",
+      "snapshot_label": "日本对外航路受到严格限制",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/锁国"
+      }
+    },
+    {
+      "text": "1642年至1651年，英格兰发生内战，查理一世被处死，议会军取得优势。",
+      "start_year": 1642,
+      "end_year": 1651,
+      "precision": "range",
+      "display_text": "1642–1651",
+      "region_slugs": [
+        "england"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "查理一世"
+      ],
+      "event_title": "英国内战",
+      "snapshot_label": "英格兰国王与议会开战",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/英国内战"
+      }
+    },
+    {
+      "text": "1644年，李自成攻入北京，明思宗自尽；清军同年入关。",
+      "start_year": 1644,
+      "end_year": 1644,
+      "precision": "year",
+      "display_text": "1644",
+      "region_slugs": [
+        "beijing"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "李自成",
+        "明思宗"
+      ],
+      "event_title": "甲申之变",
+      "snapshot_label": "明朝在北京的统治中断",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/甲申之变"
+      }
+    },
+    {
+      "text": "1648年，列强签订威斯特伐利亚系列和约，三十年战争结束。",
+      "start_year": 1648,
+      "end_year": 1648,
+      "precision": "year",
+      "display_text": "1648",
+      "region_slugs": [
+        "munster"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "威斯特伐利亚和约",
+      "snapshot_label": "欧洲战争以和约重划政权",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/威斯特伐利亚和约"
+      }
+    },
+    {
+      "text": "1661年至1662年，郑成功攻占台湾的荷兰据点。",
+      "start_year": 1661,
+      "end_year": 1662,
+      "precision": "range",
+      "display_text": "1661–1662",
+      "region_slugs": [
+        "tainan"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "郑成功"
+      ],
+      "event_title": "郑成功攻取台湾",
+      "snapshot_label": "郑氏政权控制台湾",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/郑成功"
+      }
+    },
+    {
+      "text": "1661年至1722年，康熙帝在位，清朝继续巩固对中国本部的统治。",
+      "start_year": 1661,
+      "end_year": 1722,
+      "precision": "range",
+      "display_text": "1661–1722",
+      "region_slugs": [
+        "china"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "康熙帝"
+      ],
+      "event_title": "康熙年间",
+      "snapshot_label": "清朝康熙年间",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/康熙帝"
+      }
+    },
+    {
+      "text": "1680年，普韦布洛人驱逐西班牙殖民者，暂时收复新墨西哥的殖民据点。",
+      "start_year": 1680,
+      "end_year": 1680,
+      "precision": "year",
+      "display_text": "1680",
+      "region_slugs": [
+        "santa-fe"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "普韦布洛起义",
+      "snapshot_label": "普韦布洛人驱逐西班牙殖民者",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/普韦布洛起义"
+      }
+    },
+    {
+      "text": "1683年，清军在澎湖击败郑氏水师，随后进入台湾。",
+      "start_year": 1683,
+      "end_year": 1683,
+      "precision": "year",
+      "display_text": "1683",
+      "region_slugs": [
+        "tainan"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "施琅"
+      ],
+      "event_title": "清军进入台湾",
+      "snapshot_label": "清朝控制台湾",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/施琅"
+      }
+    },
+    {
+      "text": "1683年，奥斯曼军队再次围攻维也纳，被哈布斯堡与波兰援军击退。",
+      "start_year": 1683,
+      "end_year": 1683,
+      "precision": "year",
+      "display_text": "1683",
+      "region_slugs": [
+        "vienna"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "第二次维也纳之围",
+      "snapshot_label": "奥斯曼对中欧的围攻被击退",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/维也纳之战_(1683年)"
+      }
+    },
+    {
+      "text": "1687年，牛顿发表《自然哲学的数学原理》，提出万有引力的数学表述。",
+      "start_year": 1687,
+      "end_year": 1687,
+      "precision": "year",
+      "display_text": "1687",
+      "region_slugs": [
+        "london"
+      ],
+      "topic_slugs": [
+        "technology",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "艾萨克·牛顿"
+      ],
+      "event_title": "发表《自然哲学的数学原理》",
+      "snapshot_label": "欧洲力学有了统一的数学表述",
+      "snapshot_dimension": "technology",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/自然哲学的数学原理"
+      }
+    },
+    {
+      "text": "1688年，英格兰议会迎立威廉和玛丽，詹姆斯二世失去王位，称为光荣革命。",
+      "start_year": 1688,
+      "end_year": 1688,
+      "precision": "year",
+      "display_text": "1688",
+      "region_slugs": [
+        "london"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "威廉三世",
+        "玛丽二世"
+      ],
+      "event_title": "光荣革命",
+      "snapshot_label": "英格兰议会更换国王",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/光荣革命"
+      }
+    },
+    {
+      "text": "1689年，清朝与俄国签订《尼布楚条约》，划定东北一段边界。",
+      "start_year": 1689,
+      "end_year": 1689,
+      "precision": "year",
+      "display_text": "1689",
+      "region_slugs": [
+        "nerchinsk"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "康熙帝"
+      ],
+      "event_title": "签订《尼布楚条约》",
+      "snapshot_label": "清朝与俄国划定东北边界",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/尼布楚条约"
+      }
+    }
+  ]
+}

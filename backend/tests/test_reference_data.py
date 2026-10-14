@@ -8,6 +8,11 @@ EXPECTED_REGIONS = [
     ("west-asia-north-africa", "西亚与北非", 20),
     ("europe", "欧洲", 30),
     ("americas", "美洲", 40),
+    ("south-asia", "南亚", 50),
+    ("southeast-asia", "东南亚", 60),
+    ("central-asia", "中亚与北亚", 70),
+    ("africa", "撒哈拉以南非洲", 80),
+    ("oceania", "大洋洲", 90),
 ]
 EXPECTED_TOPICS = {
     "politics": "政治",
@@ -23,7 +28,7 @@ def test_reference_data_command_is_idempotent():
     call_command("load_reference_data")
     call_command("load_reference_data")
 
-    assert Region.objects.filter(parent=None).count() == 4
+    assert Region.objects.filter(parent=None).count() == len(EXPECTED_REGIONS)
     for slug, name, sort_order in EXPECTED_REGIONS:
         region = Region.objects.get(slug=slug)
         assert region.name == name

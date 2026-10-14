@@ -1,0 +1,426 @@
+{
+  "source": {
+    "title": "维基百科",
+    "kind": "dataset",
+    "license_status": "metadata_only",
+    "canonical_url": "https://zh.wikipedia.org/",
+    "license_note": "只保存条目链接和自撰短陈述，不保存词条正文。这些是待核查候选，发布前需要人工对照原文。"
+  },
+  "claims": [
+    {
+      "text": "约公元前1750年，巴比伦国王汉谟拉比颁布成文法典。",
+      "start_year": -1750,
+      "end_year": -1750,
+      "precision": "circa",
+      "display_text": "约前1750",
+      "region_slugs": [
+        "babylon"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "汉谟拉比"
+      ],
+      "event_title": "颁布汉谟拉比法典",
+      "snapshot_label": "巴比伦王权以成文法统治",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/汉谟拉比法典"
+      }
+    },
+    {
+      "text": "公元前776年，奥林匹亚举办传统上被视为第一届古奥运会的竞技。",
+      "start_year": -776,
+      "end_year": -776,
+      "precision": "year",
+      "display_text": "前776",
+      "region_slugs": [
+        "olympia"
+      ],
+      "topic_slugs": [
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "第一届古奥运会",
+      "snapshot_label": "希腊城邦以竞技相会",
+      "snapshot_dimension": "culture",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/古代奥林匹克运动会"
+      }
+    },
+    {
+      "text": "公元前539年，居鲁士二世攻入巴比伦。",
+      "start_year": -539,
+      "end_year": -539,
+      "precision": "year",
+      "display_text": "前539",
+      "region_slugs": [
+        "babylon"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "居鲁士二世"
+      ],
+      "event_title": "居鲁士攻入巴比伦",
+      "snapshot_label": "波斯帝国控制两河流域",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/居鲁士二世"
+      }
+    },
+    {
+      "text": "公元前221年，秦王政完成统一，称始皇帝。",
+      "start_year": -221,
+      "end_year": -221,
+      "precision": "year",
+      "display_text": "前221",
+      "region_slugs": [
+        "xianyang"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "秦始皇"
+      ],
+      "event_title": "秦统一六国",
+      "snapshot_label": "秦帝国建立",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/秦始皇"
+      }
+    },
+    {
+      "text": "公元前44年，尤利乌斯·凯撒在罗马元老院遇刺。",
+      "start_year": -44,
+      "end_year": -44,
+      "precision": "year",
+      "display_text": "前44",
+      "region_slugs": [
+        "rome"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "尤利乌斯·凯撒"
+      ],
+      "event_title": "凯撒遇刺",
+      "snapshot_label": "罗马共和国陷入权力斗争",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/凯撒遇刺"
+      }
+    },
+    {
+      "text": "公元105年，蔡伦改进造纸术，纸张开始更容易流传。",
+      "start_year": 105,
+      "end_year": 105,
+      "precision": "year",
+      "display_text": "105",
+      "region_slugs": [
+        "luoyang"
+      ],
+      "topic_slugs": [
+        "technology"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "蔡伦"
+      ],
+      "event_title": "蔡伦改进造纸",
+      "snapshot_label": "纸张成为更易传播的书写材料",
+      "snapshot_dimension": "technology",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/蔡伦"
+      }
+    },
+    {
+      "text": "公元476年，西罗马帝国末代皇帝被废，帝国在西部的统治结束。",
+      "start_year": 476,
+      "end_year": 476,
+      "precision": "year",
+      "display_text": "476",
+      "region_slugs": [
+        "ravenna"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "西罗马帝国终结",
+      "snapshot_label": "西罗马的帝国统治结束",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/西罗马帝国"
+      }
+    },
+    {
+      "text": "618年至907年，唐朝统治中国本部。",
+      "start_year": 618,
+      "end_year": 907,
+      "precision": "range",
+      "display_text": "618–907",
+      "region_slugs": [
+        "china"
+      ],
+      "topic_slugs": [
+        "politics",
+        "culture"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "唐朝",
+      "snapshot_label": "唐朝",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/唐朝"
+      }
+    },
+    {
+      "text": "622年，穆罕默德迁往麦地那，这一年成为伊斯兰历元年。",
+      "start_year": 622,
+      "end_year": 622,
+      "precision": "year",
+      "display_text": "622",
+      "region_slugs": [
+        "medina"
+      ],
+      "topic_slugs": [
+        "culture",
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "穆罕默德"
+      ],
+      "event_title": "希吉拉",
+      "snapshot_label": "麦地那成为新的政治中心",
+      "snapshot_dimension": "culture",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/希吉来"
+      }
+    },
+    {
+      "text": "800年，查理曼在罗马由教宗加冕为皇帝。",
+      "start_year": 800,
+      "end_year": 800,
+      "precision": "year",
+      "display_text": "800",
+      "region_slugs": [
+        "rome"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "查理曼"
+      ],
+      "event_title": "查理曼加冕",
+      "snapshot_label": "西欧出现新的皇帝称号",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/查理曼"
+      }
+    },
+    {
+      "text": "960年至1279年，宋朝先后以开封和临安为都城。",
+      "start_year": 960,
+      "end_year": 1279,
+      "precision": "range",
+      "display_text": "960–1279",
+      "region_slugs": [
+        "china"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "宋朝",
+      "snapshot_label": "宋朝",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/宋朝"
+      }
+    },
+    {
+      "text": "1066年，诺曼底公爵威廉征服英格兰。",
+      "start_year": 1066,
+      "end_year": 1066,
+      "precision": "year",
+      "display_text": "1066",
+      "region_slugs": [
+        "hastings"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "征服者威廉"
+      ],
+      "event_title": "诺曼征服",
+      "snapshot_label": "诺曼贵族统治英格兰",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/诺曼征服英格兰"
+      }
+    },
+    {
+      "text": "1258年，蒙古军队攻陷巴格达，阿拔斯哈里发国在当地的统治结束。",
+      "start_year": 1258,
+      "end_year": 1258,
+      "precision": "year",
+      "display_text": "1258",
+      "region_slugs": [
+        "baghdad"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "巴格达陷落",
+      "snapshot_label": "阿拔斯朝在巴格达的统治结束",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/巴格达之战_(1258年)"
+      }
+    },
+    {
+      "text": "1271年至1368年，元朝统治中国本部。",
+      "start_year": 1271,
+      "end_year": 1368,
+      "precision": "range",
+      "display_text": "1271–1368",
+      "region_slugs": [
+        "china"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "忽必烈"
+      ],
+      "event_title": "元朝",
+      "snapshot_label": "元朝",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/元朝"
+      }
+    },
+    {
+      "text": "1325年，墨西加人在特斯科科湖岛上建立特诺奇蒂特兰。",
+      "start_year": 1325,
+      "end_year": 1325,
+      "precision": "year",
+      "display_text": "1325",
+      "region_slugs": [
+        "tenochtitlan"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "建立特诺奇蒂特兰",
+      "snapshot_label": "墨西加城邦在湖心建立",
+      "snapshot_dimension": "society",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/特诺奇蒂特兰"
+      }
+    },
+    {
+      "text": "1347年至1351年，黑死病在欧洲造成大规模死亡。",
+      "start_year": 1347,
+      "end_year": 1351,
+      "precision": "range",
+      "display_text": "1347–1351",
+      "region_slugs": [
+        "europe"
+      ],
+      "topic_slugs": [
+        "society"
+      ],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "黑死病流行",
+      "snapshot_label": "欧洲人口因瘟疫锐减",
+      "snapshot_dimension": "society",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/黑死病"
+      }
+    },
+    {
+      "text": "1368年，朱元璋建立明朝，元朝退出大都。",
+      "start_year": 1368,
+      "end_year": 1368,
+      "precision": "year",
+      "display_text": "1368",
+      "region_slugs": [
+        "nanjing"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "unverified",
+      "people": [
+        "朱元璋"
+      ],
+      "event_title": "明朝建立",
+      "snapshot_label": "明朝取代元朝",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/朱元璋"
+      }
+    }
+  ]
+}

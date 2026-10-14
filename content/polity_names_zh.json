@@ -1,0 +1,5073 @@
+{
+  "note": "Cliopatria 政权英文名到中文名的对照，capital 为常用都城。中国历代疆域表示需经测绘资质单位核对后随审图材料送审。",
+  "names": {
+    "Russian Empire": [
+      "俄罗斯帝国",
+      "圣彼得堡"
+    ],
+    "Qing Dynasty": [
+      "清",
+      "北京"
+    ],
+    "Spanish Empire": [
+      "西班牙帝国",
+      "马德里"
+    ],
+    "Mongol Empire": [
+      "蒙古帝国",
+      "哈拉和林"
+    ],
+    "Tsardom of Russia": [
+      "俄国沙皇国",
+      "莫斯科"
+    ],
+    "Roman Empire": [
+      "罗马帝国",
+      "罗马"
+    ],
+    "Han Dynasty": [
+      "汉",
+      "长安"
+    ],
+    "Ottoman Empire": [
+      "奥斯曼帝国",
+      "伊斯坦布尔"
+    ],
+    "Abbasid Caliphate": [
+      "阿拔斯王朝",
+      "巴格达"
+    ],
+    "Sasanian Empire": [
+      "萨珊王朝",
+      "泰西封"
+    ],
+    "Ming Dynasty": [
+      "明",
+      "北京"
+    ],
+    "Tang Dynasty": [
+      "唐",
+      "长安"
+    ],
+    "Yuan Dynasty": [
+      "元",
+      "大都"
+    ],
+    "Achaemenid Empire": [
+      "阿契美尼德王朝",
+      "波斯波利斯"
+    ],
+    "Parthian Empire": [
+      "帕提亚（安息）",
+      "泰西封"
+    ],
+    "Xiongnu": [
+      "匈奴",
+      ""
+    ],
+    "Golden Horde": [
+      "金帐汗国",
+      "萨莱"
+    ],
+    "Kimek-Kipchak confederation": [
+      "基马克—钦察联盟",
+      ""
+    ],
+    "Kazakh Khanate": [
+      "哈萨克汗国",
+      ""
+    ],
+    "Tibetans": [
+      "吐蕃诸部",
+      ""
+    ],
+    "Umayyad Caliphate": [
+      "倭马亚王朝",
+      "大马士革"
+    ],
+    "Tibetan Empire": [
+      "吐蕃",
+      "逻些"
+    ],
+    "Portuguese Empire": [
+      "葡萄牙帝国",
+      "里斯本"
+    ],
+    "Tibet": [
+      "西藏",
+      "拉萨"
+    ],
+    "British Colonial Empire": [
+      "大英殖民帝国",
+      "伦敦"
+    ],
+    "Southern Song": [
+      "南宋",
+      "临安"
+    ],
+    "Rouran Khaganate": [
+      "柔然",
+      ""
+    ],
+    "Xianbei": [
+      "鲜卑",
+      ""
+    ],
+    "Mughal Empire": [
+      "莫卧儿帝国",
+      "德里"
+    ],
+    "Safavid Dynasty": [
+      "萨法维王朝",
+      "伊斯法罕"
+    ],
+    "Empire of Brazil": [
+      "巴西帝国",
+      "里约热内卢"
+    ],
+    "United States of America": [
+      "美国",
+      "华盛顿"
+    ],
+    "Khanate of Sibir": [
+      "西伯利亚汗国",
+      ""
+    ],
+    "Eastern Roman Empire": [
+      "东罗马帝国",
+      "君士坦丁堡"
+    ],
+    "Byzantine Empire": [
+      "拜占庭帝国",
+      "君士坦丁堡"
+    ],
+    "Kingdom of Kush": [
+      "库施王国",
+      "麦罗埃"
+    ],
+    "Western Jin": [
+      "西晋",
+      "洛阳"
+    ],
+    "Indus Valley Civilization": [
+      "印度河流域文明",
+      ""
+    ],
+    "Mongol Khanate": [
+      "蒙古汗国",
+      ""
+    ],
+    "Great Seljuk Empire": [
+      "塞尔柱帝国",
+      ""
+    ],
+    "New Kingdom of Egypt": [
+      "埃及新王国",
+      "底比斯"
+    ],
+    "Mamluk Sultanate": [
+      "马穆鲁克苏丹国",
+      "开罗"
+    ],
+    "Liao Dynasty": [
+      "辽",
+      "上京"
+    ],
+    "Khmer Empire": [
+      "高棉帝国",
+      "吴哥"
+    ],
+    "Maurya Empire": [
+      "孔雀王朝",
+      "华氏城"
+    ],
+    "Gupta Empire": [
+      "笈多王朝",
+      "华氏城"
+    ],
+    "Novgorod Republic": [
+      "诺夫哥罗德共和国",
+      "诺夫哥罗德"
+    ],
+    "Uyghur Khaganate": [
+      "回鹘汗国",
+      ""
+    ],
+    "Chagatai Khanate": [
+      "察合台汗国",
+      ""
+    ],
+    "Kushan Empire": [
+      "贵霜帝国",
+      ""
+    ],
+    "Satavahana Dynasty": [
+      "百乘王朝",
+      ""
+    ],
+    "Mayan City-States": [
+      "玛雅城邦",
+      ""
+    ],
+    "Timurid Empire": [
+      "帖木儿帝国",
+      "撒马尔罕"
+    ],
+    "Srivijaya": [
+      "三佛齐",
+      "巨港"
+    ],
+    "Yuezhi": [
+      "月氏",
+      ""
+    ],
+    "Fatimid Caliphate": [
+      "法蒂玛王朝",
+      "开罗"
+    ],
+    "Ghaznavid Empire": [
+      "伽色尼王朝",
+      "加兹尼"
+    ],
+    "Seleucid Empire": [
+      "塞琉古王国",
+      "安条克"
+    ],
+    "Mali Empire": [
+      "马里帝国",
+      ""
+    ],
+    "Samanid Empire": [
+      "萨曼王朝",
+      "布哈拉"
+    ],
+    "Ethiopian Empire": [
+      "埃塞俄比亚帝国",
+      ""
+    ],
+    "Yenisei Kyrgyz": [
+      "黠戛斯",
+      ""
+    ],
+    "Holy Roman Empire": [
+      "神圣罗马帝国",
+      ""
+    ],
+    "Khazaria": [
+      "可萨汗国",
+      ""
+    ],
+    "White Huns": [
+      "嚈哒",
+      ""
+    ],
+    "British Raj": [
+      "英属印度",
+      "加尔各答"
+    ],
+    "Western Göktürks": [
+      "西突厥",
+      ""
+    ],
+    "Indo-Scythians": [
+      "印度—斯基泰",
+      ""
+    ],
+    "Türgesh": [
+      "突骑施",
+      ""
+    ],
+    "Kingdom of Spain": [
+      "西班牙王国",
+      "马德里"
+    ],
+    "Protectorate of the Western Regions": [
+      "西域都护府",
+      ""
+    ],
+    "Chu": [
+      "楚",
+      ""
+    ],
+    "Kingdom of France": [
+      "法兰西王国",
+      "巴黎"
+    ],
+    "Western Satraps": [
+      "西部总督",
+      ""
+    ],
+    "Funj Sultanate": [
+      "丰吉苏丹国",
+      ""
+    ],
+    "Great Jin": [
+      "金",
+      "中都"
+    ],
+    "Kara-Khitans": [
+      "西辽",
+      ""
+    ],
+    "Göktürk Khaganate": [
+      "突厥汗国",
+      ""
+    ],
+    "Rashtrakuta Dynasty": [
+      "罗湿陀罗拘陀王朝",
+      ""
+    ],
+    "Grand Principality of Moscow": [
+      "莫斯科大公国",
+      "莫斯科"
+    ],
+    "Neo-Assyrian Empire": [
+      "新亚述帝国",
+      "尼尼微"
+    ],
+    "Qajar Dynasty": [
+      "恺加王朝",
+      "德黑兰"
+    ],
+    "Ilkhanate": [
+      "伊儿汗国",
+      "大不里士"
+    ],
+    "Rashidun Caliphate": [
+      "正统哈里发",
+      "麦地那"
+    ],
+    "Ptolemaic Kingdom": [
+      "托勒密王朝",
+      "亚历山大港"
+    ],
+    "Kievan Rus'": [
+      "基辅罗斯",
+      "基辅"
+    ],
+    "Holy Roman Empire Minor States": [
+      "神圣罗马帝国诸邦",
+      ""
+    ],
+    "Qocho Kingdom": [
+      "高昌回鹘",
+      "高昌"
+    ],
+    "Denmark-Norway": [
+      "丹麦—挪威",
+      "哥本哈根"
+    ],
+    "Makuria": [
+      "马库里亚",
+      ""
+    ],
+    "Old Kingdom of Norway": [
+      "挪威王国",
+      ""
+    ],
+    "Northern Yuan": [
+      "北元",
+      ""
+    ],
+    "Zhou Dynasty": [
+      "周",
+      ""
+    ],
+    "Dzungar Khanate": [
+      "准噶尔汗国",
+      ""
+    ],
+    "Swedish Empire": [
+      "瑞典帝国",
+      "斯德哥尔摩"
+    ],
+    "Polish-Lithuanian Commonwealth": [
+      "波兰—立陶宛联邦",
+      "华沙"
+    ],
+    "Assyria": [
+      "亚述",
+      ""
+    ],
+    "Kingdom of Hungary": [
+      "匈牙利王国",
+      ""
+    ],
+    "Vakataka Kingdom": [
+      "伐迦陀迦王国",
+      ""
+    ],
+    "Four Oirats": [
+      "四卫拉特",
+      ""
+    ],
+    "Goguryeo": [
+      "高句丽",
+      ""
+    ],
+    "Roman Republic": [
+      "罗马共和国",
+      "罗马"
+    ],
+    "Northern Song": [
+      "北宋",
+      "开封"
+    ],
+    "Tuyuhun": [
+      "吐谷浑",
+      ""
+    ],
+    "Eastern Moghulistan": [
+      "东察合台汗国",
+      ""
+    ],
+    "Yamato": [
+      "大和",
+      ""
+    ],
+    "Himyarite Kingdom": [
+      "希木叶尔王国",
+      ""
+    ],
+    "Almoravid Dynasty": [
+      "穆拉比特王朝",
+      "马拉喀什"
+    ],
+    "Majapahit": [
+      "满者伯夷",
+      ""
+    ],
+    "Kingdom of Armenia": [
+      "亚美尼亚王国",
+      ""
+    ],
+    "Kingdom of Sweden": [
+      "瑞典王国",
+      "斯德哥尔摩"
+    ],
+    "Ayutthaya Kingdom": [
+      "阿瑜陀耶王国",
+      "阿瑜陀耶"
+    ],
+    "Alodia": [
+      "阿勒瓦",
+      ""
+    ],
+    "Venezuela": [
+      "委内瑞拉",
+      "加拉加斯"
+    ],
+    "Median Kingdom": [
+      "米底王国",
+      ""
+    ],
+    "Liu Song Dynasty": [
+      "刘宋",
+      "建康"
+    ],
+    "Visigothic Kingdom": [
+      "西哥特王国",
+      "托莱多"
+    ],
+    "Argentine Confederation": [
+      "阿根廷联邦",
+      ""
+    ],
+    "Oghuz Turks": [
+      "乌古斯",
+      ""
+    ],
+    "Kalmar Union": [
+      "卡尔马联合",
+      ""
+    ],
+    "Kara-Khanids": [
+      "喀喇汗王朝",
+      ""
+    ],
+    "Republic of Peru": [
+      "秘鲁共和国",
+      "利马"
+    ],
+    "Western Chalukya Empire": [
+      "西遮娄其王朝",
+      ""
+    ],
+    "Bolivia": [
+      "玻利维亚",
+      ""
+    ],
+    "First Toungoo Empire": [
+      "东吁王朝",
+      ""
+    ],
+    "Ayyubid Sultanate": [
+      "阿尤布王朝",
+      "开罗"
+    ],
+    "Kingdom of England": [
+      "英格兰王国",
+      "伦敦"
+    ],
+    "Elam": [
+      "埃兰",
+      "苏萨"
+    ],
+    "Lan Xang": [
+      "澜沧王国",
+      ""
+    ],
+    "Brazilian Republic": [
+      "巴西共和国",
+      "里约热内卢"
+    ],
+    "Gurjara-Pratihara Dynasty": [
+      "瞿折罗—波罗提诃罗王朝",
+      ""
+    ],
+    "Babylonia": [
+      "巴比伦尼亚",
+      "巴比伦"
+    ],
+    "Habsburg Monarchy": [
+      "哈布斯堡君主国",
+      "维也纳"
+    ],
+    "Eastern Göktürks": [
+      "东突厥",
+      ""
+    ],
+    "Chalukya Dynasty": [
+      "遮娄其王朝",
+      ""
+    ],
+    "Durrani Empire": [
+      "杜兰尼帝国",
+      "坎大哈"
+    ],
+    "Kingdom of Axum": [
+      "阿克苏姆王国",
+      "阿克苏姆"
+    ],
+    "Avar Khaganate": [
+      "阿瓦尔汗国",
+      ""
+    ],
+    "Northern Wei": [
+      "北魏",
+      "平城"
+    ],
+    "Bornu Empire": [
+      "博尔努帝国",
+      ""
+    ],
+    "Kingdom of Portugal": [
+      "葡萄牙王国",
+      "里斯本"
+    ],
+    "Western Roman Empire": [
+      "西罗马帝国",
+      "拉文纳"
+    ],
+    "Pala Empire": [
+      "波罗王朝",
+      ""
+    ],
+    "Joseon": [
+      "朝鲜王朝",
+      "汉城"
+    ],
+    "Almohad Caliphate": [
+      "穆瓦希德王朝",
+      "马拉喀什"
+    ],
+    "Sui Dynasty": [
+      "隋",
+      "大兴"
+    ],
+    "Kingdom of the Franks": [
+      "法兰克王国",
+      ""
+    ],
+    "Kingdom of Dali": [
+      "大理",
+      "大理"
+    ],
+    "Hamdanid Emirates": [
+      "哈姆丹王朝",
+      ""
+    ],
+    "Shunga Empire": [
+      "巽伽王朝",
+      ""
+    ],
+    "Liang Dynasty": [
+      "梁",
+      "建康"
+    ],
+    "Pagan Kingdom": [
+      "蒲甘王朝",
+      "蒲甘"
+    ],
+    "House of Jagiellon": [
+      "雅盖隆王朝",
+      ""
+    ],
+    "Khanate of Bukhara": [
+      "布哈拉汗国",
+      "布哈拉"
+    ],
+    "Kamarupa Kingdom": [
+      "迦摩缕波",
+      ""
+    ],
+    "Pyu City-States": [
+      "骠国城邦",
+      ""
+    ],
+    "Khanate of Khiva": [
+      "希瓦汗国",
+      "希瓦"
+    ],
+    "Middle Kingdom of Egypt": [
+      "埃及中王国",
+      ""
+    ],
+    "British Africa": [
+      "英属非洲",
+      ""
+    ],
+    "Inca Empire": [
+      "印加帝国",
+      "库斯科"
+    ],
+    "Later Mayan City-States": [
+      "后期玛雅城邦",
+      ""
+    ],
+    "Crown of Castile": [
+      "卡斯蒂利亚王室",
+      ""
+    ],
+    "Vijayanagara Empire": [
+      "毗奢耶那伽罗帝国",
+      ""
+    ],
+    "Anurādhapura": [
+      "阿努拉德普勒王国",
+      ""
+    ],
+    "Greco-Bactrian Kingdom": [
+      "希腊—巴克特里亚王国",
+      ""
+    ],
+    "First Bulgarian Empire": [
+      "第一保加利亚帝国",
+      ""
+    ],
+    "Qin": [
+      "秦",
+      "咸阳"
+    ],
+    "Shang Dynasty": [
+      "商",
+      "殷"
+    ],
+    "Ghana Empire": [
+      "加纳帝国",
+      ""
+    ],
+    "Western Xia": [
+      "西夏",
+      "兴庆"
+    ],
+    "Tokugawa Shogunate": [
+      "江户幕府",
+      "江户"
+    ],
+    "Morocco": [
+      "摩洛哥",
+      ""
+    ],
+    "Mamluk Dynasty": [
+      "德里奴隶王朝",
+      "德里"
+    ],
+    "Chola Empire": [
+      "朱罗王朝",
+      ""
+    ],
+    "Grand Duchy of Lithuania": [
+      "立陶宛大公国",
+      "维尔纽斯"
+    ],
+    "Muhammad Ali dynasty": [
+      "穆罕默德·阿里王朝",
+      "开罗"
+    ],
+    "Hadhramaut": [
+      "哈德拉毛",
+      ""
+    ],
+    "Federated Republic of Mexico": [
+      "墨西哥联邦共和国",
+      "墨西哥城"
+    ],
+    "Nanzhao": [
+      "南诏",
+      "太和城"
+    ],
+    "Cao Wei": [
+      "曹魏",
+      "洛阳"
+    ],
+    "Lakhmid Kingdom": [
+      "莱赫米王国",
+      ""
+    ],
+    "Greek City-States": [
+      "希腊城邦",
+      ""
+    ],
+    "Xin Dynasty": [
+      "新",
+      "长安"
+    ],
+    "Eastern Kara-Khanids": [
+      "东喀喇汗王朝",
+      ""
+    ],
+    "Rasulid Dynasty": [
+      "拉苏勒王朝",
+      ""
+    ],
+    "Gothia": [
+      "哥特",
+      ""
+    ],
+    "Buyid Dynasty": [
+      "白益王朝",
+      ""
+    ],
+    "Maratha Empire": [
+      "马拉塔帝国",
+      ""
+    ],
+    "Tughlaq Dynasty": [
+      "图格鲁克王朝",
+      "德里"
+    ],
+    "Balhae": [
+      "渤海国",
+      ""
+    ],
+    "Haripuñjaya": [
+      "哈里奔猜",
+      ""
+    ],
+    "Dutch East Indies": [
+      "荷属东印度",
+      "巴达维亚"
+    ],
+    "Mexico": [
+      "墨西哥",
+      "墨西哥城"
+    ],
+    "Songhai Empire": [
+      "桑海帝国",
+      "加奥"
+    ],
+    "Sultanate of Darfur": [
+      "达尔富尔苏丹国",
+      ""
+    ],
+    "Huns": [
+      "匈人",
+      ""
+    ],
+    "Shan States": [
+      "掸邦",
+      ""
+    ],
+    "Turk Shahis": [
+      "突厥沙希",
+      ""
+    ],
+    "Khwarezmid Empire": [
+      "花剌子模",
+      ""
+    ],
+    "Viking City-States": [
+      "维京城邦",
+      ""
+    ],
+    "Akkadian Empire": [
+      "阿卡德帝国",
+      "阿卡德"
+    ],
+    "Wadai Empire": [
+      "瓦达伊帝国",
+      ""
+    ],
+    "Hittites": [
+      "赫梯",
+      "哈图沙"
+    ],
+    "Emirate of Córdoba": [
+      "科尔多瓦埃米尔国",
+      "科尔多瓦"
+    ],
+    "Kingdom of Great Britain": [
+      "大不列颠王国",
+      "伦敦"
+    ],
+    "Sokoto Caliphate": [
+      "索科托哈里发国",
+      ""
+    ],
+    "Eastern Wu": [
+      "东吴",
+      "建业"
+    ],
+    "Champa": [
+      "占城",
+      ""
+    ],
+    "Blue Horde": [
+      "蓝帐汗国",
+      ""
+    ],
+    "Kashmir": [
+      "克什米尔",
+      ""
+    ],
+    "Southern Qi": [
+      "南齐",
+      "建康"
+    ],
+    "Hafsid Dynasty": [
+      "哈夫斯王朝",
+      "突尼斯"
+    ],
+    "French Africa": [
+      "法属非洲",
+      ""
+    ],
+    "Aq Qoyunlu": [
+      "白羊王朝",
+      ""
+    ],
+    "Nogai Horde": [
+      "诺盖汗国",
+      ""
+    ],
+    "Kingdom of Poland": [
+      "波兰王国",
+      "克拉科夫"
+    ],
+    "Rattanakosin Kingdom": [
+      "曼谷王朝",
+      "曼谷"
+    ],
+    "Sumerian City-States": [
+      "苏美尔城邦",
+      ""
+    ],
+    "Carthage": [
+      "迦太基",
+      "迦太基"
+    ],
+    "Indo-Greeks": [
+      "印度—希腊王国",
+      ""
+    ],
+    "Ghurid Dynasty": [
+      "古尔王朝",
+      ""
+    ],
+    "Minyue": [
+      "闽越",
+      ""
+    ],
+    "Zand Dynasty": [
+      "赞德王朝",
+      "设拉子"
+    ],
+    "Bahmani Sultanate": [
+      "巴赫曼尼苏丹国",
+      ""
+    ],
+    "Moghulistan": [
+      "东察合台汗国",
+      ""
+    ],
+    "Sultanate of Bengal": [
+      "孟加拉苏丹国",
+      ""
+    ],
+    "Sultanate of Johor": [
+      "柔佛苏丹国",
+      ""
+    ],
+    "West Franks": [
+      "西法兰克",
+      ""
+    ],
+    "Marinid Sultanate": [
+      "马林王朝",
+      "非斯"
+    ],
+    "Qi": [
+      "齐",
+      "临淄"
+    ],
+    "Saffarid Dynasty": [
+      "萨法尔王朝",
+      ""
+    ],
+    "Wu": [
+      "吴",
+      ""
+    ],
+    "Goryeo": [
+      "高丽",
+      "开京"
+    ],
+    "White Horde": [
+      "白帐汗国",
+      ""
+    ],
+    "Zapotec Civilization": [
+      "萨波特克文明",
+      ""
+    ],
+    "Kingdom of Georgia": [
+      "格鲁吉亚王国",
+      ""
+    ],
+    "Sukhothai Kingdom": [
+      "素可泰王国",
+      "素可泰"
+    ],
+    "Jin": [
+      "晋",
+      ""
+    ],
+    "Hunnic Empire": [
+      "匈人帝国",
+      ""
+    ],
+    "Early Dynastic Period of Egypt": [
+      "埃及早王朝",
+      ""
+    ],
+    "Neo-Babylonian Empire": [
+      "新巴比伦王国",
+      "巴比伦"
+    ],
+    "Iberian Union": [
+      "伊比利亚联盟",
+      ""
+    ],
+    "Kamakura Shogunate": [
+      "镰仓幕府",
+      "镰仓"
+    ],
+    "Saadi Sultanate": [
+      "萨阿德王朝",
+      "马拉喀什"
+    ],
+    "Nanyue": [
+      "南越",
+      "番禺"
+    ],
+    "Wusun": [
+      "乌孙",
+      ""
+    ],
+    "Kingdom of Italy": [
+      "意大利王国",
+      "罗马"
+    ],
+    "Chenla": [
+      "真腊",
+      ""
+    ],
+    "Crown of Aragon": [
+      "阿拉贡王室",
+      ""
+    ],
+    "Gran Colombia": [
+      "大哥伦比亚",
+      ""
+    ],
+    "Kingdom of Pontus": [
+      "本都王国",
+      ""
+    ],
+    "Sultanate of Brunei": [
+      "文莱苏丹国",
+      ""
+    ],
+    "Konbaung Dynasty": [
+      "贡榜王朝",
+      ""
+    ],
+    "Austrian Empire": [
+      "奥地利帝国",
+      "维也纳"
+    ],
+    "Kingdom of Denmark": [
+      "丹麦王国",
+      "哥本哈根"
+    ],
+    "Oirat Confederation": [
+      "卫拉特联盟",
+      ""
+    ],
+    "Mitanni": [
+      "米坦尼",
+      ""
+    ],
+    "Ashikaga Shogunate": [
+      "室町幕府",
+      "京都"
+    ],
+    "Haudenosaunee": [
+      "易洛魁联盟",
+      ""
+    ],
+    "Sultanate of Rum": [
+      "罗姆苏丹国",
+      "科尼亚"
+    ],
+    "Kingdom of Khotan": [
+      "于阗",
+      "于阗"
+    ],
+    "Caliphate of Córdoba": [
+      "后倭马亚王朝",
+      "科尔多瓦"
+    ],
+    "Kingdom of Bohemia": [
+      "波希米亚王国",
+      "布拉格"
+    ],
+    "Unified Silla": [
+      "统一新罗",
+      "庆州"
+    ],
+    "Hyksos": [
+      "喜克索斯",
+      ""
+    ],
+    "Southern Ming": [
+      "南明",
+      ""
+    ],
+    "Crimean Khanate": [
+      "克里米亚汗国",
+      ""
+    ],
+    "Shu Han": [
+      "蜀汉",
+      "成都"
+    ],
+    "German Empire": [
+      "德意志帝国",
+      "柏林"
+    ],
+    "Northern Zhou": [
+      "北周",
+      "长安"
+    ],
+    "Former Qin": [
+      "前秦",
+      "长安"
+    ],
+    "Kingdom of Castile": [
+      "卡斯蒂利亚王国",
+      ""
+    ],
+    "Papal States": [
+      "教皇国",
+      "罗马"
+    ],
+    "Warring States Japan": [
+      "日本战国",
+      ""
+    ],
+    "Chen Dynasty": [
+      "陈",
+      "建康"
+    ],
+    "Khanate of Kokand": [
+      "浩罕汗国",
+      "浩罕"
+    ],
+    "Kingdom of Kongo": [
+      "刚果王国",
+      ""
+    ],
+    "Astrakhan Khanate": [
+      "阿斯特拉罕汗国",
+      ""
+    ],
+    "Teutonic Order": [
+      "条顿骑士团国",
+      ""
+    ],
+    "Kingdom of León": [
+      "莱昂王国",
+      ""
+    ],
+    "Old Kingdom of Egypt": [
+      "埃及古王国",
+      "孟菲斯"
+    ],
+    "Nabataeans": [
+      "纳巴泰",
+      "佩特拉"
+    ],
+    "Kingdom of Scotland": [
+      "苏格兰王国",
+      "爱丁堡"
+    ],
+    "Second Bulgarian Empire": [
+      "第二保加利亚帝国",
+      ""
+    ],
+    "Lydia": [
+      "吕底亚",
+      "萨第斯"
+    ],
+    "Republic of Venice": [
+      "威尼斯共和国",
+      "威尼斯"
+    ],
+    "Ashanti Empire": [
+      "阿散蒂帝国",
+      ""
+    ],
+    "Ostrogothic Kingdom": [
+      "东哥特王国",
+      "拉文纳"
+    ],
+    "Austria-Hungary": [
+      "奥匈帝国",
+      "维也纳"
+    ],
+    "Volga Bulgaria": [
+      "伏尔加保加利亚",
+      ""
+    ],
+    "Lodi Dynasty": [
+      "洛迪王朝",
+      "德里"
+    ],
+    "Adal Sultanate": [
+      "阿达尔苏丹国",
+      ""
+    ],
+    "Vandal Kingdom": [
+      "汪达尔王国",
+      "迦太基"
+    ],
+    "Etruscans": [
+      "伊特鲁里亚",
+      ""
+    ],
+    "Aztec Empire": [
+      "阿兹特克帝国",
+      "特诺奇蒂特兰"
+    ],
+    "Triple Alliance": [
+      "阿兹特克三邦同盟",
+      "特诺奇蒂特兰"
+    ],
+    "Kingdom of Ryukyu": [
+      "琉球国",
+      "首里"
+    ],
+    "Ryukyu Kingdom": [
+      "琉球国",
+      "首里"
+    ],
+    "Eastern Jin": [
+      "东晋",
+      "建康"
+    ],
+    "Later Han": [
+      "东汉",
+      "洛阳"
+    ],
+    "Eastern Han": [
+      "东汉",
+      "洛阳"
+    ],
+    "Western Han": [
+      "西汉",
+      "长安"
+    ],
+    "Northern Qi": [
+      "北齐",
+      "邺"
+    ],
+    "Western Wei": [
+      "西魏",
+      "长安"
+    ],
+    "Eastern Wei": [
+      "东魏",
+      "邺"
+    ],
+    "Later Liang": [
+      "后梁",
+      "开封"
+    ],
+    "Later Tang": [
+      "后唐",
+      "洛阳"
+    ],
+    "Later Jin": [
+      "后晋",
+      "开封"
+    ],
+    "Later Zhou": [
+      "后周",
+      "开封"
+    ],
+    "Southern Tang": [
+      "南唐",
+      "金陵"
+    ],
+    "Former Shu": [
+      "前蜀",
+      "成都"
+    ],
+    "Later Shu": [
+      "后蜀",
+      "成都"
+    ],
+    "Wuyue": [
+      "吴越",
+      "杭州"
+    ],
+    "Min": [
+      "闽",
+      "福州"
+    ],
+    "Southern Han": [
+      "南汉",
+      "广州"
+    ],
+    "Later Jin (1616–1636)": [
+      "后金",
+      "盛京"
+    ],
+    "Kingdom of Tungning": [
+      "明郑",
+      "承天府"
+    ],
+    "Song Dynasty": [
+      "宋",
+      "开封"
+    ],
+    "Xia Dynasty": [
+      "夏",
+      ""
+    ],
+    "Qin Dynasty": [
+      "秦",
+      "咸阳"
+    ],
+    "Kingdom of Navarre": [
+      "纳瓦拉王国",
+      ""
+    ],
+    "Kingdom of Naples": [
+      "那不勒斯王国",
+      "那不勒斯"
+    ],
+    "Kingdom of Sicily": [
+      "西西里王国",
+      "巴勒莫"
+    ],
+    "Duchy of Milan": [
+      "米兰公国",
+      "米兰"
+    ],
+    "Republic of Florence": [
+      "佛罗伦萨共和国",
+      "佛罗伦萨"
+    ],
+    "Kingdom of Prussia": [
+      "普鲁士王国",
+      "柏林"
+    ],
+    "Dutch Republic": [
+      "荷兰共和国",
+      "阿姆斯特丹"
+    ],
+    "Kingdom of Ireland": [
+      "爱尔兰王国",
+      "都柏林"
+    ],
+    "Lower Egypt": [
+      "下埃及",
+      ""
+    ],
+    "Upper Egypt": [
+      "上埃及",
+      ""
+    ],
+    "Gutian Dynasty": [
+      "古提王朝",
+      ""
+    ],
+    "First Sealand Dynasty": [
+      "海地王朝",
+      ""
+    ],
+    "Fifteenth Dynasty of Egypt": [
+      "埃及第十五王朝",
+      ""
+    ],
+    "Seventeenth Dynasty of Egypt": [
+      "埃及第十七王朝",
+      ""
+    ],
+    "Sixteenth Dynasty of Egypt": [
+      "埃及第十六王朝",
+      ""
+    ],
+    "Minoan civilization": [
+      "米诺斯文明",
+      ""
+    ],
+    "Phoenicia": [
+      "腓尼基",
+      ""
+    ],
+    "Greek Dark Ages": [
+      "希腊黑暗时代",
+      ""
+    ],
+    "Kingdom of Israel": [
+      "以色列王国",
+      ""
+    ],
+    "Kingdom of Judah": [
+      "犹大王国",
+      ""
+    ],
+    "Phrygia": [
+      "弗里吉亚",
+      ""
+    ],
+    "Kingdom of Urartu": [
+      "乌拉尔图",
+      ""
+    ],
+    "Sabaeans": [
+      "赛伯伊人",
+      ""
+    ],
+    "Twenty-third Dynasty of Egypt": [
+      "埃及第二十三王朝",
+      ""
+    ],
+    "Twenty-second Dynasty of Egypt": [
+      "埃及第二十二王朝",
+      ""
+    ],
+    "Song": [
+      "宋国",
+      ""
+    ],
+    "Teng": [
+      "滕国",
+      ""
+    ],
+    "Chen": [
+      "陈国",
+      ""
+    ],
+    "Wey": [
+      "卫国",
+      ""
+    ],
+    "Cao": [
+      "曹国",
+      ""
+    ],
+    "Lu": [
+      "鲁国",
+      ""
+    ],
+    "Zheng": [
+      "郑国",
+      ""
+    ],
+    "Cai": [
+      "蔡",
+      ""
+    ],
+    "Yan": [
+      "燕国",
+      ""
+    ],
+    "Xu": [
+      "徐国",
+      ""
+    ],
+    "Phoenician Colonies": [
+      "古代殖民地",
+      ""
+    ],
+    "Macedonian Empire": [
+      "马其顿帝国",
+      ""
+    ],
+    "Twenty-sixth Dynasty of Egypt": [
+      "埃及第二十六王朝",
+      ""
+    ],
+    "Janapada of Avanti": [
+      "阿槃提",
+      ""
+    ],
+    "Janapada of Anga": [
+      "鸯伽",
+      ""
+    ],
+    "Janapada of Magadha": [
+      "摩揭陀",
+      ""
+    ],
+    "Janapada of Malla": [
+      "末罗",
+      ""
+    ],
+    "Janapada of Aśmaka": [
+      "阿萨玛卡",
+      ""
+    ],
+    "Janapada of Vajji": [
+      "弗栗恃国",
+      ""
+    ],
+    "Janapada of Kosala": [
+      "拘萨罗",
+      ""
+    ],
+    "Janapada of Matsya": [
+      "摩蹉国",
+      ""
+    ],
+    "Janapada of Surasena": [
+      "苏罗娑",
+      ""
+    ],
+    "Janapada of Vatsa": [
+      "跋蹉",
+      ""
+    ],
+    "Janapada of Kāśī": [
+      "迦尸国",
+      ""
+    ],
+    "Janapada of Kamboja": [
+      "剑浮沙",
+      ""
+    ],
+    "Yue": [
+      "越国",
+      ""
+    ],
+    "Magadha - Haryanka dynasty": [
+      "诃黎王朝",
+      ""
+    ],
+    "Mahajanapadas": [
+      "十六大国",
+      ""
+    ],
+    "Zhao": [
+      "赵国",
+      ""
+    ],
+    "Magadha - Shaishunaga dynasty": [
+      "幼龙王朝",
+      ""
+    ],
+    "Cimmerian Bosporus": [
+      "博斯普鲁斯王国",
+      ""
+    ],
+    "Wei": [
+      "魏国",
+      ""
+    ],
+    "Thirtieth Dynasty of Egypt": [
+      "埃及第三十王朝",
+      ""
+    ],
+    "Second Athenian League": [
+      "雅典第二帝国",
+      ""
+    ],
+    "Sacred Band of Thebes": [
+      "锡韦",
+      ""
+    ],
+    "Zhongshan": [
+      "中山市",
+      ""
+    ],
+    "Kingdom of Bithynia": [
+      "比提尼亚王国",
+      ""
+    ],
+    "Cyrenaica": [
+      "昔兰尼加",
+      ""
+    ],
+    "Laomedon": [
+      "米利都的拉俄墨东",
+      ""
+    ],
+    "Atropatene": [
+      "阿特罗帕特尼王国",
+      ""
+    ],
+    "Colchis": [
+      "科尔基斯",
+      ""
+    ],
+    "Early Cheras": [
+      "哲罗",
+      ""
+    ],
+    "Early Cholas": [
+      "早期朱罗",
+      ""
+    ],
+    "Antigonid Dynasty": [
+      "安提柯王朝",
+      ""
+    ],
+    "Aetolian League": [
+      "埃托利亚同盟",
+      ""
+    ],
+    "Achaean League": [
+      "亚该亚同盟",
+      ""
+    ],
+    "Galatia": [
+      "加拉太",
+      ""
+    ],
+    "Kingdom of Pergamon": [
+      "帕加马王国",
+      ""
+    ],
+    "Antigonid Macedonia": [
+      "安提柯王朝",
+      ""
+    ],
+    "Greek Colonies": [
+      "古代殖民地",
+      ""
+    ],
+    "Mamertines": [
+      "玛末丁人",
+      ""
+    ],
+    "Âu Lạc": [
+      "瓯貉国",
+      ""
+    ],
+    "Kingdom of Sophene": [
+      "索菲尼王国",
+      ""
+    ],
+    "Kingdom of Cappadocia": [
+      "卡帕多西亚王国",
+      ""
+    ],
+    "Mauretania": [
+      "毛里塔尼亚",
+      ""
+    ],
+    "Zhai": [
+      "秦朝",
+      ""
+    ],
+    "Dai": [
+      "代",
+      ""
+    ],
+    "Jibei": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Jiujiang": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Henan": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Hán": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Linjiang": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Chang-shan": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Sai": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Liaodong": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Jiaodong": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Yong": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Yin": [
+      "项羽十八诸侯",
+      ""
+    ],
+    "Gojoseon": [
+      "古朝鲜",
+      ""
+    ],
+    "Ankhwennefer": [
+      "安赫玛基斯",
+      ""
+    ],
+    "Korean Jin": [
+      "辰国",
+      ""
+    ],
+    "Kingdom of Numidia": [
+      "朱古达",
+      ""
+    ],
+    "Rhodes": [
+      "罗得岛",
+      ""
+    ],
+    "Judea": [
+      "犹大山地",
+      ""
+    ],
+    "Great Yuan": [
+      "元朝",
+      ""
+    ],
+    "Byeonhan": [
+      "弁韩",
+      ""
+    ],
+    "Italian City-States": [
+      "意大利城邦",
+      ""
+    ],
+    "Jinhan": [
+      "辰韩",
+      ""
+    ],
+    "Kanva Dynasty": [
+      "甘婆王朝",
+      ""
+    ],
+    "Caucasian Iberia": [
+      "高加索伊比利亚王国",
+      ""
+    ],
+    "Caucasian Albania": [
+      "高加索阿尔巴尼亚王国",
+      ""
+    ],
+    "Kingdom of Commagene": [
+      "科马基尼王国",
+      ""
+    ],
+    "Lazica": [
+      "拉齐卡",
+      ""
+    ],
+    "Kingdom of Adiabene": [
+      "阿迪亚波纳",
+      ""
+    ],
+    "Teotihuacan": [
+      "特奥蒂瓦坎",
+      ""
+    ],
+    "Goths": [
+      "哥特人",
+      ""
+    ],
+    "Trưng sisters": [
+      "征氏姐妹",
+      ""
+    ],
+    "Southern Xiongnu": [
+      "匈奴",
+      ""
+    ],
+    "Cao Cao": [
+      "曹操",
+      ""
+    ],
+    "Chámpa": [
+      "占城",
+      ""
+    ],
+    "Burgundians": [
+      "勃艮第人",
+      ""
+    ],
+    "Eastern Kushans": [
+      "贵霜帝国",
+      ""
+    ],
+    "Ripuarian Franks": [
+      "利普里安法兰克人",
+      ""
+    ],
+    "Western Kushans": [
+      "贵霜帝国",
+      ""
+    ],
+    "Indo-Sasanian Empire": [
+      "贵霜-萨珊王国",
+      ""
+    ],
+    "Gallic Empire": [
+      "高卢帝国",
+      ""
+    ],
+    "Palmyrene Empire": [
+      "巴尔米拉帝国",
+      ""
+    ],
+    "Tamna": [
+      "耽罗",
+      ""
+    ],
+    "Saxons": [
+      "撒克逊人",
+      ""
+    ],
+    "Yaudheya Republic": [
+      "姚德海雅",
+      ""
+    ],
+    "Cheng Han": [
+      "成汉",
+      ""
+    ],
+    "Former Zhao": [
+      "汉赵",
+      ""
+    ],
+    "Former Liang": [
+      "前凉",
+      ""
+    ],
+    "Vandals": [
+      "汪达尔人",
+      ""
+    ],
+    "Former Yan": [
+      "前燕",
+      ""
+    ],
+    "Later Zhao": [
+      "后赵",
+      ""
+    ],
+    "Baekje": [
+      "百济",
+      ""
+    ],
+    "Kalabhra Dynasty": [
+      "卡拉波拉王朝",
+      ""
+    ],
+    "Kidarites": [
+      "寄多罗王朝",
+      ""
+    ],
+    "Salian Franks": [
+      "萨利昂法兰克",
+      ""
+    ],
+    "Tarumanagara": [
+      "塔鲁曼内格拉",
+      ""
+    ],
+    "Silla": [
+      "新罗",
+      ""
+    ],
+    "Western Qin": [
+      "西秦",
+      ""
+    ],
+    "Western Yan": [
+      "西燕",
+      ""
+    ],
+    "Later Yan": [
+      "后燕",
+      ""
+    ],
+    "Later Qin": [
+      "后秦",
+      ""
+    ],
+    "Xionites": [
+      "西戎",
+      ""
+    ],
+    "Visigoths": [
+      "西哥特人",
+      ""
+    ],
+    "Northern Liang": [
+      "北凉",
+      ""
+    ],
+    "Southern Liang": [
+      "南凉",
+      ""
+    ],
+    "Southern Yan": [
+      "南燕",
+      ""
+    ],
+    "Western Liang": [
+      "西凉",
+      ""
+    ],
+    "Northern Yan": [
+      "北燕",
+      ""
+    ],
+    "Burgundian Kingdom": [
+      "勃艮第人王国",
+      ""
+    ],
+    "Kingdom of the Suebi": [
+      "苏维汇王国",
+      ""
+    ],
+    "Alans": [
+      "奄蔡",
+      ""
+    ],
+    "Brythons": [
+      "不列吞凯尔特人",
+      ""
+    ],
+    "Anglo-Saxon England": [
+      "盎格鲁-撒克逊英格兰",
+      ""
+    ],
+    "Kingdom of Alamannia": [
+      "阿勒曼尼亚",
+      ""
+    ],
+    "Maitraka Dynasty": [
+      "迈特拉卡王朝",
+      ""
+    ],
+    "Kingdom of Soissons": [
+      "苏瓦松王国",
+      ""
+    ],
+    "Lombards": [
+      "伦巴底人",
+      ""
+    ],
+    "Kingdom of Kent": [
+      "肯特王国",
+      ""
+    ],
+    "Kingdom of Sussex": [
+      "萨塞克斯王国",
+      ""
+    ],
+    "Ghassanids": [
+      "伽珊",
+      ""
+    ],
+    "Kingdom of the Gepids": [
+      "格皮德人",
+      ""
+    ],
+    "Kingdom of East Anglia": [
+      "东盎格利亚",
+      ""
+    ],
+    "Kingdom of Deira": [
+      "德伊勒",
+      ""
+    ],
+    "Kingdom of Wessex": [
+      "西撒克逊王国",
+      ""
+    ],
+    "Kingdom of Mercia": [
+      "麦西亚王国",
+      ""
+    ],
+    "Kingdom of Essex": [
+      "埃塞克斯王国",
+      ""
+    ],
+    "Kingdom of Lindsey": [
+      "林赛王国",
+      ""
+    ],
+    "Kingdom of Gwent": [
+      "格温特王国",
+      ""
+    ],
+    "Kingdom of Brycheiniog": [
+      "布雷切尼奥格王国",
+      ""
+    ],
+    "Kingdom of Gwynedd": [
+      "圭内斯王国",
+      ""
+    ],
+    "Kingdom of Powys": [
+      "波伊斯王国",
+      ""
+    ],
+    "Kingdom of Morgannwg": [
+      "摩根努格",
+      ""
+    ],
+    "Dál Riata": [
+      "达尔里阿达王国",
+      ""
+    ],
+    "Bavarians": [
+      "巴伐利亚人",
+      ""
+    ],
+    "Early Lý Dynasty": [
+      "前李朝",
+      ""
+    ],
+    "Classic Veracruz Culture": [
+      "古韦拉克鲁斯文化",
+      ""
+    ],
+    "Kingdom of Bernicia": [
+      "伯尼西亚",
+      ""
+    ],
+    "Georgia": [
+      "乔治亚 (消歧义)",
+      ""
+    ],
+    "Duchy of Thuringia": [
+      "图林根公国",
+      ""
+    ],
+    "Duchy of Benevento": [
+      "贝内文托公国",
+      ""
+    ],
+    "Duchy of Spoleto": [
+      "斯波莱托公国",
+      ""
+    ],
+    "Hwicce": [
+      "赫威赛",
+      ""
+    ],
+    "Breton Kingdoms": [
+      "布列塔尼",
+      ""
+    ],
+    "Karkota Dynasty": [
+      "卡尔科塔王朝",
+      ""
+    ],
+    "Kingdom of Rheged": [
+      "雷格德",
+      ""
+    ],
+    "Dumnonia": [
+      "顿诺尼亚王国",
+      ""
+    ],
+    "Magna Frisia": [
+      "弗里西亚王国",
+      ""
+    ],
+    "Frisia Kingdom": [
+      "弗里西亚",
+      ""
+    ],
+    "Harsha's Empire": [
+      "戒日王朝",
+      ""
+    ],
+    "Samo's Empire": [
+      "萨莫帝国",
+      ""
+    ],
+    "Gao Kaidao": [
+      "高开道",
+      ""
+    ],
+    "Kingdom of Lazica": [
+      "拉齐卡",
+      ""
+    ],
+    "Lavo Kingdom": [
+      "罗涡",
+      ""
+    ],
+    "Dabuyid Dynasty": [
+      "Dabuyid王朝",
+      ""
+    ],
+    "Strathclyde": [
+      "斯特拉斯克莱德地区",
+      ""
+    ],
+    "Carantania": [
+      "卡伦坦尼亚",
+      ""
+    ],
+    "Turks": [
+      "突厥",
+      ""
+    ],
+    "Sunda Kingdom": [
+      "巽他王国",
+      ""
+    ],
+    "Galuh Kingdom": [
+      "加卢王国",
+      ""
+    ],
+    "Cyprus Condominium": [
+      "塞浦路斯",
+      ""
+    ],
+    "Cornwall": [
+      "康沃尔郡",
+      ""
+    ],
+    "Water Chenla": [
+      "真腊",
+      ""
+    ],
+    "Land Chenla": [
+      "真腊",
+      ""
+    ],
+    "Kingdom of Asturias": [
+      "阿斯图里亚斯王国",
+      ""
+    ],
+    "Kannauj-Varman Dynasty": [
+      "根瑙杰",
+      ""
+    ],
+    "Duchy of Croatia": [
+      "克罗地亚公国",
+      ""
+    ],
+    "Emirate of Nekor": [
+      "内寇尔王国",
+      ""
+    ],
+    "Fihrids": [
+      "菲赫尔氏族",
+      ""
+    ],
+    "Kharijites": [
+      "哈瓦利吉派",
+      ""
+    ],
+    "Duchy of Naples": [
+      "普利亚和卡拉布里亚督军区",
+      ""
+    ],
+    "Duchy of Gascony": [
+      "加斯科涅公国",
+      ""
+    ],
+    "Frisia": [
+      "弗里西亚",
+      ""
+    ],
+    "Frisians": [
+      "弗里斯兰人",
+      ""
+    ],
+    "Idrisids": [
+      "伊德里斯王朝",
+      ""
+    ],
+    "Barghawata Conference": [
+      "卡萨布兰卡",
+      ""
+    ],
+    "Kingdom of the Iberians": [
+      "陶-克拉杰伊",
+      ""
+    ],
+    "Great Moravia": [
+      "大摩拉维亚公国",
+      ""
+    ],
+    "Kingdom of Pamplona": [
+      "纳瓦拉王国",
+      ""
+    ],
+    "Kingdom of Brittany": [
+      "布列塔尼王国",
+      ""
+    ],
+    "Shirvan": [
+      "希尔凡",
+      ""
+    ],
+    "Kingdom of Sobrarbe": [
+      "索夫拉韦王国",
+      ""
+    ],
+    "Emirate of Crete": [
+      "克里特埃米尔国",
+      ""
+    ],
+    "Magyars": [
+      "马札尔人",
+      ""
+    ],
+    "Middle Franks": [
+      "洛泰尔王国",
+      ""
+    ],
+    "East Franks": [
+      "东法兰克王国",
+      ""
+    ],
+    "Ganzhou Kingdom": [
+      "甘州回鹘",
+      ""
+    ],
+    "Giudicato of Cagliari": [
+      "卡利亚里王国",
+      ""
+    ],
+    "Ziyadid dynasty": [
+      "齐亚德王朝",
+      ""
+    ],
+    "Giudicato of Gallura": [
+      "加卢拉王国",
+      ""
+    ],
+    "Zaydi Alid dynasties": [
+      "阿拉菲德王朝",
+      ""
+    ],
+    "Giudicato of Logudoro": [
+      "鲁古多罗王国",
+      ""
+    ],
+    "Giudicato of Arborea": [
+      "阿波利亚王国",
+      ""
+    ],
+    "County of Ribagorza": [
+      "里瓦戈萨",
+      ""
+    ],
+    "County of Urgell": [
+      "乌赫尔伯国",
+      ""
+    ],
+    "Toltec": [
+      "托尔特克",
+      ""
+    ],
+    "Tulunids": [
+      "图伦王朝",
+      ""
+    ],
+    "County of Pallars": [
+      "帕利亚斯伯国",
+      ""
+    ],
+    "Danelaw": [
+      "丹麦法区",
+      ""
+    ],
+    "Kingdom of Seisyllwg": [
+      "塞瑟卢格",
+      ""
+    ],
+    "Lower Burgundy": [
+      "下勃艮第",
+      ""
+    ],
+    "Bagratid Armenia": [
+      "亚美尼亚",
+      ""
+    ],
+    "Upper Burgundy": [
+      "上勃艮第王国合并",
+      ""
+    ],
+    "Duchy of Bohemia": [
+      "波希米亚公国",
+      ""
+    ],
+    "County of Rosellón": [
+      "鲁西永",
+      ""
+    ],
+    "Sajid Dynasty": [
+      "萨吉德王朝",
+      ""
+    ],
+    "County of Berga": [
+      "贝尔加",
+      ""
+    ],
+    "County of Barcelona": [
+      "赫罗纳",
+      ""
+    ],
+    "Qarmatians": [
+      "卡拉米塔教派",
+      ""
+    ],
+    "Kingdom of Alba": [
+      "阿尔巴王国",
+      ""
+    ],
+    "Chandra Dynasty": [
+      "钱德拉王朝",
+      ""
+    ],
+    "Kingdom of Lower Burgundy": [
+      "下勃艮第",
+      ""
+    ],
+    "Yan Kingdom": [
+      "燕",
+      ""
+    ],
+    "Kingdom of Galicia": [
+      "加利西亚王国",
+      ""
+    ],
+    "Later Liang Dynasty": [
+      "后梁",
+      ""
+    ],
+    "Kingdom of Germany": [
+      "德意志王国",
+      ""
+    ],
+    "Kingdom of Vaspurakan": [
+      "瓦斯普拉干王国",
+      ""
+    ],
+    "Chimor": [
+      "奇穆王国",
+      ""
+    ],
+    "Southern Chu": [
+      "马楚",
+      ""
+    ],
+    "Qi Kingdom": [
+      "岐",
+      ""
+    ],
+    "Early Balinese Kingdoms": [
+      "巴厘岛王国",
+      ""
+    ],
+    "Duchy of Normandy": [
+      "诺曼底公国",
+      ""
+    ],
+    "Former Jin": [
+      "晋",
+      ""
+    ],
+    "Upper Burgundy and Italy": [
+      "上勃艮第王国合并",
+      ""
+    ],
+    "Kingdom of Croatia": [
+      "克罗地亚王国 (925–1102)",
+      ""
+    ],
+    "Jingnan": [
+      "荆南",
+      ""
+    ],
+    "Icelandic Commonwealth": [
+      "冰岛自由邦",
+      ""
+    ],
+    "Kingdom of Arles": [
+      "阿尔勒王国",
+      ""
+    ],
+    "Ziyarid dynasty": [
+      "齐亚尔王朝",
+      ""
+    ],
+    "Zagwe dynasty": [
+      "扎格维王朝",
+      ""
+    ],
+    "Jaemtland": [
+      "耶姆特兰",
+      ""
+    ],
+    "Abbasid Caliphate/Buyid Dynasty": [
+      "阿拔斯王朝",
+      ""
+    ],
+    "Duchy of Brittany": [
+      "布列塔尼公国",
+      ""
+    ],
+    "Chaulukya Dynasty": [
+      "索兰奇王国",
+      ""
+    ],
+    "Chandela Kingdom": [
+      "昌德拉王朝",
+      ""
+    ],
+    "Utpala Dynasty": [
+      "Utpala王朝",
+      ""
+    ],
+    "County of Toulouse": [
+      "图卢兹伯国",
+      ""
+    ],
+    "County of Blôis": [
+      "布卢瓦伯国",
+      ""
+    ],
+    "County of Vexin": [
+      "韦克桑",
+      ""
+    ],
+    "County of Flanders": [
+      "佛兰德伯国",
+      ""
+    ],
+    "Seljuk Dynasty": [
+      "塞尔柱王朝",
+      ""
+    ],
+    "County of Maine": [
+      "曼恩",
+      ""
+    ],
+    "County of Vermandois": [
+      "韦尔芒杜瓦",
+      ""
+    ],
+    "County of Rouergue": [
+      "鲁埃格",
+      ""
+    ],
+    "County of Champagne": [
+      "香槟伯国",
+      ""
+    ],
+    "County of Anjou": [
+      "安茹伯爵",
+      ""
+    ],
+    "Duchy of Aquitaine": [
+      "阿基坦公国",
+      ""
+    ],
+    "County of Osona": [
+      "奥索纳伯爵",
+      ""
+    ],
+    "Duchy of Burgundy": [
+      "勃艮第公国",
+      ""
+    ],
+    "County of Ampuria": [
+      "安普里亚斯伯国",
+      ""
+    ],
+    "Taifa of Valencia": [
+      "瓦伦西亚泰法",
+      ""
+    ],
+    "Taifa of Toledo": [
+      "泰法王国",
+      ""
+    ],
+    "Republic of Pisa": [
+      "比萨共和国",
+      ""
+    ],
+    "Taifa of Dénia": [
+      "德尼亚泰法",
+      ""
+    ],
+    "Taifa of Badajoz": [
+      "巴达霍斯泰法",
+      ""
+    ],
+    "Taifa of Tortosa": [
+      "托尔托萨泰法",
+      ""
+    ],
+    "County of Nevers": [
+      "讷韦尔子爵",
+      ""
+    ],
+    "Republic of Genoa": [
+      "热那亚共和国",
+      ""
+    ],
+    "Taifa of Zaragoza": [
+      "萨拉戈萨王国",
+      ""
+    ],
+    "Taifa of Murcia": [
+      "穆尔西亚王国",
+      ""
+    ],
+    "Kingdom of Aragon": [
+      "阿拉贡王国",
+      ""
+    ],
+    "Hammadid Dynasty": [
+      "哈马德王国",
+      ""
+    ],
+    "Taifa of Seville": [
+      "塞维利亚泰法",
+      ""
+    ],
+    "Kahuripan": [
+      "固里班",
+      ""
+    ],
+    "Takrur": [
+      "塔克鲁尔王国",
+      ""
+    ],
+    "Kingdom of Janggala": [
+      "戎牙路",
+      ""
+    ],
+    "Western Karakhanid Khanate": [
+      "喀喇汗国",
+      ""
+    ],
+    "Zirid dynasty": [
+      "齐尔王朝",
+      ""
+    ],
+    "Principality of Volhynia": [
+      "沃伦公国",
+      ""
+    ],
+    "Great Principality of Duklja": [
+      "杜克里亚",
+      ""
+    ],
+    "Principality of Rostov-Suzdal": [
+      "弗拉基米尔-苏兹达尔大公国",
+      ""
+    ],
+    "Eastern Ganga Kingdom": [
+      "东恒伽王朝",
+      ""
+    ],
+    "Uyunid Emirate": [
+      "乌尤尼德王朝",
+      ""
+    ],
+    "Kingdom of Polonnaruwa": [
+      "波隆纳鲁瓦王国",
+      ""
+    ],
+    "Kingdom of Duklja": [
+      "杜克里亚",
+      ""
+    ],
+    "Gahadavala Dynasty": [
+      "加哈达瓦拉",
+      ""
+    ],
+    "Kingdom of the Isles": [
+      "马恩岛及群岛王国",
+      ""
+    ],
+    "Danishmendids": [
+      "达尼什曼德王朝",
+      ""
+    ],
+    "Khwarezmid Dynasty": [
+      "花剌子模王朝",
+      ""
+    ],
+    "Grand Principality of Serbia": [
+      "塞尔维亚大王子",
+      ""
+    ],
+    "Principality of Ryazan": [
+      "梁赞公国",
+      ""
+    ],
+    "County of Edessa": [
+      "埃德萨伯国",
+      ""
+    ],
+    "Armenian Kingdom of Cilicia": [
+      "奇里乞亚亚美尼亚王国",
+      ""
+    ],
+    "Kingdom of Jerusalem": [
+      "耶路撒冷王国",
+      ""
+    ],
+    "Hoysala Kingdom": [
+      "曷萨拉王朝",
+      ""
+    ],
+    "County of Tripoli": [
+      "的黎波里伯国",
+      ""
+    ],
+    "Principality of Vitebsk": [
+      "维捷布斯克公爵",
+      ""
+    ],
+    "Duchy of Silesia": [
+      "西里西亚公国",
+      ""
+    ],
+    "County of Portugal": [
+      "葡萄牙伯国",
+      ""
+    ],
+    "Zengid dynasty": [
+      "赞吉王朝",
+      ""
+    ],
+    "Duchy of Łęczyca": [
+      "文奇察省",
+      ""
+    ],
+    "Duchy of Greater Poland": [
+      "大波兰公爵",
+      ""
+    ],
+    "Duchy of Sandomierz": [
+      "桑多梅日公国",
+      ""
+    ],
+    "Duchy of Masovia": [
+      "马佐夫舍公国",
+      ""
+    ],
+    "Sultanate of Kedah": [
+      "吉打苏丹王朝",
+      ""
+    ],
+    "Angevin Empire": [
+      "安茹帝国",
+      ""
+    ],
+    "Taifa of Córdoba": [
+      "哥多华王国",
+      ""
+    ],
+    "Mahdids": [
+      "玛赫迪王朝",
+      ""
+    ],
+    "Duchy of Opole": [
+      "奥波莱公国",
+      ""
+    ],
+    "Kingdom of Mann": [
+      "马恩岛及群岛王国",
+      ""
+    ],
+    "Kakatiya Dynasty": [
+      "卡卡提亚王朝",
+      ""
+    ],
+    "Kingdom of Serbia": [
+      "塞尔维亚王国",
+      ""
+    ],
+    "Shunten Dynasty": [
+      "舜天王朝",
+      ""
+    ],
+    "Banate of Bosnia": [
+      "匈牙利皇冠领地波士尼亚省",
+      ""
+    ],
+    "Principality of Turov and Pinsk": [
+      "图罗夫-平斯克公国",
+      ""
+    ],
+    "Chimu Empire": [
+      "奇穆王国",
+      ""
+    ],
+    "Kingdom of Cyprus": [
+      "塞浦路斯王国",
+      ""
+    ],
+    "Livonian Brothers of the Sword": [
+      "宝剑骑士团",
+      ""
+    ],
+    "Despotate of Epirus": [
+      "伊庇鲁斯采邑",
+      ""
+    ],
+    "Latin Empire": [
+      "拉丁帝国",
+      ""
+    ],
+    "County of Armagnac": [
+      "阿尔马尼亚克行省",
+      ""
+    ],
+    "County of Auvergne": [
+      "奥弗涅",
+      ""
+    ],
+    "Duchy of Athens": [
+      "雅典公国",
+      ""
+    ],
+    "Empire of Trebizond": [
+      "特拉比松帝国",
+      ""
+    ],
+    "Nicaean Empire": [
+      "尼西亚帝国",
+      ""
+    ],
+    "Kingdom of Thessalonica": [
+      "萨洛尼卡王国",
+      ""
+    ],
+    "Domain of Rhodes": [
+      "罗得岛",
+      ""
+    ],
+    "County of Touraine": [
+      "图赖讷",
+      ""
+    ],
+    "Duchy of the Archipelago": [
+      "爱琴群岛公国",
+      ""
+    ],
+    "Singhasari": [
+      "信诃沙里",
+      ""
+    ],
+    "County of Foix": [
+      "富瓦伯国",
+      ""
+    ],
+    "Empire of Thessalonica": [
+      "塞萨洛尼基帝国",
+      ""
+    ],
+    "Zayyanid dynasty": [
+      "扎亚尼德王朝",
+      ""
+    ],
+    "Ceylon": [
+      "斯里兰卡",
+      ""
+    ],
+    "County of Artois": [
+      "阿图瓦伯国",
+      ""
+    ],
+    "Emirate of Granada": [
+      "格拉纳达酋长国",
+      ""
+    ],
+    "Capetian House of Anjou": [
+      "卡佩-安茹王朝",
+      ""
+    ],
+    "Duchy of Głogów": [
+      "格沃古夫公国",
+      ""
+    ],
+    "County of Holland": [
+      "荷兰伯国",
+      ""
+    ],
+    "House of Luxembourg": [
+      "卢森堡王朝",
+      ""
+    ],
+    "Margraviate of Brandenburg": [
+      "勃兰登堡侯爵",
+      ""
+    ],
+    "Duchy of Styria": [
+      "施蒂利亚公国",
+      ""
+    ],
+    "County of Savoy": [
+      "萨沃伊伯爵",
+      ""
+    ],
+    "House of Hohenstaufen": [
+      "霍亨斯陶芬王朝",
+      ""
+    ],
+    "Dauphiné": [
+      "多菲内",
+      ""
+    ],
+    "House of Wittelsbach": [
+      "维特尔斯巴赫王朝",
+      ""
+    ],
+    "County of Brabant": [
+      "布拉班特伯国",
+      ""
+    ],
+    "House of Habsburg": [
+      "哈布斯堡王朝",
+      ""
+    ],
+    "Bahrani Dynasty": [
+      "哈萨绿洲",
+      ""
+    ],
+    "Duchy of Bavaria": [
+      "巴伐利亚公国",
+      ""
+    ],
+    "House of Ascania": [
+      "阿斯坎尼王朝",
+      ""
+    ],
+    "Thessaly": [
+      "色萨利",
+      ""
+    ],
+    "Samudera Pasai Sultanate": [
+      "苏木都剌国",
+      ""
+    ],
+    "Comtat Venaissin": [
+      "沃奈桑伯爵领地",
+      ""
+    ],
+    "House of Anjou-Sicily": [
+      "卡佩-安茹王朝",
+      ""
+    ],
+    "Kingdom of Majorca": [
+      "马略卡王国",
+      ""
+    ],
+    "Duchy of Jawor": [
+      "亚沃尔公国",
+      ""
+    ],
+    "Duchy of Legnica": [
+      "莱格尼察公爵",
+      ""
+    ],
+    "Grand Duchy of Kraków": [
+      "克拉科夫大公国",
+      ""
+    ],
+    "Pskov Republic": [
+      "普斯科夫共和国",
+      ""
+    ],
+    "Kingdom of Syrmia": [
+      "斯雷姆",
+      ""
+    ],
+    "Ifat Sultanate": [
+      "伊法特苏丹国",
+      ""
+    ],
+    "Duchy of Racibórz": [
+      "拉蒂博尔公国",
+      ""
+    ],
+    "Duchy of Bytom": [
+      "比托姆公爵",
+      ""
+    ],
+    "Cuzco": [
+      "库斯科",
+      ""
+    ],
+    "Malaya": [
+      "马来亚",
+      ""
+    ],
+    "Khalji Dynasty": [
+      "卡尔吉王朝",
+      ""
+    ],
+    "Principality of Pinsk": [
+      "图罗夫-平斯克公国",
+      ""
+    ],
+    "Principality of Vladimir-Suzdal": [
+      "弗拉基米尔-苏兹达尔大公国",
+      ""
+    ],
+    "Swiss Confederation": [
+      "瑞士联邦",
+      ""
+    ],
+    "Lan Na Kingdom": [
+      "兰纳",
+      ""
+    ],
+    "Principality of Turov": [
+      "图罗夫-平斯克公国",
+      ""
+    ],
+    "Tver": [
+      "特维尔",
+      ""
+    ],
+    "Beylik of Aydin": [
+      "艾登王朝",
+      ""
+    ],
+    "Beylik of Karasi": [
+      "卡拉斯王朝",
+      ""
+    ],
+    "Beylik of Hamid": [
+      "哈米德",
+      ""
+    ],
+    "Beylik of Sinop": [
+      "桑达尔王朝",
+      ""
+    ],
+    "Eshrefids": [
+      "埃斯雷夫侯国",
+      ""
+    ],
+    "Germiyanids": [
+      "格尔米扬",
+      ""
+    ],
+    "Michoacán": [
+      "米却肯州",
+      ""
+    ],
+    "Kastamonu": [
+      "卡斯塔莫努",
+      ""
+    ],
+    "Beylik of Menteshe": [
+      "门泰谢",
+      ""
+    ],
+    "Beylik of Isfendiyar": [
+      "桑达尔王朝",
+      ""
+    ],
+    "Ahi Republic": [
+      "阿赫茨兄弟会",
+      ""
+    ],
+    "Beylik of Karaman": [
+      "卡拉曼公国",
+      ""
+    ],
+    "Principality of Wallachia": [
+      "瓦拉几亚",
+      ""
+    ],
+    "Beylik of Saruhan": [
+      "萨鲁汗侯国",
+      ""
+    ],
+    "Hokuzan": [
+      "北山王国",
+      ""
+    ],
+    "Catalan Company": [
+      "卡塔兰军团",
+      ""
+    ],
+    "Jaffna kingdom": [
+      "贾夫纳王国",
+      ""
+    ],
+    "Tenochtitlan": [
+      "特诺奇提特兰",
+      ""
+    ],
+    "Beylik of Teke": [
+      "泰凯侯国",
+      ""
+    ],
+    "Earldom of Ulster": [
+      "阿尔斯特伯爵",
+      ""
+    ],
+    "Earldom of Desmond": [
+      "迪斯蒙伯爵",
+      ""
+    ],
+    "Kenmu Restoration": [
+      "建武新政",
+      ""
+    ],
+    "Principality of Theodoro": [
+      "西奥多罗公国",
+      ""
+    ],
+    "Free County of Burgundy": [
+      "勃艮第伯国",
+      ""
+    ],
+    "Danish Magnates": [
+      "克里斯托弗二世",
+      ""
+    ],
+    "House of Bourbon": [
+      "波旁王朝",
+      ""
+    ],
+    "Electorate of Trier": [
+      "特里尔选侯国",
+      ""
+    ],
+    "Kartids": [
+      "卡尔提德王朝",
+      ""
+    ],
+    "Sarbadars": [
+      "萨尔巴达尔",
+      ""
+    ],
+    "Injuids": [
+      "因贾王朝",
+      ""
+    ],
+    "Chobanids": [
+      "丘拜尼王朝",
+      ""
+    ],
+    "Sind-Samma Dynasty": [
+      "萨玛王朝",
+      ""
+    ],
+    "Commune of the Zealots": [
+      "塞萨洛尼基",
+      ""
+    ],
+    "Jalayirid Sultanate": [
+      "札剌亦儿王朝",
+      ""
+    ],
+    "Beylik of Dulkadir": [
+      "杜勒卡迪尔王朝",
+      ""
+    ],
+    "Serbian Empire": [
+      "塞尔维亚帝国",
+      ""
+    ],
+    "Electorate of Saxony": [
+      "萨克森选侯国",
+      ""
+    ],
+    "House of Tocco": [
+      "凯法利尼亚与扎金索斯公爵领地",
+      ""
+    ],
+    "House of Valois-Anjou": [
+      "瓦卢瓦-安茹王室",
+      ""
+    ],
+    "Despotate of Vidin": [
+      "维丁沙皇国",
+      ""
+    ],
+    "Despotate of Dobruja": [
+      "多布罗加专制公国",
+      ""
+    ],
+    "Tondo": [
+      "汤都王国",
+      ""
+    ],
+    "Ava Kingdom": [
+      "阿瓦王朝",
+      ""
+    ],
+    "Serbian Despots": [
+      "塞尔维亚王国",
+      ""
+    ],
+    "Qara Qoyunlu": [
+      "黑羊王朝",
+      ""
+    ],
+    "Albanian Principalities": [
+      "阿尔巴尼亚大公国",
+      ""
+    ],
+    "County of Béarn": [
+      "贝阿恩",
+      ""
+    ],
+    "Margraviate of Moravia": [
+      "摩拉维亚伯国",
+      ""
+    ],
+    "Kingdom of Bosnia": [
+      "波斯尼亚王国",
+      ""
+    ],
+    "Ramadanid Emirate": [
+      "拉玛赞",
+      ""
+    ],
+    "Principality of Valona and Kanina": [
+      "瓦罗纳公国",
+      ""
+    ],
+    "Chüzan": [
+      "中山王国",
+      ""
+    ],
+    "Republic of Ragusa": [
+      "拉古萨共和国",
+      ""
+    ],
+    "Sayyid Dynasty": [
+      "赛义德王朝",
+      ""
+    ],
+    "Makuria Kingdom": [
+      "马库里亚",
+      ""
+    ],
+    "Electorate of Brandenburg": [
+      "勃兰登堡选侯国",
+      ""
+    ],
+    "Livonian Conference": [
+      "立窝尼亚语",
+      ""
+    ],
+    "Lê Dynasty": [
+      "后黎朝",
+      ""
+    ],
+    "Kingdom of Mrauk U": [
+      "妙乌王国",
+      ""
+    ],
+    "Duchy of Luxembourg": [
+      "卢森堡公国",
+      ""
+    ],
+    "Aztec Triple Alliance": [
+      "阿兹特克联盟",
+      ""
+    ],
+    "Duchy of Lorraine": [
+      "洛林公国",
+      ""
+    ],
+    "Khanate of Kazan": [
+      "喀山汗国",
+      ""
+    ],
+    "Ambrosian Republic": [
+      "安布罗西亚共和国",
+      ""
+    ],
+    "House of Oldenburg": [
+      "奥尔登堡王朝",
+      ""
+    ],
+    "Ryazan": [
+      "梁赞",
+      ""
+    ],
+    "Qasim Khanate": [
+      "卡西姆汗国",
+      ""
+    ],
+    "Duchy of Saint Sava": [
+      "圣萨瓦公国",
+      ""
+    ],
+    "Sultanate of Sulu": [
+      "苏禄苏丹国",
+      ""
+    ],
+    "Tahirid Sultanate": [
+      "塔希尔王朝",
+      ""
+    ],
+    "Sultanate of Malacca": [
+      "马六甲苏丹王朝",
+      ""
+    ],
+    "Kingdom of Kartli": [
+      "卡尔特利王国",
+      ""
+    ],
+    "East Turkestan": [
+      "东突厥斯坦",
+      ""
+    ],
+    "Kingdom of Imereti": [
+      "伊梅雷蒂王国",
+      ""
+    ],
+    "Samtskhe-Saatabago": [
+      "萨姆茨赫公国",
+      ""
+    ],
+    "Kingdom of Kakheti": [
+      "卡赫蒂王国",
+      ""
+    ],
+    "Wattasid dynasty": [
+      "瓦塔斯王朝",
+      ""
+    ],
+    "Demak Sultanate": [
+      "淡目国",
+      ""
+    ],
+    "Sultanate of Cirebon": [
+      "井里汶苏丹国",
+      ""
+    ],
+    "Ahmadnagar Sultanate": [
+      "艾哈迈德讷格尔王朝",
+      ""
+    ],
+    "Eastern Chagatai Khanate": [
+      "蒙兀儿斯坦",
+      ""
+    ],
+    "Bidar Sultanate": [
+      "比德尔苏丹国",
+      ""
+    ],
+    "Shaybanids": [
+      "昔班尼王朝",
+      ""
+    ],
+    "Rajahnate of Cebu": [
+      "宿雾拉贾国",
+      ""
+    ],
+    "Sultanate of Gowa": [
+      "戈瓦苏丹国",
+      ""
+    ],
+    "Sultanate of Bone": [
+      "苏丹",
+      ""
+    ],
+    "Sultanate of Aceh": [
+      "亚齐苏丹国",
+      ""
+    ],
+    "Blambangan Kingdom": [
+      "布拉邦岸王国",
+      ""
+    ],
+    "Golconda Sultanate": [
+      "顾特卜沙希王朝",
+      ""
+    ],
+    "Balinese Kingdom": [
+      "巴厘岛王国",
+      ""
+    ],
+    "Western Moghulistan": [
+      "蒙兀儿斯坦",
+      ""
+    ],
+    "Sultanate of Maguindanao": [
+      "马京达瑙苏丹国",
+      ""
+    ],
+    "Maynila": [
+      "梅尼拉王国",
+      ""
+    ],
+    "Sultanate of Banjar": [
+      "班贾尔苏丹国",
+      ""
+    ],
+    "Duchy of Prussia": [
+      "普鲁士公国",
+      ""
+    ],
+    "Nayaks of Madurai": [
+      "马杜赖纳亚克王朝",
+      ""
+    ],
+    "Sultanate of Banten": [
+      "万丹苏丹",
+      ""
+    ],
+    "Sultanate of Perak": [
+      "霹雳苏丹",
+      ""
+    ],
+    "Eastern Hungarian Kingdom": [
+      "东匈牙利王国",
+      ""
+    ],
+    "Nayaks of Thanjavur": [
+      "坦贾武尔纳亚克王国",
+      ""
+    ],
+    "Hussain Shahi Dynasty": [
+      "胡塞因沙希王朝",
+      ""
+    ],
+    "Sur Empire": [
+      "苏尔王朝",
+      ""
+    ],
+    "Itza Mayans": [
+      "伊察",
+      ""
+    ],
+    "Sultanate of Harar": [
+      "阿达尔苏丹国",
+      ""
+    ],
+    "Don Cossacks": [
+      "Донские哥萨克",
+      ""
+    ],
+    "France Antarctique": [
+      "法属南境",
+      ""
+    ],
+    "House of Savoy": [
+      "萨伏依王朝",
+      ""
+    ],
+    "Kingdom of Mysore": [
+      "迈索尔土邦",
+      ""
+    ],
+    "Trịnh lords": [
+      "郑主",
+      ""
+    ],
+    "Kingdom of Pajana": [
+      "布吉文",
+      ""
+    ],
+    "Union of Utrecht": [
+      "乌得勒支同盟",
+      ""
+    ],
+    "Tümed": [
+      "土默特部",
+      ""
+    ],
+    "Khoshut Khanate": [
+      "和硕特汗国",
+      ""
+    ],
+    "Mataram Sultanate": [
+      "马打兰国",
+      ""
+    ],
+    "Jesuit Reducciones": [
+      "瓜拉尼人聚居地的耶稣会传教区",
+      ""
+    ],
+    "Lan Na": [
+      "兰纳",
+      ""
+    ],
+    "Oyo Empire": [
+      "奥约帝国",
+      ""
+    ],
+    "English Colonial Empire": [
+      "英格兰海外领地",
+      ""
+    ],
+    "Sultanate of Sukadana": [
+      "单重布啰国",
+      ""
+    ],
+    "Sultanate of Sambas": [
+      "三发苏丹国",
+      ""
+    ],
+    "Sultanate of Mempawah": [
+      "喃吧哇王国",
+      ""
+    ],
+    "Later Jin Dynasty": [
+      "后晋",
+      ""
+    ],
+    "Huguenots": [
+      "雨格诺派",
+      ""
+    ],
+    "Yarubid dynasty": [
+      "雅鲁布王朝",
+      ""
+    ],
+    "Li Zicheng": [
+      "李自成",
+      ""
+    ],
+    "Kalmyk Khanate": [
+      "卡尔梅克汗国",
+      ""
+    ],
+    "Kingdom of Bhutan": [
+      "不丹",
+      ""
+    ],
+    "Qasimids": [
+      "罗瑟斯",
+      ""
+    ],
+    "Catalonia": [
+      "加泰罗尼亚自治区",
+      ""
+    ],
+    "Irish Catholic Confederation": [
+      "爱尔兰邦联",
+      ""
+    ],
+    "Kutai Kingdom": [
+      "古泰",
+      ""
+    ],
+    "Commonwealth of England": [
+      "英格兰联邦",
+      ""
+    ],
+    "Dutch Cape Coast": [
+      "海岸角",
+      ""
+    ],
+    "Danish India": [
+      "丹属印度",
+      ""
+    ],
+    "Zaporozhian Cossacks": [
+      "札波罗结哥萨克",
+      ""
+    ],
+    "Sloboda Ukraine": [
+      "斯沃博达乌克兰",
+      ""
+    ],
+    "Sultanate of Jambi": [
+      "占碑苏丹国",
+      ""
+    ],
+    "French India": [
+      "法属印度",
+      ""
+    ],
+    "Principality of Upper Hungary": [
+      "上匈牙利公国",
+      ""
+    ],
+    "Dutch Ceylon": [
+      "荷属锡兰",
+      ""
+    ],
+    "Bali": [
+      "巴厘省",
+      ""
+    ],
+    "French Colonial Vietnam": [
+      "法属印度支那",
+      ""
+    ],
+    "Pro-Habsburg Spain": [
+      "西班牙哈布斯堡王朝",
+      ""
+    ],
+    "Regency of Algiers": [
+      "奥斯曼阿尔及利亚",
+      ""
+    ],
+    "Beylik of Tunis": [
+      "突尼斯贝伊国",
+      ""
+    ],
+    "Vientiane": [
+      "万象",
+      ""
+    ],
+    "Hotaki Dynasty": [
+      "汉达基王朝",
+      ""
+    ],
+    "Sikhs": [
+      "锡克人",
+      ""
+    ],
+    "Kingdom of Champasak": [
+      "占巴塞",
+      ""
+    ],
+    "Kingdom of Luang Phrabang": [
+      "琅勃拉邦",
+      ""
+    ],
+    "Electorate of Hanover": [
+      "汉诺威选侯国",
+      ""
+    ],
+    "Karamanli Dynasty": [
+      "卡拉曼里王朝",
+      ""
+    ],
+    "Carnatic Sultanate": [
+      "卡纳蒂克苏丹国",
+      ""
+    ],
+    "Kingdom of Sardinia": [
+      "撒丁王国",
+      ""
+    ],
+    "Sultanate of Terengganu": [
+      "登嘉楼苏丹",
+      ""
+    ],
+    "Hyderabad State": [
+      "海得拉巴",
+      ""
+    ],
+    "Greenland": [
+      "格陵兰",
+      ""
+    ],
+    "Duchy of Courland": [
+      "库尔兰和瑟米加利亚公国",
+      ""
+    ],
+    "Sultanate of Kutai Kartanegara": [
+      "古泰",
+      ""
+    ],
+    "Kingdom of Bulungan": [
+      "布隆甘苏丹国",
+      ""
+    ],
+    "Sultanate of Selangor": [
+      "雪兰莪苏丹",
+      ""
+    ],
+    "Sultan of Yogyakarta": [
+      "哈孟古布沃诺",
+      ""
+    ],
+    "Surakarta Sunanate": [
+      "梭罗苏丹国",
+      ""
+    ],
+    "Gurkha Kingdom": [
+      "廓尔喀",
+      ""
+    ],
+    "Khanates of the Caucasus": [
+      "高加索诸汗国",
+      ""
+    ],
+    "Afsharid Iran": [
+      "阿夫沙尔帝国",
+      ""
+    ],
+    "Corsican Republic": [
+      "科西嘉共和国",
+      ""
+    ],
+    "Kuwait": [
+      "科威特",
+      ""
+    ],
+    "Bahrain": [
+      "巴林",
+      ""
+    ],
+    "Kelantan": [
+      "吉兰丹",
+      ""
+    ],
+    "Kingdom of Naples (Napoleonic)": [
+      "那不勒斯王国 (1806年－1815年)",
+      ""
+    ],
+    "Sikh Confederacy": [
+      "锡克联盟",
+      ""
+    ],
+    "Thonburi Kingdom": [
+      "吞武里王朝",
+      ""
+    ],
+    "Kathmandu": [
+      "加德满都",
+      ""
+    ],
+    "Tây Sơn dynasty": [
+      "西山朝",
+      ""
+    ],
+    "Chiangmai": [
+      "清迈",
+      ""
+    ],
+    "Vermont Republic": [
+      "佛蒙特共和国",
+      ""
+    ],
+    "House of Khalifa": [
+      "阿勒·哈里发家族",
+      ""
+    ],
+    "Emirate of Bukhara": [
+      "布哈拉埃米尔国",
+      ""
+    ],
+    "Freetown Colony": [
+      "弗里敦",
+      ""
+    ],
+    "French Colony of Guiana": [
+      "法属圭亚那",
+      ""
+    ],
+    "Kingdom of Hawaï'i": [
+      "夏威夷王国",
+      ""
+    ],
+    "Vietnam": [
+      "越南",
+      ""
+    ],
+    "French First Republic": [
+      "法兰西第一共和国",
+      ""
+    ],
+    "Haiti": [
+      "海地",
+      ""
+    ],
+    "British Cape Colony": [
+      "开普殖民地",
+      ""
+    ],
+    "Batavian Republic": [
+      "巴达维亚共和国",
+      ""
+    ],
+    "British Ceylon": [
+      "英属锡兰",
+      ""
+    ],
+    "Ligurian Republic": [
+      "利古里亚共和国",
+      ""
+    ],
+    "Grand Duchy of Tuscany": [
+      "托斯卡纳大公国",
+      ""
+    ],
+    "Cisalpine Republic": [
+      "奇萨尔皮尼共和国",
+      ""
+    ],
+    "Helvetic Republic": [
+      "海尔维第共和国",
+      ""
+    ],
+    "Sikh Empire": [
+      "锡克帝国",
+      ""
+    ],
+    "Cispadane Republic": [
+      "奇斯帕达纳共和国",
+      ""
+    ],
+    "Septinsular Republic": [
+      "塞普丁修拉共和国",
+      ""
+    ],
+    "Napoleonic Batavia Republic": [
+      "巴达维亚共和国 (荷兰殖民地)总督",
+      ""
+    ],
+    "Electorate of Württemberg": [
+      "符腾堡选侯国",
+      ""
+    ],
+    "Kingdom of Hanover": [
+      "汉诺威王国",
+      ""
+    ],
+    "Electorate of Hesse": [
+      "黑森选侯国",
+      ""
+    ],
+    "Electorate of Salzburg": [
+      "萨尔茨堡选侯国",
+      ""
+    ],
+    "Kingdom of Etruria": [
+      "伊特鲁里亚王国",
+      ""
+    ],
+    "Electorate of Baden": [
+      "巴登选侯国",
+      ""
+    ],
+    "Italian Republic": [
+      "意大利",
+      ""
+    ],
+    "Empire of Haiti": [
+      "海地帝国",
+      ""
+    ],
+    "Serbs": [
+      "塞尔维亚人",
+      ""
+    ],
+    "First French Empire": [
+      "法兰西第一帝国",
+      ""
+    ],
+    "Duchy of Nassau": [
+      "拿骚",
+      ""
+    ],
+    "Saxe-Altenburg": [
+      "萨克森-阿尔滕堡",
+      ""
+    ],
+    "Grand Duchy of Baden": [
+      "巴登大公国",
+      ""
+    ],
+    "Duchy of Oldenburg": [
+      "奥尔登堡公国",
+      ""
+    ],
+    "Free City of Lübeck": [
+      "吕贝克自由市",
+      ""
+    ],
+    "Principality of Waldeck and Pyrmont": [
+      "瓦尔德克统治者列表",
+      ""
+    ],
+    "Kingdom of Württemberg": [
+      "符腾堡王国",
+      ""
+    ],
+    "Kingdom of Bavaria": [
+      "巴伐利亚王国",
+      ""
+    ],
+    "Grand Duchy of Würzburg": [
+      "维尔茨堡大公国",
+      ""
+    ],
+    "Grand Duchy of Hesse": [
+      "黑森大公国",
+      ""
+    ],
+    "Grand Duchy of Saxe-Weimar-Eisenach": [
+      "萨克森-魏玛-艾森纳赫",
+      ""
+    ],
+    "Principality of Hohenzollern-Sigmaringen": [
+      "霍亨索伦-西格马林根亲王国（Hohenzollern-Sigmaringen）",
+      ""
+    ],
+    "Duchy of Anhalt": [
+      "安哈尔特公国",
+      ""
+    ],
+    "Kingdom of Saxony": [
+      "萨克森王国",
+      ""
+    ],
+    "Grand Duchy of Berg": [
+      "贝尔格大公国",
+      ""
+    ],
+    "Duchy of Warsaw": [
+      "华沙公国",
+      ""
+    ],
+    "Free City of Danzig": [
+      "但泽自由市",
+      ""
+    ],
+    "Kingdom of Westphalia": [
+      "威斯特法伦王国",
+      ""
+    ],
+    "Confederation of the Rhine": [
+      "莱茵邦联",
+      ""
+    ],
+    "Republic of Venezuela": [
+      "委内瑞拉",
+      ""
+    ],
+    "Mexicans": [
+      "墨西哥人 (墨西哥合众国)",
+      ""
+    ],
+    "Río de la Plata": [
+      "拉普拉塔河",
+      ""
+    ],
+    "Bessarabia": [
+      "比萨拉比亚",
+      ""
+    ],
+    "Guayaquil Junta": [
+      "厄瓜多尔独立战争",
+      ""
+    ],
+    "Republic of Chile": [
+      "智利",
+      ""
+    ],
+    "Imamate of Yemen": [
+      "也门伊玛目列表",
+      ""
+    ],
+    "Federal League": [
+      "联邦联盟",
+      ""
+    ],
+    "Sovereign Principality of the United Netherlands": [
+      "联合尼德兰主权公国",
+      ""
+    ],
+    "Duchy of Brunswick": [
+      "不伦瑞克公国",
+      ""
+    ],
+    "Free City of Hamburg": [
+      "汉堡",
+      ""
+    ],
+    "Bourbon Kingdom of France": [
+      "波旁复辟",
+      ""
+    ],
+    "Free City of Krakow": [
+      "克拉科夫自由市",
+      ""
+    ],
+    "Duchy of Parma and Piacenza": [
+      "帕尔马公国",
+      ""
+    ],
+    "Kingdom of the Two Sicilies": [
+      "两西西里王国",
+      ""
+    ],
+    "United Kingdoms of Sweden and Norway": [
+      "瑞典－挪威联盟",
+      ""
+    ],
+    "Duchy of Modena and Reggio": [
+      "摩德纳和雷焦公国",
+      ""
+    ],
+    "German Confederation": [
+      "德意志邦联",
+      ""
+    ],
+    "Principality of Schwarzburg-Sonderhausen": [
+      "施瓦茨堡统治者列表",
+      ""
+    ],
+    "Talpur Dynasty": [
+      "塔尔普尔王朝",
+      ""
+    ],
+    "Saxe-Meiningen": [
+      "萨克森-迈宁根",
+      ""
+    ],
+    "Zululand": [
+      "祖鲁兰",
+      ""
+    ],
+    "Trucial States": [
+      "停战诸国",
+      ""
+    ],
+    "Qatar Dynasty": [
+      "卡塔尔",
+      ""
+    ],
+    "Riau-Lingga Sultanate": [
+      "廖内—林加苏丹王朝",
+      ""
+    ],
+    "First Mexican Empire": [
+      "墨西哥第一帝国",
+      ""
+    ],
+    "First Hellenic Republic": [
+      "希腊第一共和国",
+      ""
+    ],
+    "United Provinces of Central America": [
+      "中美洲联邦共和国",
+      ""
+    ],
+    "Emirate of Jabal Shammar": [
+      "杰贝勒沙马尔酋长国",
+      ""
+    ],
+    "Emirate of Afghanistan": [
+      "阿富汗酋长国",
+      ""
+    ],
+    "Caucasian Imamate": [
+      "高加索伊玛目领",
+      ""
+    ],
+    "Oriental Republic of Uruguay": [
+      "乌拉圭",
+      ""
+    ],
+    "French Algiers": [
+      "阿尔及尔",
+      ""
+    ],
+    "Kingdom of Belgium": [
+      "比利时",
+      ""
+    ],
+    "Republic of New Granada": [
+      "新格拉纳达共和国",
+      ""
+    ],
+    "Republic of Ecuador": [
+      "厄瓜多尔",
+      ""
+    ],
+    "Centralist Mexico": [
+      "墨西哥共和国极权政府",
+      ""
+    ],
+    "Riograndense Republic": [
+      "南里奥格兰德共和国",
+      ""
+    ],
+    "Republic of Texas": [
+      "得克萨斯共和国",
+      ""
+    ],
+    "Saxe-Coburg and Gotha": [
+      "萨克森-科堡-哥达",
+      ""
+    ],
+    "Durrani Dynasty": [
+      "杜兰尼王朝",
+      ""
+    ],
+    "Honduras": [
+      "洪都拉斯",
+      ""
+    ],
+    "Republic of the Rio Grande": [
+      "里奥格兰德共和国",
+      ""
+    ],
+    "Republic of Costa Rica": [
+      "哥斯达黎加",
+      ""
+    ],
+    "Guatemala": [
+      "危地马拉",
+      ""
+    ],
+    "Republic of El Salvador": [
+      "萨尔瓦多",
+      ""
+    ],
+    "Los Altos": [
+      "洛斯阿尔托斯",
+      ""
+    ],
+    "Kingdom of Sarawak": [
+      "沙捞越王国",
+      ""
+    ],
+    "French Equatorial Africa": [
+      "法属赤道非洲",
+      ""
+    ],
+    "Kashmir and Jammu": [
+      "查谟-克什米尔 (土邦)",
+      ""
+    ],
+    "Dominican Republic": [
+      "多米尼加",
+      ""
+    ],
+    "California Republic": [
+      "熊旗起义",
+      ""
+    ],
+    "Republic of Liberia": [
+      "利比里亚",
+      ""
+    ],
+    "Italian Nationalists": [
+      "意大利民族主义",
+      ""
+    ],
+    "French Second Republic": [
+      "法兰西第二共和国",
+      ""
+    ],
+    "Duchy of Holstein": [
+      "荷尔斯泰因公国",
+      ""
+    ],
+    "Republic of Baden": [
+      "巴登共和国",
+      ""
+    ],
+    "Hungarian Nationalists": [
+      "奥匈帝国",
+      ""
+    ],
+    "Republic of Baja California": [
+      "下加利福尼亚共和国",
+      ""
+    ],
+    "Taiping Heavenly Kingdom": [
+      "太平天国",
+      ""
+    ],
+    "State of Buenos Aires": [
+      "布宜诺斯艾利斯邦",
+      ""
+    ],
+    "Second French Empire": [
+      "法兰西第二帝国",
+      ""
+    ],
+    "Majeerteen Sultanate": [
+      "马吉尔廷苏丹国",
+      ""
+    ],
+    "South African Republic": [
+      "德兰士瓦共和国",
+      ""
+    ],
+    "United Principalities of Moldavia and Wallachia": [
+      "罗马尼亚联合公国",
+      ""
+    ],
+    "Granadine Confederation": [
+      "格拉纳达联合",
+      ""
+    ],
+    "French Indochina": [
+      "法属印度支那",
+      ""
+    ],
+    "Confederate States of America": [
+      "美利坚联盟国",
+      ""
+    ],
+    "United States of Colombia": [
+      "哥伦比亚合众国",
+      ""
+    ],
+    "Mexican Monarchists": [
+      "保守党",
+      ""
+    ],
+    "Second Mexican Empire": [
+      "墨西哥第二帝国",
+      ""
+    ],
+    "Khedivate of Egypt": [
+      "埃及赫迪夫领",
+      ""
+    ],
+    "Republic of Colombia": [
+      "哥伦比亚",
+      ""
+    ],
+    "Kamerun": [
+      "德属喀麦隆",
+      ""
+    ],
+    "French Third Republic": [
+      "法兰西第三共和国",
+      ""
+    ],
+    "Empire of Japan": [
+      "大日本帝国",
+      ""
+    ],
+    "Kingdom of Fiji": [
+      "斐济王国",
+      ""
+    ],
+    "First Spanish Republic": [
+      "西班牙第一共和国",
+      ""
+    ],
+    "Sultanate of Hobyo": [
+      "霍比奥苏丹国",
+      ""
+    ],
+    "Swaziland": [
+      "斯威士兰",
+      ""
+    ],
+    "Italian Africa": [
+      "意大利殖民地",
+      ""
+    ],
+    "Luxembourg": [
+      "卢森堡",
+      ""
+    ],
+    "Belgian Congo": [
+      "比属刚果",
+      ""
+    ],
+    "Mahdist State": [
+      "马赫迪苏丹国",
+      ""
+    ],
+    "Cuban Nationalists": [
+      "菲德尔·卡斯特罗",
+      ""
+    ],
+    "Republic of Hawai'i": [
+      "夏威夷共和国",
+      ""
+    ],
+    "Korean Empire": [
+      "大韩帝国",
+      ""
+    ],
+    "Cretan State": [
+      "克里特州 (奥斯曼帝国)",
+      ""
+    ],
+    "Republic of Cuba": [
+      "古巴",
+      ""
+    ],
+    "Maderistas": [
+      "墨西哥革命各阵营#马德罗派",
+      ""
+    ],
+    "Mycenaean Greece": [
+      "迈锡尼希腊",
+      ""
+    ],
+    "Philistia": [
+      "非利士",
+      ""
+    ],
+    "Zhu": [
+      "邾",
+      ""
+    ],
+    "Olmec Civilization": [
+      "奥尔梅克文明",
+      ""
+    ],
+    "Assyrian Egypt": [
+      "亚述治下的埃及",
+      ""
+    ],
+    "Janapada of Cedī": [
+      "切迪国",
+      ""
+    ],
+    "Janapada of Kuru": [
+      "俱卢国",
+      ""
+    ],
+    "Janapada of Pañcāla": [
+      "般阇罗国",
+      ""
+    ],
+    "Janapada of Gandhāra": [
+      "犍陀罗国",
+      ""
+    ],
+    "Peloponnesian League": [
+      "伯罗奔尼撒同盟",
+      ""
+    ],
+    "Odrysian Kingdom": [
+      "奥德里西亚王国",
+      ""
+    ],
+    "Han": [
+      "汉",
+      ""
+    ],
+    "Minaeans": [
+      "米奈人",
+      ""
+    ],
+    "Thebans": [
+      "底比斯人",
+      ""
+    ],
+    "Qataban": [
+      "卡塔班",
+      ""
+    ],
+    "Nanda Empire": [
+      "难陀帝国",
+      ""
+    ],
+    "Athenian Coalition": [
+      "雅典同盟",
+      ""
+    ],
+    "Perdiccas": [
+      "佩尔狄卡斯",
+      ""
+    ],
+    "Kalinga": [
+      "羯陵伽",
+      ""
+    ],
+    "Polyperchon": [
+      "波利佩尔孔",
+      ""
+    ],
+    "Early Pandyas": [
+      "早期潘地亚",
+      ""
+    ],
+    "Paphlagonia": [
+      "帕夫拉戈尼亚",
+      ""
+    ],
+    "Illyrian Kingdom": [
+      "伊利里亚王国",
+      ""
+    ],
+    "Western Chu": [
+      "西楚",
+      ""
+    ],
+    "Mahameghavahana Dynasty": [
+      "摩诃梅伽伐哈纳王朝",
+      ""
+    ],
+    "Molossians": [
+      "摩罗西亚人",
+      ""
+    ],
+    "Dongye": [
+      "东濊",
+      ""
+    ],
+    "Mahan": [
+      "马韩",
+      ""
+    ],
+    "Thracian Kingdom": [
+      "色雷斯王国",
+      ""
+    ],
+    "Kingdom of Osroene": [
+      "奥斯若恩王国",
+      ""
+    ],
+    "Kingdom of Gordyene": [
+      "戈尔迪耶内王国",
+      ""
+    ],
+    "Dong-okjeo": [
+      "东沃沮",
+      ""
+    ],
+    "Indo-Parthians": [
+      "印度—帕提亚",
+      ""
+    ],
+    "Norse": [
+      "诺斯人",
+      ""
+    ],
+    "Late Pallava Empire": [
+      "后期帕拉瓦帝国",
+      ""
+    ],
+    "Nobatia": [
+      "诺巴提亚",
+      ""
+    ],
+    "Kadamba Empire": [
+      "卡丹巴王朝",
+      ""
+    ],
+    "Angles": [
+      "盎格鲁人",
+      ""
+    ],
+    "Xia": [
+      "夏",
+      ""
+    ],
+    "Rugiland": [
+      "鲁吉兰",
+      ""
+    ],
+    "Ostrogoths": [
+      "东哥特人",
+      ""
+    ],
+    "Thuringian states": [
+      "图林根诸邦",
+      ""
+    ],
+    "Kingdom of Thuringia": [
+      "图林根王国",
+      ""
+    ],
+    "Maukhari Dynasty": [
+      "莫哈里王朝",
+      ""
+    ],
+    "Duchy of Tuscia": [
+      "托斯卡纳公国",
+      ""
+    ],
+    "Kingdom of Dunoting": [
+      "邓诺廷王国",
+      ""
+    ],
+    "Pandya Dynasty": [
+      "潘地亚王朝",
+      ""
+    ],
+    "Gauda Kingdom": [
+      "高达王国",
+      ""
+    ],
+    "Kingdom of Northumbria": [
+      "诺森布里亚王国",
+      ""
+    ],
+    "Old Great Bulgaria": [
+      "大保加利亚",
+      ""
+    ],
+    "Balasagan": [
+      "巴拉萨甘",
+      ""
+    ],
+    "Khadga Dynasty": [
+      "卡德加王朝",
+      ""
+    ],
+    "Principality of Iberia": [
+      "伊比利亚公国",
+      ""
+    ],
+    "Kingdom of Neustria": [
+      "纽斯特里亚王国",
+      ""
+    ],
+    "Mataram Kingdom": [
+      "马塔兰王国",
+      ""
+    ],
+    "Principality of Serbia": [
+      "塞尔维亚公国",
+      ""
+    ],
+    "Obotrites": [
+      "奥博德里特人",
+      ""
+    ],
+    "Qarlugs": [
+      "葛逻禄",
+      ""
+    ],
+    "Aghlabid Dynasty": [
+      "阿格拉布王朝",
+      ""
+    ],
+    "Principality of Nitra": [
+      "尼特拉公国",
+      ""
+    ],
+    "County of Aragon": [
+      "阿拉贡伯国",
+      ""
+    ],
+    "Principality of Salerno": [
+      "萨莱诺公国",
+      ""
+    ],
+    "Emirate of Sicily": [
+      "西西里酋长国",
+      ""
+    ],
+    "Sind-Habbari Dynasty": [
+      "信德哈巴里王朝",
+      ""
+    ],
+    "Rus'": [
+      "罗斯",
+      ""
+    ],
+    "Hubaekje": [
+      "后百济",
+      ""
+    ],
+    "County of Besalú": [
+      "贝萨卢伯国",
+      ""
+    ],
+    "Nitra": [
+      "尼特拉",
+      ""
+    ],
+    "Principality of Hungary": [
+      "匈牙利公国",
+      ""
+    ],
+    "Taebong": [
+      "泰封",
+      ""
+    ],
+    "Southern Wu": [
+      "南吴",
+      ""
+    ],
+    "Ngô Dynasty": [
+      "吴朝",
+      ""
+    ],
+    "Northern Han": [
+      "北汉",
+      ""
+    ],
+    "Paramara Dynasty": [
+      "帕拉马拉王朝",
+      ""
+    ],
+    "Chauhan Dynasty": [
+      "乔汉王朝",
+      ""
+    ],
+    "Lohara Dynasty": [
+      "洛哈拉王朝",
+      ""
+    ],
+    "Taifa of Alpuente": [
+      "阿尔普恩泰泰法",
+      ""
+    ],
+    "Taifa of Arcos": [
+      "阿尔科斯泰法",
+      ""
+    ],
+    "Taifa of Albarracín": [
+      "阿尔巴拉辛泰法",
+      ""
+    ],
+    "Taifa of Almería": [
+      "阿尔梅里亚泰法",
+      ""
+    ],
+    "Taifa of Morón": [
+      "莫龙泰法",
+      ""
+    ],
+    "Taifa of Saltés and Huelva": [
+      "萨尔泰斯与韦尔瓦泰法",
+      ""
+    ],
+    "Taifa of Niebla": [
+      "涅布拉泰法",
+      ""
+    ],
+    "Taifa of Carmona": [
+      "卡尔莫纳泰法",
+      ""
+    ],
+    "Taifa of Granada": [
+      "格拉纳达泰法",
+      ""
+    ],
+    "Taifa of Santa Maria do Algarve": [
+      "圣马里亚—阿尔加维泰法",
+      ""
+    ],
+    "North Sea Empire": [
+      "北海帝国",
+      ""
+    ],
+    "Principality of Capua": [
+      "卡普亚公国",
+      ""
+    ],
+    "Taifa of Algeciras": [
+      "阿尔赫西拉斯泰法",
+      ""
+    ],
+    "Taifa of Silves": [
+      "锡尔维斯泰法",
+      ""
+    ],
+    "County of Pallars Jussà": [
+      "下帕利亚尔斯伯国",
+      ""
+    ],
+    "County of Pallars Sobirà": [
+      "上帕利亚尔斯伯国",
+      ""
+    ],
+    "Denmark-England": [
+      "丹麦—英格兰",
+      ""
+    ],
+    "Norman Italy": [
+      "诺曼意大利",
+      ""
+    ],
+    "Taifa of Ronda": [
+      "龙达泰法",
+      ""
+    ],
+    "Norway-Denmark": [
+      "挪威—丹麦",
+      ""
+    ],
+    "Kediri Kingdom": [
+      "谏义里王国",
+      ""
+    ],
+    "Sulayhid Dynasty": [
+      "苏莱希王朝",
+      ""
+    ],
+    "Halych-Volhynia occupation": [
+      "加利奇—沃伦占领区",
+      ""
+    ],
+    "Principality of Kiev": [
+      "基辅公国",
+      ""
+    ],
+    "Principality of Chernigov": [
+      "切尔尼戈夫公国",
+      ""
+    ],
+    "Principality of Peremyshl": [
+      "佩列梅什利公国",
+      ""
+    ],
+    "Principality of Pereyaslavl": [
+      "佩列亚斯拉夫公国",
+      ""
+    ],
+    "Principality of Smolensk": [
+      "斯摩棱斯克公国",
+      ""
+    ],
+    "Principality of Polotsky": [
+      "波洛茨克公国",
+      ""
+    ],
+    "Najahid Dynasty": [
+      "纳贾希德王朝",
+      ""
+    ],
+    "Taifa of Ceuta": [
+      "休达泰法",
+      ""
+    ],
+    "Sena Dynasty": [
+      "犀那王朝",
+      ""
+    ],
+    "Norman England": [
+      "诺曼英格兰",
+      ""
+    ],
+    "Empire of Kanem": [
+      "卡奈姆帝国",
+      ""
+    ],
+    "Norse Greenland": [
+      "诺斯人格林兰",
+      ""
+    ],
+    "Zurayid dynasty": [
+      "祖赖德王朝",
+      ""
+    ],
+    "Principality of Terebovlia": [
+      "捷列博夫利亚公国",
+      ""
+    ],
+    "Northern Fujiwara": [
+      "奥州藤原氏",
+      ""
+    ],
+    "Principality of Antioch": [
+      "安条克公国",
+      ""
+    ],
+    "Principality of Koknese": [
+      "科克内塞公国",
+      ""
+    ],
+    "Principality of Drutsk": [
+      "德鲁茨克公国",
+      ""
+    ],
+    "Principality of Minsk": [
+      "明斯克公国",
+      ""
+    ],
+    "Principality of Jersika": [
+      "耶尔西卡公国",
+      ""
+    ],
+    "Angevins": [
+      "安茹家族",
+      ""
+    ],
+    "Pomerania": [
+      "波美拉尼亚",
+      ""
+    ],
+    "Taifa of Tejada": [
+      "特哈达泰法",
+      ""
+    ],
+    "Principality of Halych": [
+      "加利奇公国",
+      ""
+    ],
+    "Kingdom of Africa": [
+      "阿非利加王国",
+      ""
+    ],
+    "Nabhani Dynasty": [
+      "纳巴尼王朝",
+      ""
+    ],
+    "Duchy of Wrocław": [
+      "弗罗茨瓦夫公国",
+      ""
+    ],
+    "Kingdom of Powys Wenwynwyn": [
+      "波伊斯·温温温王国",
+      ""
+    ],
+    "Kingdom of Powys Fadog": [
+      "波伊斯·法多格王国",
+      ""
+    ],
+    "Yadava Dynasty": [
+      "耶陀婆王朝",
+      ""
+    ],
+    "Duchy of Kuyavia": [
+      "库亚维公国",
+      ""
+    ],
+    "Texcoco": [
+      "特斯科科",
+      ""
+    ],
+    "Principality of Galicia-Volhynia": [
+      "加利西亚—沃伦公国",
+      ""
+    ],
+    "Namayan": [
+      "纳马扬",
+      ""
+    ],
+    "Negroponte": [
+      "内格罗蓬特",
+      ""
+    ],
+    "County of Périgord": [
+      "佩里戈尔伯国",
+      ""
+    ],
+    "County of Poitou": [
+      "普瓦图伯国",
+      ""
+    ],
+    "Principality of Achaea": [
+      "阿凯亚公国",
+      ""
+    ],
+    "Duchy of Kalisz": [
+      "卡利什公国",
+      ""
+    ],
+    "Pandya Empire": [
+      "潘地亚帝国",
+      ""
+    ],
+    "Kingdom of Dambadaneiya": [
+      "丹巴德尼亚王国",
+      ""
+    ],
+    "Patriarchate of Aquileia": [
+      "阿奎莱亚宗主教区",
+      ""
+    ],
+    "Kampili Kingdom": [
+      "坎皮利王国",
+      ""
+    ],
+    "Nizhny Novgorod": [
+      "下诺夫哥罗德",
+      ""
+    ],
+    "Hanthawaddy Kingdom": [
+      "勃固王国",
+      ""
+    ],
+    "Phayao Kingdom": [
+      "帕尧王国",
+      ""
+    ],
+    "Myinsaing Kingdom": [
+      "敏象王国",
+      ""
+    ],
+    "Principality of Beloozero": [
+      "别洛奥泽罗公国",
+      ""
+    ],
+    "Galicia-Volhynia": [
+      "加利西亚—沃伦",
+      ""
+    ],
+    "Kingdom of Pinya": [
+      "彬牙王国",
+      ""
+    ],
+    "Sagaing Kingdom": [
+      "实皆王国",
+      ""
+    ],
+    "Kashmiri Sultanate": [
+      "克什米尔苏丹国",
+      ""
+    ],
+    "Muzaffarids": [
+      "穆扎法尔王朝",
+      ""
+    ],
+    "Principality of Moldavia": [
+      "摩尔达维亚公国",
+      ""
+    ],
+    "Despotate of Arta": [
+      "阿尔塔专制国",
+      ""
+    ],
+    "Jaunpur Sultanate": [
+      "江布尔苏丹国",
+      ""
+    ],
+    "Hashemite Arab Federation": [
+      "哈希姆阿拉伯联邦",
+      ""
+    ],
+    "Sultanate of Palembang": [
+      "巨港苏丹国",
+      ""
+    ],
+    "Principality of Abkhazia": [
+      "阿布哈兹公国",
+      ""
+    ],
+    "Principality of Mingrelia": [
+      "明格列尔公国",
+      ""
+    ],
+    "Principality of Guria": [
+      "古里亚公国",
+      ""
+    ],
+    "Kapisa": [
+      "迦毕试",
+      ""
+    ],
+    "Prome Kingdom": [
+      "卑谬王国",
+      ""
+    ],
+    "Berar Sultanate": [
+      "贝拉尔苏丹国",
+      ""
+    ],
+    "Bijapur Sultanate": [
+      "比贾布尔苏丹国",
+      ""
+    ],
+    "Portuguese Ceylon": [
+      "葡属锡兰",
+      ""
+    ],
+    "Portuguese Africa": [
+      "葡属非洲",
+      ""
+    ],
+    "Great Việt": [
+      "大越",
+      ""
+    ],
+    "Small Horde": [
+      "小帐",
+      ""
+    ],
+    "Portuguese Colonies": [
+      "葡萄牙殖民地",
+      ""
+    ],
+    "Nguyễn lords": [
+      "阮主",
+      ""
+    ],
+    "Principality of Transylvania": [
+      "特兰西瓦尼亚公国",
+      ""
+    ],
+    "Patani Kingdom": [
+      "北大年王国",
+      ""
+    ],
+    "Gorkha Kingdom": [
+      "廓尔喀王国",
+      ""
+    ],
+    "Nalyvaiko Uprising": [
+      "纳利瓦伊科起义",
+      ""
+    ],
+    "New France": [
+      "新法兰西",
+      ""
+    ],
+    "Moroccan Pretenders": [
+      "摩洛哥争夺者",
+      ""
+    ],
+    "Brandenburg-Prussia": [
+      "勃兰登堡—普鲁士",
+      ""
+    ],
+    "New Netherland": [
+      "新尼德兰",
+      ""
+    ],
+    "Sultanate of Bima": [
+      "比马苏丹国",
+      ""
+    ],
+    "New Sweden": [
+      "新瑞典",
+      ""
+    ],
+    "Thanjavur Maratha Kingdom": [
+      "坦焦尔马拉塔王国",
+      ""
+    ],
+    "Pro-Swedish Poland": [
+      "亲瑞典的波兰",
+      ""
+    ],
+    "Kingdom of Lunda": [
+      "隆达王国",
+      ""
+    ],
+    "Bamana Empire": [
+      "巴马纳帝国",
+      ""
+    ],
+    "Nawabs of Bengal": [
+      "孟加拉纳瓦布",
+      ""
+    ],
+    "Principality of Svaneti": [
+      "斯瓦涅季公国",
+      ""
+    ],
+    "Nawab of Awadh": [
+      "阿瓦德纳瓦布",
+      ""
+    ],
+    "Sultanate of Oman": [
+      "阿曼苏丹国",
+      ""
+    ],
+    "Emirate of Diriyah": [
+      "德拉伊耶酋长国",
+      ""
+    ],
+    "Pontianak Kadriyah Sultanate": [
+      "坤甸苏丹国",
+      ""
+    ],
+    "Negeri Sembilan": [
+      "森美兰",
+      ""
+    ],
+    "Nepal": [
+      "尼泊尔",
+      ""
+    ],
+    "Merina Kingdom": [
+      "梅里纳王国",
+      ""
+    ],
+    "Revolutionary Roman Republic": [
+      "罗马共和国",
+      ""
+    ],
+    "French Louisiana": [
+      "法属路易斯安那",
+      ""
+    ],
+    "Principality of Regensberg": [
+      "雷根斯堡公国",
+      ""
+    ],
+    "Principality of Lippe": [
+      "利珀公国",
+      ""
+    ],
+    "Principality of Reuss-Gera": [
+      "罗伊斯—格拉公国",
+      ""
+    ],
+    "Duchy of Mecklenburg": [
+      "梅克伦堡公国",
+      ""
+    ],
+    "New Granada": [
+      "新格拉纳达",
+      ""
+    ],
+    "Paraguay": [
+      "巴拉圭",
+      ""
+    ],
+    "Omani Slave Coast": [
+      "阿曼奴隶海岸",
+      ""
+    ],
+    "Cundinamarca": [
+      "昆迪纳马卡",
+      ""
+    ],
+    "Kingdom of Norway": [
+      "挪威王国",
+      ""
+    ],
+    "Netherlands": [
+      "荷兰",
+      ""
+    ],
+    "Netherlands Antilles": [
+      "荷属安的列斯",
+      ""
+    ],
+    "Massina Empire": [
+      "马西纳帝国",
+      ""
+    ],
+    "Burma": [
+      "缅甸",
+      ""
+    ],
+    "Emirate of Nejd": [
+      "内志酋长国",
+      ""
+    ],
+    "Poles": [
+      "波兰人",
+      ""
+    ],
+    "Sultanate of Sambaliung": [
+      "桑巴里翁苏丹国",
+      ""
+    ],
+    "Peru-Bolivian Confederation": [
+      "秘鲁—玻利维亚邦联",
+      ""
+    ],
+    "Natalia Republic": [
+      "纳塔利亚共和国",
+      ""
+    ],
+    "Ottoman Tripolitania": [
+      "奥斯曼的黎波里塔尼亚",
+      ""
+    ],
+    "Republic of Nicaragua": [
+      "尼加拉瓜共和国",
+      ""
+    ],
+    "Kedah-Perlis District": [
+      "吉打—玻璃市",
+      ""
+    ],
+    "Pahang Sultanate": [
+      "彭亨苏丹国",
+      ""
+    ],
+    "Montenegro": [
+      "黑山",
+      ""
+    ],
+    "Mosquito Kingdom": [
+      "米斯基托王国",
+      ""
+    ],
+    "Free Orange State": [
+      "奥兰治自由邦",
+      ""
+    ],
+    "New Caledonia": [
+      "新喀里多尼亚",
+      ""
+    ],
+    "People's Republic of Zanzibar": [
+      "桑给巴尔人民共和国",
+      ""
+    ],
+    "Panthay Rebellion": [
+      "杜文秀起义",
+      ""
+    ],
+    "German Africa": [
+      "德属非洲",
+      ""
+    ],
+    "Principality of Bulgaria": [
+      "保加利亚公国",
+      ""
+    ],
+    "Nieuwe Republiek": [
+      "新共和国",
+      ""
+    ],
+    "New Hebrides": [
+      "新赫布里底",
+      ""
+    ],
+    "Sultanate of Muscat and Oman": [
+      "马斯喀特与阿曼苏丹国",
+      ""
+    ],
+    "Republic of Panama": [
+      "巴拿马共和国",
+      ""
+    ],
+    "Portuguese Republic": [
+      "葡萄牙共和国",
+      ""
+    ]
+  }
+}

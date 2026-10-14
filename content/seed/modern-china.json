@@ -1,0 +1,220 @@
+{
+  "source": {
+    "title": "维基百科",
+    "kind": "dataset",
+    "license_status": "metadata_only",
+    "canonical_url": "https://zh.wikipedia.org/",
+    "license_note": "只保存条目链接和自撰短陈述，不保存词条正文。全部为待核查候选。"
+  },
+  "claims": [
+    {
+      "text": "1912年1月1日，中华民国在南京成立，孙中山就任临时大总统。此条待核查。",
+      "start_year": 1912,
+      "end_year": 1912,
+      "precision": "year",
+      "display_text": "1912",
+      "region_slugs": ["nanjing"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": ["孙中山"],
+      "event_title": "中华民国成立",
+      "snapshot_label": "共和政体在中国建立",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/中华民国"
+      }
+    },
+    {
+      "text": "1912年2月12日，清帝溥仪退位，清朝统治结束。此条待核查。",
+      "start_year": 1912,
+      "end_year": 1912,
+      "precision": "year",
+      "display_text": "1912",
+      "region_slugs": ["beijing"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": ["溥仪"],
+      "event_title": "清帝退位",
+      "snapshot_label": "帝制在中国结束",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/宣统退位诏书"
+      }
+    },
+    {
+      "text": "1926年，国民革命军自广东出师北伐。此条待核查。",
+      "start_year": 1926,
+      "end_year": 1928,
+      "precision": "year",
+      "display_text": "1926–1928",
+      "region_slugs": ["guangdong"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": ["蒋介石"],
+      "event_title": "北伐",
+      "snapshot_label": "国民革命军北伐",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/国民革命军北伐"
+      }
+    },
+    {
+      "text": "1928年，国民政府完成形式上的全国统一，定都南京。此条待核查。",
+      "start_year": 1928,
+      "end_year": 1928,
+      "precision": "year",
+      "display_text": "1928",
+      "region_slugs": ["nanjing"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "南京国民政府统一",
+      "snapshot_label": "国民政府定都南京",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/南京国民政府"
+      }
+    },
+    {
+      "text": "1931年9月18日，日军发动九一八事变，侵占中国东北。此条待核查。",
+      "start_year": 1931,
+      "end_year": 1931,
+      "precision": "year",
+      "display_text": "1931",
+      "region_slugs": ["liaodong"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "九一八事变",
+      "snapshot_label": "日本侵占东北",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/九一八事变"
+      }
+    },
+    {
+      "text": "1937年7月7日，卢沟桥事变爆发，中国全面抗日战争开始。此条待核查。",
+      "start_year": 1937,
+      "end_year": 1937,
+      "precision": "year",
+      "display_text": "1937",
+      "region_slugs": ["beijing"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "卢沟桥事变",
+      "snapshot_label": "全面抗战开始",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/卢沟桥事变"
+      }
+    },
+    {
+      "text": "1945年8月，日本宣布投降，中国抗日战争结束。此条待核查。",
+      "start_year": 1945,
+      "end_year": 1945,
+      "precision": "year",
+      "display_text": "1945",
+      "region_slugs": ["nanjing"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "抗日战争胜利",
+      "snapshot_label": "日本投降",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/中国抗日战争"
+      }
+    },
+    {
+      "text": "1949年10月1日，中华人民共和国在北京宣告成立。此条待核查。",
+      "start_year": 1949,
+      "end_year": 1949,
+      "precision": "year",
+      "display_text": "1949",
+      "region_slugs": ["beijing"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": ["毛泽东"],
+      "event_title": "中华人民共和国成立",
+      "snapshot_label": "中华人民共和国宣告成立",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/中华人民共和国"
+      }
+    },
+    {
+      "text": "1978年，中共十一届三中全会召开，中国开始改革开放。此条待核查。",
+      "start_year": 1978,
+      "end_year": 1978,
+      "precision": "year",
+      "display_text": "1978",
+      "region_slugs": ["beijing"],
+      "topic_slugs": ["politics", "economy"],
+      "certainty": "unverified",
+      "people": ["邓小平"],
+      "event_title": "十一届三中全会",
+      "snapshot_label": "改革开放起步",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/中国共产党第十一届中央委员会第三次全体会议"
+      }
+    },
+    {
+      "text": "1997年7月1日，香港回归，中华人民共和国对香港恢复行使主权。此条待核查。",
+      "start_year": 1997,
+      "end_year": 1997,
+      "precision": "year",
+      "display_text": "1997",
+      "region_slugs": ["guangdong"],
+      "topic_slugs": ["politics"],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "香港回归",
+      "snapshot_label": "香港特别行政区成立",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/香港回归"
+      }
+    },
+    {
+      "text": "2001年，中国加入世界贸易组织。此条待核查。",
+      "start_year": 2001,
+      "end_year": 2001,
+      "precision": "year",
+      "display_text": "2001",
+      "region_slugs": ["beijing"],
+      "topic_slugs": ["economy"],
+      "certainty": "unverified",
+      "people": [],
+      "event_title": "中国加入世界贸易组织",
+      "snapshot_label": "中国加入全球贸易体系",
+      "snapshot_dimension": "economy",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/中华人民共和国加入世界贸易组织"
+      }
+    }
+  ]
+}

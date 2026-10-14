@@ -34,3 +34,28 @@ def publish_claim(*, claim: Claim, reviewer, reason: str) -> Claim:
         reason=reason.strip(),
     )
     return locked_claim
+
+
+@transaction.atomic
+def withdraw_claim(*, claim: Claim, reviewer, reason: str) -> Claim:
+    if not reviewer.is_staff:
+        raise PermissionDenied("Only staff reviewers can withdraw claims.")
+    if not reason.strip():
+        raise ValidationError("Withdrawal requires a reason.")
+
+    locked_claim = Claim.objects.select_for_update().get(pk=claim.pk)
+    if locked_claim.workflow_state != WorkflowState.PUBLISHED:
+        raise ValidationError("Only a published claim can be withdrawn.")
+
+    previous_state = locked_claim.workflow_state
+    locked_claim.workflow_state = WorkflowState.WITHDRAWN
+    locked_claim.save(update_fields=["workflow_state", "updated_at"])
+    ClaimRevision.objects.create(
+        claim=locked_claim,
+        reviewer=reviewer,
+        from_state=previous_state,
+        to_state=WorkflowState.WITHDRAWN,
+        text_snapshot=locked_claim.text,
+        reason=reason.strip(),
+    )
+    return locked_claim

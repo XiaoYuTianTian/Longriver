@@ -1,0 +1,112 @@
+{
+  "source": {
+    "title": "维基百科",
+    "kind": "dataset",
+    "license_status": "metadata_only",
+    "canonical_url": "https://zh.wikipedia.org/"
+  },
+  "claims": [
+    {
+      "text": "1517年，马丁·路德公布《九十五条论纲》，宗教改革开始在欧洲展开。",
+      "start_year": 1517,
+      "end_year": 1517,
+      "precision": "year",
+      "display_text": "1517",
+      "region_slugs": [
+        "wittenberg"
+      ],
+      "topic_slugs": [
+        "politics",
+        "culture"
+      ],
+      "certainty": "inferred",
+      "people": [
+        "马丁·路德"
+      ],
+      "event_title": "公布《九十五条论纲》",
+      "snapshot_label": "宗教改革展开",
+      "snapshot_dimension": "culture",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/九十五条论纲"
+      }
+    },
+    {
+      "text": "1520年，苏莱曼一世即位，奥斯曼帝国继续向地中海和欧洲方向扩张。",
+      "start_year": 1520,
+      "end_year": 1566,
+      "precision": "range",
+      "display_text": "1520–1566",
+      "region_slugs": [
+        "ottoman"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "inferred",
+      "people": [
+        "苏莱曼一世"
+      ],
+      "event_title": "苏莱曼一世即位",
+      "snapshot_label": "奥斯曼帝国扩张",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/苏莱曼一世"
+      }
+    },
+    {
+      "text": "1519年至1521年，西班牙远征者与当地盟友攻陷特诺奇蒂特兰，阿兹特克帝国覆亡。",
+      "start_year": 1519,
+      "end_year": 1521,
+      "precision": "range",
+      "display_text": "1519–1521",
+      "region_slugs": [
+        "tenochtitlan"
+      ],
+      "topic_slugs": [
+        "politics",
+        "society"
+      ],
+      "certainty": "inferred",
+      "people": [
+        "埃尔南·科尔特斯"
+      ],
+      "event_title": "阿兹特克帝国覆亡",
+      "snapshot_label": "中美洲政治剧变",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/阿兹特克帝国"
+      }
+    },
+    {
+      "text": "1521年，明武宗去世，明世宗即位，次年改元嘉靖。",
+      "start_year": 1521,
+      "end_year": 1522,
+      "precision": "range",
+      "display_text": "1521–1522",
+      "region_slugs": [
+        "beijing"
+      ],
+      "topic_slugs": [
+        "politics"
+      ],
+      "certainty": "inferred",
+      "people": [
+        "明世宗"
+      ],
+      "event_title": "嘉靖帝即位",
+      "snapshot_label": "明朝中期",
+      "snapshot_dimension": "politics",
+      "citation": {
+        "edition_label": "维基百科条目",
+        "locator": "条目正文",
+        "stable_url": "https://zh.wikipedia.org/wiki/明世宗"
+      }
+    }
+  ]
+}
