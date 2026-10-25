@@ -1,8 +1,8 @@
-"""Copy licensed images already used by the Android package into app assets.
+"""Copy licensed images already used by the reading package into content/dist/media.
 
 Sources are the WebP files written by build_media.py. Only public-domain, CC0,
-CC BY and CC BY-SA files are in that manifest. The app reads them from
-assets/media so a phone does not need the development server.
+CC BY and CC BY-SA files are in that manifest. Android and the browser both
+read them from the shared bundle, so a phone does not need the development server.
 """
 
 import json
@@ -10,9 +10,9 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE = ROOT / "android" / "app" / "src" / "main" / "assets" / "knowledge-package.json"
+PACKAGE = ROOT / "content" / "dist" / "knowledge-package.json"
 MEDIA = ROOT / "backend" / "media"
-DEST = ROOT / "android" / "app" / "src" / "main" / "assets" / "media"
+DEST = ROOT / "content" / "dist" / "media"
 
 
 def main() -> None:

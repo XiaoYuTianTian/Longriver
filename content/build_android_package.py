@@ -1,4 +1,4 @@
-"""Build the offline Android package from seed JSON files and Wikidata extracts."""
+"""Build the shared reading package from seed JSON files and Wikidata extracts."""
 
 import json
 import urllib.parse
@@ -13,7 +13,7 @@ SEEDS = [
     CONTENT / "seed" / "wikidata.json",
     CONTENT / "seed" / "modern-china.json",
 ]
-OUTPUT = ROOT / "android" / "app" / "src" / "main" / "assets" / "knowledge-package.json"
+OUTPUT = CONTENT / "dist" / "knowledge-package.json"
 GAZETTEERS = [CONTENT / "gazetteer.json", CONTENT / "gazetteer_wikidata.json"]
 PLACE_POLITIES = CONTENT / "place_polities.json"
 PEOPLE = CONTENT / "wikidata_people.json"
@@ -244,6 +244,7 @@ def main() -> None:
         "polities": [],
         "claims": claims,
     }
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(package, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     size = OUTPUT.stat().st_size / 1e6
     with_brief = sum(1 for claim in claims if claim["brief"])

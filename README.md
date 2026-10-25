@@ -8,7 +8,7 @@ Longriver 是一款离线可用的世界历史地图。拖动时间，疆域、�
 - **事件是档案，不是一句标题。** 列表只留一句事实。详情页另外放维基百科导语和「背景 / 经过 / 结果」一类段落，并列出同地、同时代的其他记述。
 - **人物按寿命出现。** 生卒都有的人，在相交的每个时段都会出现。只有生年时，只出现在生年，并写明卒年未收录，不把寿命往后推。
 - **出处跟着内容走。** 陈述带有时间、地点和引用。维基数据保持未核验，不写成已核实的定论。配图只收公有领域、CC0、CC BY、CC BY-SA，作者和许可随图标注。
-- **手机上就能读完。** 地图、疆域、陈述和已下载的图片打进安装包，不联网也能浏览、检索和收藏。收藏和备注只存在这台手机里。
+- **手机上就能读完。** 地图、疆域、陈述和已下载的图片打进安装包，不联网也能浏览、检索和收藏。收藏和备注只存在这台手机里。浏览器阅读同一份知识包，收藏单独留在那个浏览器里。
 
 当前离线包约有 9246 条陈述、5130 位人物、3504 个地点。三个页面是「图」「览」「我的」。
 
@@ -34,7 +34,7 @@ Longriver 是一款离线可用的世界历史地图。拖动时间，疆域、�
 - `android/keystore.properties` 和 `*.jks`：签名密钥
 - `.env`：环境变量
 - `backend/db.sqlite3`：本地数据库
-- `android/app/src/main/assets/media/`：体积很大的配图文件
+- `content/dist/media/`：体积很大的配图文件
 - `content/raw/`：维基数据查询缓存
 
 Django 的默认 `SECRET_KEY` 只用于本机开发。对外部署时改用环境变量 `DJANGO_SECRET_KEY`。数据库口令 `longriver-local` 只存在于本机 Postgres 的 `compose.yaml`。
@@ -58,7 +58,7 @@ cd android
 .\gradlew.bat :app:assembleDebug
 ```
 
-调试包在 `android/app/build/outputs/apk/debug/app-debug.apk`。手机已打开 USB 调试时，可以在 `android/` 执行 `.\push-to-phone.ps1`，把包复制到手机下载目录。
+调试包在 `android/app/build/outputs/apk/debug/app-debug.apk`。手机已打开 USB 调试时，可以在 `android/` 执行 `.\push-to-phone.ps1`，把包复制到手机下载目录。安装包里的知识、疆域和配图来自 `content/dist/`，由 Gradle 打进 assets，不在 `android/app/src/main/assets/` 里再存一份。
 
 单元测试：
 
@@ -117,3 +117,16 @@ python content/bundle_media.py
 ```powershell
 python content/build_wikidata.py
 ```
+
+这些脚本把阅读包写到 `content/dist/`。手机和浏览器都读这一份。
+
+## 浏览器
+
+需要 Node.js。在 `web/` 目录：
+
+```powershell
+npm install
+npm run dev
+```
+
+开发服务器默认是 http://127.0.0.1:5173 。页面用 Vue 3 写成。收藏和备注存在这个浏览器的 IndexedDB 里，不上传，也不同步到手机。

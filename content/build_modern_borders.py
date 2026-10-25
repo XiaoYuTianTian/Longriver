@@ -23,7 +23,7 @@ from shapely.validation import make_valid
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "content" / "raw" / "ne_50m_admin_0_countries" / "ne_50m_admin_0_countries"
-ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
+ASSETS = ROOT / "content" / "dist"
 CHINA_PARTS = {"CHN", "TWN", "HKG", "MAC"}
 PALETTE_SIZE = 8
 MIN_AREA = 0.04

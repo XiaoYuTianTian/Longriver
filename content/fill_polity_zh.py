@@ -1,7 +1,7 @@
 """Fill missing Chinese names for Cliopatria polities.
 
 Looks up English Wikipedia titles on Wikidata, converts to simplified Chinese,
-then patches polity_names_zh.json and assets/polities.json. Does not rebuild
+then patches polity_names_zh.json and content/dist/polities.json. Does not rebuild
 border geometry.
 
     python content/fill_polity_zh.py
@@ -24,7 +24,7 @@ from opencc import OpenCC
 T2S = OpenCC("t2s")
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "content"
-ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
+ASSETS = CONTENT / "dist"
 TABLE = CONTENT / "polity_names_zh.json"
 POLITIES = ASSETS / "polities.json"
 CACHE = CONTENT / "raw" / "wikidata"

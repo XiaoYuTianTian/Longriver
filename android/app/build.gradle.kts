@@ -26,7 +26,7 @@ android {
         buildConfigField("String", "API_BASE_URL", "\"$apiBase\"")
         buildConfigField("String", "MEDIA_BASE_URL", "\"${local.getProperty("longriver.mediaBaseUrl", "$apiBase/media/")}\"")
         buildConfigField("String", "TIANDITU_KEY", "\"${local.getProperty("tianditu.key", "")}\"")
-        val seed = file("src/main/assets/knowledge-package.json")
+        val seed = rootProject.file("../content/dist/knowledge-package.json")
         val seedRevision = CRC32().apply { if (seed.exists()) update(seed.readBytes()) }.value.toInt()
         buildConfigField("int", "SEED_REVISION", "$seedRevision")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -66,6 +66,10 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+
+    sourceSets.named("main") {
+        assets.srcDir(rootProject.file("../content/dist"))
     }
 }
 

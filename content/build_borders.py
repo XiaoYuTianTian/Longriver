@@ -16,7 +16,7 @@ from shapely.validation import make_valid
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "content" / "raw"
-ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
+ASSETS = ROOT / "content" / "dist"
 START_YEAR = -3000
 END_YEAR = 1911
 TOLERANCE = 0.06

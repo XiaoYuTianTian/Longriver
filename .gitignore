@@ -19,6 +19,9 @@ android/.idea/
 android/.kotlin/
 content/raw/
 android/app/src/main/assets/media/
+content/dist/media/
+web/node_modules/
+web/dist/
 android/keystore.properties
 *.jks
 

@@ -12,8 +12,8 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE = ROOT / "android" / "app" / "src" / "main" / "assets" / "knowledge-package.json"
-COUNTRIES = ROOT / "android" / "app" / "src" / "main" / "assets" / "countries.geojson"
+PACKAGE = ROOT / "content" / "dist" / "knowledge-package.json"
+COUNTRIES = ROOT / "content" / "dist" / "countries.geojson"
 HISTORICAL_END = 1911
 SEPARATED = {"台湾", "臺灣", "香港", "澳门", "澳門"}
 
