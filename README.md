@@ -1,53 +1,55 @@
-# 长河
+[English](README.md) · [中文](docs/README.zh-CN.md)
 
-想看看某一年的世界，就把时间停在那一年。
+<p align="center">
+  <img src="docs/images/logo.png" width="128" alt="Longriver">
+</p>
 
-疆域顺着年份换上颜色，战争、条约、即位和出生列在手边。点开一条，时间先退开：你读的是这一件事，不会被另一年从手下拖走。合上以后，年份还停在原地，地图也还在。
+# Longriver
 
-手机里可以不联网翻完。浏览器打开的是同一条河，收藏各自留在自己的设备上。
+Stop on a year. The territories of that year spread across the map, and the people and events of the year wait at the side.
 
-![1521 年，地图和时间摊在一起](docs/images/atlas-year.jpg)
+![The year holds, then a record opens and the timeline steps aside](docs/images/atlas.gif)
 
-平时没有详情。年份写得很大，底下是可以放大的时间尺。滚轮把刻度收到一年，拖动时地图跟着走。
+![1521, the map and the timeline together](docs/images/atlas-year.jpg)
 
-![打开沃尔姆斯会议时，时间尺让开](docs/images/atlas-reading.jpg)
+The index has two shelves: events, and people. A tag shows only what that year actually holds — a war, a treaty, a scientist, a poet. Choosing a line moves the map to the place and draws the territory around it. The essay stays shut until you ask to read.
 
-记述从地图下方升起，时间尺收起。文章留在你点开的那一条，旁边仍能换同一年的其他事。
+![The Diet of Worms, drawn as a record, while the timeline steps aside](docs/images/atlas-reading.jpg)
 
-现在这条河里大约有 9246 条记述、5130 位人物、3504 个地点。公元前 3000 年到 1911 年的疆域来自 Cliopatria；1912 年以后的陆地和国界来自 Natural Earth，台湾、香港、澳门并入中国。一条记述不只是标题，里面有原句、摘录、同地与同时代的事、相关人物和出处。人物按寿命出现：只有生年的，不把寿命往后推。配图只收公有领域、CC0、CC BY 和 CC BY-SA，作者和许可随图走。
+A record opens as a picture: the year, the place, the title, one sentence. The longer extract and the citations stay folded under 原文. If an illustration can be made, it is requested only for that one record, after the picture is already on the page, and kept for the next visit. The map does not wait for it.
 
-## 数据从哪来
+The same package runs in the browser and, without a network, on the phone. Bookmarks stay on the device that made them.
 
-| 内容 | 来源 | 协议 |
+There are about 9,737 records, 5,130 people and 3,617 places, from 3000 BCE through 2026. Borders through 1911 come from Cliopatria. Land and countries from 1912 come from Natural Earth; Taiwan, Hong Kong and Macau are part of China. A person with only a birth year appears in that year alone. A person with a death year stays for the span of the life. Pictures already in the package are public domain, CC0, CC BY or CC BY-SA, and the credit travels with them.
+
+## Where it comes from
+
+| What | Source | Licence |
 | --- | --- | --- |
-| 1911 年及以前的疆域 | [Cliopatria](https://doi.org/10.5281/zenodo.13363121) | CC BY 4.0，轮廓已简化和按年切分 |
-| 1912 年以后的陆地与国界 | [Natural Earth](https://www.naturalearthdata.com/) | 公共领域 |
-| 人物、地点、事件事实 | [维基数据](https://www.wikidata.org/) | CC0 |
-| 详情摘录 | 中文维基百科 | CC BY-SA 4.0，页内标明 |
-| 人物与地点图片 | [维基共享资源](https://commons.wikimedia.org/) | 仅 PD / CC0 / CC BY / CC BY-SA |
+| Borders through 1911 | [Cliopatria](https://doi.org/10.5281/zenodo.13363121) | CC BY 4.0, simplified and cut by year |
+| Land and countries from 1912 | [Natural Earth](https://www.naturalearthdata.com/) | Public domain |
+| People, places, events | [Wikidata](https://www.wikidata.org/) | CC0 |
+| Extracts | Chinese Wikipedia | CC BY-SA 4.0, named on the page |
+| Portraits and place pictures | [Wikimedia Commons](https://commons.wikimedia.org/) | PD / CC0 / CC BY / CC BY-SA only |
 
-维基数据里、1949 年以后且地点在中国的条目留在待审批次 `china-1949-plus`，不写入安装包。受版权保护的书籍只保留书目，不收录正文。配置天地图密钥后，1912 年以后可以改用天地图在线底图；密钥不进仓库。
+Wikidata entries in China after 1949 stay in the held batch `china-1949-plus` and are not shipped. Copyrighted books keep a citation, not the text. A Tianditu key can replace the modern basemap; the key is not in the repository. The map has no official review number and is marked as a test build. Historical borders are a sketch of public data, not a claim about present boundaries.
 
-地图尚未取得审图号，应用内标为内测版。历史疆域是公开数据的近似示意，不代表对现实边界的认定。
+The app does not collect a name, a phone number, a location or a device id, and it does not include ads or analytics.
 
-## 仓库里不会出现的东西
+## In the browser
 
-提交前已核对，下列文件被 `.gitignore` 排除：
+Node.js, then from `web/`:
 
-- `android/local.properties`：本机 SDK 路径、接口地址、天地图密钥
-- `android/keystore.properties` 和 `*.jks`：签名密钥
-- `.env`：环境变量
-- `backend/db.sqlite3`：本地数据库
-- `content/dist/media/`：体积很大的配图文件
-- `content/raw/`：维基数据查询缓存
+```powershell
+npm install
+npm run dev
+```
 
-Django 的默认 `SECRET_KEY` 只用于本机开发。对外部署时改用环境变量 `DJANGO_SECRET_KEY`。数据库口令 `longriver-local` 只存在于本机 Postgres 的 `compose.yaml`。
+Open http://127.0.0.1:5173 . To generate a missing illustration the first time a record is opened, set `LONGRIVER_IMAGE_KEY` before starting the dev server. Without the key, the drawn record remains, and nothing else is fetched for the picture.
 
-应用不收集姓名、手机号、位置或设备标识，也不接入广告和统计 SDK。
+## On the phone
 
-## 构建 Android 应用
-
-需要 JDK 17 和 Android SDK。在 `android/local.properties` 里按需填写（此文件不要提交）：
+JDK 17 and the Android SDK. `android/local.properties` stays off the repository:
 
 ```properties
 sdk.dir=C:\\Android\\Sdk
@@ -55,82 +57,13 @@ longriver.apiBaseUrl=http://10.0.2.2:8000
 tianditu.key=
 ```
 
-然后：
-
 ```powershell
 cd android
 .\gradlew.bat :app:assembleDebug
 ```
 
-调试包在 `android/app/build/outputs/apk/debug/app-debug.apk`。手机已打开 USB 调试时，可以在 `android/` 执行 `.\push-to-phone.ps1`，把包复制到手机下载目录。安装包里的知识、疆域和配图来自 `content/dist/`，由 Gradle 打进 assets，不在 `android/app/src/main/assets/` 里再存一份。
+The debug package is `android/app/build/outputs/apk/debug/app-debug.apk`. The knowledge, borders and pictures come from `content/dist/` and are packed by Gradle.
 
-单元测试：
+## What is not in the repository
 
-```powershell
-cd android
-.\gradlew.bat :app:testDebugUnitTest
-```
-
-## 知识后台
-
-后台用来审核和发布陈述。要求 Python 3.13。在仓库根目录：
-
-```powershell
-docker compose up -d db --wait
-cd backend
-py -3.13 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-$env:DATABASE_URL = "postgresql://longriver:longriver-local@localhost:5432/longriver"
-.\.venv\Scripts\python.exe manage.py migrate
-.\.venv\Scripts\python.exe manage.py load_reference_data
-.\.venv\Scripts\python.exe manage.py runserver
-```
-
-- 健康检查：http://127.0.0.1:8000/health/
-- 内容后台：http://127.0.0.1:8000/admin/
-- 知识包：http://127.0.0.1:8000/api/v1/content/packages/
-
-检查：
-
-```powershell
-.\.venv\Scripts\python.exe manage.py check
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m ruff check .
-```
-
-发布需要审核者和有效引用。AI 草稿不能直接发布。
-
-## 继续补内容
-
-摘录可以分批下载，中断后重跑会接着写 `content/wiki_briefs.json`：
-
-```powershell
-python content/build_briefs.py --limit 400
-python content/build_android_package.py
-```
-
-配图和维基导语：
-
-```powershell
-python content/build_media.py
-python content/bundle_media.py
-```
-
-人物、事件和地点的维基数据提取：
-
-```powershell
-python content/build_wikidata.py
-```
-
-这些脚本把阅读包写到 `content/dist/`。手机和浏览器都读这一份。
-
-## 在浏览器里沿河走
-
-需要 Node.js。在 `web/` 目录：
-
-```powershell
-npm install
-npm run dev
-```
-
-打开 http://127.0.0.1:5173 。页面用 Vue 3 写成。先看地图和时间，点开记述才进入阅读；阅读时时间尺会让开。收藏和备注存在这个浏览器的 IndexedDB 里，不上传，也不同步到手机。
+`android/local.properties`, keystores, `.env`, `backend/db.sqlite3`, `content/dist/media/`, `content/dist/detail-art/`, and the Wikidata cache in `content/raw/`. Django's default `SECRET_KEY` is for this machine. The database password `longriver-local` lives only in the local Postgres compose file.

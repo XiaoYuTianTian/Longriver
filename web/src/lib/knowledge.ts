@@ -9,6 +9,7 @@ import type {
   Polity,
   Region,
   Snapshot,
+  Topic,
 } from './types'
 
 export interface IndexedKnowledge {
@@ -25,6 +26,7 @@ export interface IndexedKnowledge {
   snapshotById: Map<number, Snapshot>
   polityById: Map<number, Polity>
   claimsByPerson: Map<number, number[]>
+  topics: Topic[]
 }
 
 export const knowledge = shallowRef<IndexedKnowledge | null>(null)
@@ -72,6 +74,7 @@ function indexPackage(
     snapshotById,
     polityById,
     claimsByPerson,
+    topics: pack.topics,
   }
 }
 

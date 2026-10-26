@@ -53,25 +53,39 @@ ZH_LANGS = ["zh-hans", "zh-cn", "zh-sg", "zh", "zh-my", "zh-hant", "zh-tw", "zh-
 REUSE_KM = 25
 
 EVENT_CLASSES = {
-    "Q178561": "politics",  # battle
-    "Q198": "politics",  # war
-    "Q131569": "politics",  # treaty
-    "Q10931": "politics",  # revolution
-    "Q124734": "politics",  # rebellion
-    "Q188055": "politics",  # siege
-    "Q45382": "politics",  # coup d'etat
-    "Q7944": "society",  # earthquake
-    "Q44512": "society",  # epidemic
-    "Q2401485": "technology",  # expedition
+    "Q178561": "battle",
+    "Q198": "war",
+    "Q131569": "treaty",
+    "Q10931": "revolution",
+    "Q124734": "rebellion",
+    "Q188055": "siege",
+    "Q45382": "coup",
+    "Q7944": "earthquake",
+    "Q44512": "epidemic",
+    "Q2401485": "expedition",
 }
 
 # Kept beside the big battle list so a famous war cannot crowd them out.
 EXTRA_EVENT_CLASSES = {
-    "Q209715": "politics",  # coronation
-    "Q3882219": "politics",  # assassination
-    "Q12772819": "technology",  # discovery
-    "Q12579633": "technology",  # invention
+    "Q209715": "coronation",
+    "Q3882219": "assassination",
+    "Q12772819": "discovery",
+    "Q12579633": "invention",
+    "Q40231": "election",
+    "Q625994": "conference",
+    "Q8065": "disaster",
+    "Q1371026": "founding",
 }
+
+ROLE_RULES = (
+    ("scientist", ("scientist", "physicist", "chemist", "mathematician", "astronomer", "biologist", "physician", "inventor", "engineer")),
+    ("politician", ("politician", "monarch", "emperor", "king", "queen", "statesman", "diplomat", "president", "minister")),
+    ("writer", ("writer", "poet", "novelist", "playwright", "philosopher", "historian", "author")),
+    ("artist", ("painter", "artist", "sculptor", "composer", "musician", "architect")),
+    ("military", ("military", "general", "admiral", "soldier", "officer")),
+    ("religious", ("priest", "pope", "bishop", "monk", "theologian", "rabbi", "imam", "cleric")),
+    ("explorer", ("explorer", "navigator")),
+)
 
 CHINESE_STATES = ["Q148", "Q29520", "Q13426199", "Q8733", "Q9903", "Q7313", "Q9683", "Q7462", "Q7209", "Q35216"]
 
@@ -283,6 +297,34 @@ SELECT ?p ?label ?desc ?birth ?death ?bp ?citizen ?img ?art ?sl WHERE {{
     return picks
 
 
+def role_from_labels(labels: list[str]) -> str:
+    text = " ".join(labels).lower()
+    for role, words in ROLE_RULES:
+        if any(re.search(rf"\b{re.escape(word)}\b", text) for word in words):
+            return role
+    return "other"
+
+
+def fetch_roles(ids: list[str], refresh: bool) -> dict[str, str]:
+    grouped: dict[str, list[str]] = {}
+    for n, chunk in batched(ids, 300):
+        values = " ".join(f"wd:{q}" for q in chunk)
+        rows = sparql(f"people-role-{n}", f"""
+SELECT ?p ?occLabel WHERE {{
+  VALUES ?p {{ {values} }}
+  ?p wdt:P106 ?occ .
+  ?occ rdfs:label ?occLabel .
+  FILTER(LANG(?occLabel) = "en")
+}}
+""", refresh)
+        for row in rows:
+            key = qid(row.get("p"))
+            label = literal(row.get("occLabel"))
+            if key and label:
+                grouped.setdefault(key, []).append(label)
+    return {key: role_from_labels(labels) for key, labels in grouped.items()}
+
+
 def fetch_events(refresh: bool) -> dict[str, Pick]:
     classes = " ".join(f"wd:{q}" for q in list(EVENT_CLASSES) + list(EXTRA_EVENT_CLASSES))
     ranked = []
@@ -309,7 +351,7 @@ SELECT DISTINCT ?e ?sl WHERE {{
     for cls in EXTRA_EVENT_CLASSES:
         extra += sparql(f"events-extra-{cls}", f"""
 SELECT ?e ?sl WHERE {{
-  ?e wdt:P31 wd:{cls} ; wikibase:sitelinks ?sl .
+  ?e wdt:P31/wdt:P279* wd:{cls} ; wikibase:sitelinks ?sl .
   FILTER(?sl >= 6)
 }} ORDER BY DESC(?sl) LIMIT 400
 """, refresh)
@@ -574,6 +616,7 @@ def main() -> None:
     args = parser.parse_args()
 
     people = fetch_people(args.refresh)
+    roles = fetch_roles(list(people), args.refresh)
     events = fetch_events(args.refresh)
     try:
         works = fetch_works(args.refresh)
@@ -617,7 +660,7 @@ def main() -> None:
         people_out.append({
             "qid": q, "name": name, "birth_year": birth, "death_year": death, "description": desc,
             "place_slug": slug, "image": pick.first("img"), "zhwiki": pick.first("art"),
-            "sitelinks": pick.first("sl") or 0,
+            "sitelinks": pick.first("sl") or 0, "role": roles.get(q, "other"),
         })
         where = gaz.by_slug[slug]["name"]
         lead = desc if desc and len(desc) <= 18 else ""
@@ -625,7 +668,7 @@ def main() -> None:
             "review_batch": "wikidata-1",
             "text": f"{year_text(birth)}，{lead}{name}出生于{where}。",
             "start_year": birth, "end_year": birth, "precision": "year",
-            "display_text": year_short(birth), "region_slugs": [slug], "topic_slugs": ["society"],
+            "display_text": year_short(birth), "region_slugs": [slug], "topic_slugs": ["birth"],
             "certainty": "unverified", "people": [name], "person_qids": [q],
             "event_title": f"{name}出生", "snapshot_label": f"{name}生平", "snapshot_dimension": "society",
             "citation": citation(pick.first("art"), q), "wikidata": q,
@@ -705,7 +748,7 @@ def main() -> None:
         claims.append({
             "review_batch": SENSITIVE_BATCH if sensitive else "wikidata-1",
             "text": text, "start_year": year, "end_year": year, "precision": "year",
-            "display_text": year_short(year), "region_slugs": [slug], "topic_slugs": ["culture"],
+            "display_text": year_short(year), "region_slugs": [slug], "topic_slugs": ["work"],
             "certainty": "unverified",
             "people": [author] if author else [],
             "person_qids": known,

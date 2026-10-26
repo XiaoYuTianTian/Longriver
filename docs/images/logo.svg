@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Longriver">
+  <rect width="128" height="128" rx="28" fill="#f7f3ea"/>
+  <path d="M18 82c14-22 28 18 42-4s28-18 50 8" fill="none" stroke="#1f4e5f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M64 26v76" stroke="#8a6232" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="64" cy="78" r="5.5" fill="#8a6232"/>
+</svg>

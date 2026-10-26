@@ -8,19 +8,33 @@
     <div v-if="!data" class="sheet-body">正在载入知识库</div>
     <div v-else-if="sheet.kind === 'claim'" class="sheet-body">
       <article v-if="claim" class="reading" :class="claimToneClass">
-        <p class="kicker">{{ claim.time_label }}<template v-if="claimPlace"> · {{ claimPlace.name }}</template></p>
-        <h2>{{ claimTitle || claim.text }}</h2>
-        <p v-if="claimLead" class="lead">{{ claimLead }}</p>
-        <p v-else-if="!claimBrief.length" class="muted">知识包里这条只有一句话。可以接着看同时代的记述，或打开出处。</p>
-        <section v-for="(block, index) in claimBrief" :key="index">
-          <h3 v-if="block.heading">{{ block.heading }}</h3>
-          <p>{{ block.text }}</p>
-        </section>
-        <p v-if="claimBrief.length" class="muted">正文摘自维基百科，CC BY-SA 4.0</p>
+        <DetailCanvas
+          :title="claimTitle || claim.text"
+          :year="claim.time_label"
+          :place="claimPlace?.name || ''"
+          :sentence="claimLead || claim.text"
+          :band="bandColor"
+          :image="artUrl"
+          :note="artNote"
+        />
         <p class="actions">
           <BookmarkButton kind="claim" :target-id="claim.id" />
           <button v-if="claimPlace" type="button" class="text-button" @click="lookClaim">在地图上定位</button>
         </p>
+        <details class="source-fold">
+          <summary>原文</summary>
+          <p v-if="!claimBrief.length" class="muted">知识包里这条只有一句话。</p>
+          <section v-for="(block, index) in claimBrief" :key="index">
+            <h3 v-if="block.heading">{{ block.heading }}</h3>
+            <p>{{ block.text }}</p>
+          </section>
+          <p v-if="claimBrief.length" class="muted">正文摘自维基百科，CC BY-SA 4.0</p>
+          <h3>出处</h3>
+          <p v-for="citation in claim.citations" :key="citation.id" class="muted">
+            <a v-if="citation.stable_url" :href="citation.stable_url" target="_blank" rel="noreferrer">{{ citationLabel(citation) || '维基百科' }}</a>
+            <template v-else>{{ citationLabel(citation) }}</template>
+          </p>
+        </details>
       </article>
       <p v-else class="muted">这条记述不在知识包中。</p>
       <section v-if="samePlace.length">
@@ -47,26 +61,27 @@
           <span class="muted">{{ lifeSpan(person.birth_year, person.death_year) || '查看人物' }}</span>
         </button>
       </section>
-      <section v-if="claim">
-        <h3>出处</h3>
-        <p v-for="citation in claim.citations" :key="citation.id" class="muted">
-          <a v-if="citation.stable_url" :href="citation.stable_url" target="_blank" rel="noreferrer">{{ citationLabel(citation) || '维基百科' }}</a>
-          <template v-else>{{ citationLabel(citation) }}</template>
-        </p>
-      </section>
     </div>
 
     <div v-else-if="sheet.kind === 'person'" class="sheet-body">
       <article v-if="person" class="reading">
-        <img v-if="person.image && !personFailed" class="portrait" :src="mediaSrc(person.image)" :alt="person.name" @error="personFailed = true" />
-        <h2>{{ person.name }}</h2>
-        <p class="muted">{{ lifeSpan(person.birth_year, person.death_year) || '生卒未收录' }}</p>
-        <p v-if="person.image_credit" class="muted">头像：{{ tidyCredit(person.image_credit) }}</p>
-        <p v-if="person.description">{{ person.description }}</p>
+        <DetailCanvas
+          :title="person.name"
+          :year="lifeSpan(person.birth_year, person.death_year) || '生卒未收录'"
+          :place="personPlace?.name || roleName(person.role)"
+          :sentence="person.description || person.name"
+          band="#1f4e5f"
+          :image="personFailed ? null : artUrl"
+          :note="artNote"
+        />
         <p class="actions">
           <BookmarkButton kind="person" :target-id="person.id" />
           <button v-if="personPlace" type="button" class="text-button" @click="lookPerson">在地图上定位</button>
         </p>
+        <details v-if="person.description" class="source-fold">
+          <summary>原文</summary>
+          <p>{{ person.description }}</p>
+        </details>
       </article>
       <p v-else class="muted">这位人物不在知识包中。</p>
       <h3>相关记述</h3>
@@ -79,11 +94,15 @@
 
     <div v-else-if="sheet.kind === 'place'" class="sheet-body">
       <article v-if="place" class="reading">
-        <img v-if="place.image && !placeFailed" class="portrait wide" :src="mediaSrc(place.image)" :alt="place.name" @error="placeFailed = true" />
-        <p class="kicker">{{ placeTrail }}</p>
-        <h2>{{ place.name }}</h2>
-        <p v-if="place.image_credit" class="muted">配图：{{ tidyCredit(place.image_credit) }}</p>
-        <p v-if="place.description">{{ place.description }}</p>
+        <DetailCanvas
+          :title="place.name"
+          year=""
+          :place="placeTrail"
+          :sentence="place.description || place.name"
+          band="#8a6232"
+          :image="placeFailed ? null : artUrl"
+          :note="artNote"
+        />
         <p class="actions">
           <BookmarkButton kind="place" :target-id="place.id" />
           <button type="button" class="text-button" @click="lookPlace">在地图上定位</button>
@@ -99,11 +118,13 @@
 
     <div v-else-if="sheet.kind === 'polity'" class="sheet-body">
       <article v-if="polity" class="reading tone-reign">
-        <h2>{{ polityTitle }}</h2>
-        <p class="muted">
-          <template v-if="polity.capital">都城 {{ polity.capital }} · </template>{{ formatSpan(polity.from, polity.to) }}
-        </p>
-        <p v-if="polityLatin" class="muted latin">{{ polityLatin }}</p>
+        <DetailCanvas
+          :title="polityTitle"
+          :year="formatSpan(polity.from, polity.to)"
+          :place="polity.capital ? `都城 ${polity.capital}` : ''"
+          :sentence="polityLatin || polityTitle"
+          band="#8c4a32"
+        />
         <p class="actions">
           <BookmarkButton kind="polity" :target-id="polity.id" />
           <a v-if="polity.wikipedia" :href="wikipediaHref(polity.wikipedia)" target="_blank" rel="noreferrer">维基百科</a>
@@ -114,16 +135,16 @@
 
     <div v-else-if="sheet.kind === 'country'" class="sheet-body">
       <article class="reading tone-politics">
-        <h2>{{ sheet.name }}</h2>
-        <p class="muted">1912 年以后的国界。</p>
+        <DetailCanvas :title="sheet.name" year="1912 年以后" place="" sentence="这一年的国界。" band="#1f4e5f" />
       </article>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import BookmarkButton from './BookmarkButton.vue'
+import DetailCanvas from './DetailCanvas.vue'
 import { claimTone, clampYear, formatSpan, lifeSpan, mediaSrc, parseBrief, tidyCredit } from '../lib/format'
 import { ancestors, knowledge, polityName } from '../lib/knowledge'
 import { contemporaryClaims, samePlaceClaims } from '../lib/reading'
@@ -147,12 +168,95 @@ const tall = ref(false)
 const failed = reactive(new Set<number>())
 const personFailed = ref(false)
 const placeFailed = ref(false)
+const artUrl = ref<string | null>(null)
+const artNote = ref('')
 const data = computed(() => knowledge.value)
+const bands: Record<string, string> = {
+  war: '#c45a32',
+  treaty: '#2f6f9a',
+  reign: '#8c4a32',
+  birth: '#8a8178',
+  culture: '#6b5a2e',
+  tech: '#3e8a58',
+  economy: '#a24e7a',
+  politics: '#1f4e5f',
+  society: '#4a5f9a',
+}
+const roleNames: Record<string, string> = {
+  scientist: '科学家',
+  politician: '政治家',
+  writer: '文学家',
+  artist: '艺术家',
+  military: '军事',
+  religious: '宗教',
+  explorer: '探险',
+  other: '其他',
+}
+
+function roleName(role: string | undefined): string {
+  if (!role) return ''
+  return roleNames[role] || ''
+}
+
+let artToken = 0
+let artObjectUrl = ''
+
+function releaseArt() {
+  if (artObjectUrl) URL.revokeObjectURL(artObjectUrl)
+  artObjectUrl = ''
+  artUrl.value = null
+  artNote.value = ''
+}
+
+async function loadArt(token: number) {
+  await new Promise((resolve) => window.setTimeout(resolve, 280))
+  if (token !== artToken) return
+  const sheet = props.sheet
+  const pack = data.value
+  if (!pack) return
+  if (sheet.kind === 'person') {
+    const row = pack.personById.get(sheet.id)
+    if (!row || token !== artToken) return
+    if (row.image) {
+      artUrl.value = mediaSrc(row.image)
+      artNote.value = row.image_credit ? tidyCredit(row.image_credit) : ''
+      return
+    }
+  }
+  if (sheet.kind === 'place') {
+    const row = pack.regionById.get(sheet.id)
+    if (!row?.image || token !== artToken) return
+    artUrl.value = mediaSrc(row.image)
+    artNote.value = row.image_credit ? tidyCredit(row.image_credit) : ''
+    return
+  }
+  if (sheet.kind !== 'claim' && sheet.kind !== 'person') return
+  try {
+    const response = await fetch(`/detail-art/${sheet.kind}/${sheet.id}.webp`)
+    if (token !== artToken || !response.ok) return
+    const blob = await response.blob()
+    if (token !== artToken) return
+    releaseArt()
+    artObjectUrl = URL.createObjectURL(blob)
+    artUrl.value = artObjectUrl
+    artNote.value = '示意，不是史料'
+  } catch {
+    if (token === artToken) artNote.value = ''
+  }
+}
 
 watch(() => props.sheet, () => {
   tall.value = false
   personFailed.value = false
   placeFailed.value = false
+  releaseArt()
+  artToken += 1
+  void loadArt(artToken)
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  artToken += 1
+  releaseArt()
 })
 
 const claim = computed(() => {
@@ -166,6 +270,12 @@ const claimTitle = computed(() => {
   return data.value?.eventById.get(eventId)?.title ?? ''
 })
 const claimToneClass = computed(() => (claim.value ? `tone-${claimTone(claim.value.text, claimTitle.value, claim.value.topic_slugs)}` : ''))
+const bandColor = computed(() => {
+  const row = claim.value
+  if (!row) return '#1f4e5f'
+  const tone = claimTone(row.text, claimTitle.value, row.topic_slugs)
+  return bands[tone] || '#1f4e5f'
+})
 const claimLead = computed(() => {
   const row = claim.value
   if (!row) return ''

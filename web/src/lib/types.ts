@@ -65,6 +65,7 @@ export interface Person {
   image: string
   image_credit: string
   wikidata: string
+  role?: string
 }
 
 export interface Polity {

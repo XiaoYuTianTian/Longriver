@@ -137,6 +137,26 @@ TOPICS = [
     {"slug": "society", "name": "社会"},
     {"slug": "technology", "name": "科技"},
     {"slug": "culture", "name": "文化"},
+    {"slug": "birth", "name": "出生"},
+    {"slug": "war", "name": "战争"},
+    {"slug": "battle", "name": "战役"},
+    {"slug": "siege", "name": "围城"},
+    {"slug": "treaty", "name": "条约"},
+    {"slug": "revolution", "name": "革命"},
+    {"slug": "rebellion", "name": "叛乱"},
+    {"slug": "coup", "name": "政变"},
+    {"slug": "coronation", "name": "加冕"},
+    {"slug": "assassination", "name": "刺杀"},
+    {"slug": "earthquake", "name": "地震"},
+    {"slug": "epidemic", "name": "疫病"},
+    {"slug": "disaster", "name": "灾害"},
+    {"slug": "expedition", "name": "远征"},
+    {"slug": "discovery", "name": "发现"},
+    {"slug": "invention", "name": "发明"},
+    {"slug": "work", "name": "著作"},
+    {"slug": "election", "name": "选举"},
+    {"slug": "conference", "name": "会议"},
+    {"slug": "founding", "name": "建国"},
 ]
 REGIONS = load_regions()
 REGION_IDS = {region["slug"]: region["id"] for region in REGIONS}
@@ -163,6 +183,7 @@ def main() -> None:
             "image": image,
             "image_credit": credit,
             "wikidata": entry["qid"],
+            "role": entry.get("role") or "other",
         }
 
     def person_id(name: str, qid: str | None) -> int:

@@ -20,6 +20,7 @@ android/.kotlin/
 content/raw/
 android/app/src/main/assets/media/
 content/dist/media/
+content/dist/detail-art/
 web/node_modules/
 web/dist/
 android/keystore.properties

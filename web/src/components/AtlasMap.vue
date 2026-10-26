@@ -28,6 +28,8 @@ const props = defineProps<{
   labels: MapLabel[]
   activePolity: number | null
   activeCountry: string
+  activePlace: PlacePoint | null
+  focusToken: number
 }>()
 
 const emit = defineEmits<{
@@ -142,11 +144,29 @@ function applySelection() {
   const activeBorders: FilterSpecification = polityId == null || modern
     ? ['==', ['get', 'p'], -1]
     : ['all', ['<=', ['get', 'f'], props.year], ['>=', ['get', 't'], props.year], ['==', ['get', 'p'], polityId]]
+  map.setFilter('borders-active-fill', activeBorders)
   map.setFilter('borders-active', activeBorders)
-  map.setFilter(
-    'countries-active',
-    !modern || !props.activeCountry ? ['==', ['get', 'n'], ''] : ['==', ['get', 'n'], props.activeCountry],
-  )
+  const activeCountry: FilterSpecification = !modern || !props.activeCountry
+    ? ['==', ['get', 'n'], '']
+    : ['==', ['get', 'n'], props.activeCountry]
+  map.setFilter('countries-active-fill', activeCountry)
+  map.setFilter('countries-active', activeCountry)
+}
+
+function applyFocus() {
+  if (!map || !ready) return
+  const place = props.activePlace
+  const data: FeatureCollection<Point> = {
+    type: 'FeatureCollection',
+    features: place
+      ? [{
+        type: 'Feature',
+        properties: { id: place.id },
+        geometry: { type: 'Point', coordinates: [place.lon, place.lat] },
+      }]
+      : [],
+  }
+  ;(map.getSource('focus-place') as GeoJSONSource).setData(data)
 }
 
 function applyPlaces() {
@@ -165,7 +185,12 @@ function isActive(label: MapLabel): boolean {
 }
 
 function flyTo(lon: number, lat: number, zoom: number) {
-  map?.flyTo({ center: [lon, lat], zoom, duration: 600 })
+  map?.flyTo({
+    center: [lon, lat],
+    zoom,
+    duration: 700,
+    padding: { top: 80, right: 340, bottom: 28, left: 28 },
+  })
 }
 
 defineExpose({ flyTo })
@@ -216,11 +241,18 @@ onMounted(() => {
       paint: { 'line-color': '#3F3428', 'line-width': 1.1, 'line-opacity': 0.95 },
     })
     map.addLayer({
+      id: 'borders-active-fill',
+      type: 'fill',
+      source: 'borders',
+      filter: ['==', ['get', 'p'], -1],
+      paint: { 'fill-color': '#8A6232', 'fill-opacity': 0.28 },
+    })
+    map.addLayer({
       id: 'borders-active',
       type: 'line',
       source: 'borders',
       filter: ['==', ['get', 'p'], -1],
-      paint: { 'line-color': '#1C1915', 'line-width': 2.8 },
+      paint: { 'line-color': '#8A6232', 'line-width': 2.4 },
     })
     map.addSource('countries', { type: 'geojson', data: '/countries.geojson' })
     map.addLayer({
@@ -238,11 +270,18 @@ onMounted(() => {
       paint: { 'line-color': '#3F3428', 'line-width': 1.1 },
     })
     map.addLayer({
+      id: 'countries-active-fill',
+      type: 'fill',
+      source: 'countries',
+      filter: ['==', ['get', 'n'], ''],
+      paint: { 'fill-color': '#8A6232', 'fill-opacity': 0.28 },
+    })
+    map.addLayer({
       id: 'countries-active',
       type: 'line',
       source: 'countries',
       filter: ['==', ['get', 'n'], ''],
-      paint: { 'line-color': '#1C1915', 'line-width': 2.8 },
+      paint: { 'line-color': '#8A6232', 'line-width': 2.4 },
     })
     map.addSource('places', { type: 'geojson', data: placeCollection(props.places) })
     map.addLayer({
@@ -253,6 +292,18 @@ onMounted(() => {
         'circle-radius': 5,
         'circle-color': '#8C4A32',
         'circle-stroke-width': 1,
+        'circle-stroke-color': '#FFFBF5',
+      },
+    })
+    map.addSource('focus-place', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } })
+    map.addLayer({
+      id: 'focus-place',
+      type: 'circle',
+      source: 'focus-place',
+      paint: {
+        'circle-radius': 8,
+        'circle-color': '#8A6232',
+        'circle-stroke-width': 3,
         'circle-stroke-color': '#FFFBF5',
       },
     })
@@ -281,6 +332,8 @@ onMounted(() => {
     applyYear(props.year)
     applyPlaces()
     applySelection()
+    applyFocus()
+    if (props.focusToken > 0 && props.activePlace) flyTo(props.activePlace.lon, props.activePlace.lat, 3.4)
   })
 })
 
@@ -290,6 +343,14 @@ watch(() => props.labels, () => projectLabels())
 watch(() => [props.activePolity, props.activeCountry], () => {
   applySelection()
   projectLabels()
+})
+watch(() => props.activePlace, (place) => {
+  applyFocus()
+  if (place && props.focusToken > 0) flyTo(place.lon, place.lat, 3.4)
+})
+watch(() => props.focusToken, () => {
+  const place = props.activePlace
+  if (place) flyTo(place.lon, place.lat, 3.4)
 })
 
 onBeforeUnmount(() => {
