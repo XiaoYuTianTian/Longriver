@@ -1,156 +1,224 @@
 <template>
   <section v-if="error" class="page-message">{{ error }}</section>
   <section v-else-if="!data" class="page-message">正在载入知识库</section>
-  <section v-else class="atlas">
-    <AtlasMap
-      ref="mapRef"
-      :year="year"
-      :places="places"
-      :labels="labels"
-      :active-polity="polityId"
-      :active-country="country"
-      @polity="openPolity"
-      @country="openCountry"
-      @place="openPlace"
-    />
-    <aside class="panel">
-      <div class="year-tools">
-        <YearBar :year="year" @change="setYear" />
-        <label class="year-jump">
-          跳到
-          <input type="number" :min="-3000" :max="2026" :value="year" @change="onYearInput" />
-        </label>
-      </div>
-      <div class="era-jumps">
-        <button v-for="era in jumpYears" :key="era.name" type="button" @click="setYear(era.year)">{{ era.name }}</button>
-      </div>
-      <p class="year-summary">{{ formatYear(year) }} · {{ claimCount }} 条记述</p>
-      <p class="muted attribution">疆域 Cliopatria CC BY 4.0 · 陆地与 1912 年后国界 Natural Earth</p>
-
-      <article v-if="polity" class="card focus-card tone-reign">
-        <h2>{{ polityTitle }}</h2>
-        <p v-if="polity.capital" class="muted">都城 {{ polity.capital }}</p>
-        <p class="muted">{{ formatSpan(polity.from, polity.to) }}</p>
-        <p v-if="polityLatin" class="muted">{{ polityLatin }}</p>
-        <p class="actions">
-          <BookmarkButton kind="polity" :target-id="polity.id" />
-          <a v-if="polity.wikipedia" :href="wikipediaHref(polity.wikipedia)" target="_blank" rel="noreferrer">维基百科</a>
-        </p>
-      </article>
-
-      <article v-else-if="place" class="card focus-card tone-treaty">
-        <h2>{{ place.name }}</h2>
-        <p class="muted">{{ placeTrail }}</p>
-        <p v-if="place.description" class="fact">{{ briefExcerpt(place.description, 120) }}</p>
-        <p class="actions">
-          <BookmarkButton kind="place" :target-id="place.id" />
-          <router-link :to="`/places/${place.id}`">地点档案</router-link>
-        </p>
-      </article>
-
-      <article v-else-if="country" class="card focus-card tone-politics">
-        <h2>{{ country }}</h2>
-        <p class="muted">1912 年以后的国界。</p>
-      </article>
-
-      <h3>这一年发生的</h3>
-      <ul class="tone-legend">
-        <li class="tone-war">战争</li>
-        <li class="tone-treaty">会议条约</li>
-        <li class="tone-reign">在位</li>
-        <li class="tone-birth">出生</li>
-      </ul>
-      <p v-if="claimCount === 0" class="muted">
-        这一年还没有收录。
-        <button v-for="near in nearbyYears" :key="near" type="button" class="text-button" @click="setYear(near)">{{ formatYear(near) }}</button>
-      </p>
-      <router-link
-        v-for="claim in focusedClaims"
-        :key="claim.id"
-        class="card link-card"
-        :class="toneClass(claim)"
-        :to="`/claims/${claim.id}`"
-      >
-        <span class="kicker">{{ claim.time_label }}<template v-if="placeName(claim)"> · {{ placeName(claim) }}</template></span>
-        <strong>{{ eventTitle(claim.event_id) || claim.text }}</strong>
-        <span v-if="claim.text && claim.text !== eventTitle(claim.event_id)" class="fact">{{ claim.text }}</span>
-        <span v-if="excerpt(claim)" class="excerpt">{{ excerpt(claim) }}</span>
+  <section v-else class="desk" :class="{ reading: sheet != null }" @keydown.esc="closeFloats">
+    <div class="stage">
+    <header class="command">
+      <router-link class="brand" to="/">
+        <span class="brand-mark">Longriver</span>
+        <span class="brand-name">长河</span>
       </router-link>
-      <button v-if="backgroundClaims.length" type="button" class="text-button wide" @click="showBackground = !showBackground">
-        {{ showBackground ? '收起' : '仍在进行的长时段' }} · {{ backgroundClaims.length }}
-      </button>
-      <router-link
-        v-for="claim in shownBackground"
-        :key="`bg-${claim.id}`"
-        class="card link-card quiet"
-        :class="toneClass(claim)"
-        :to="`/claims/${claim.id}`"
-      >
-        <span class="kicker">{{ claim.time_label }}<template v-if="placeName(claim)"> · {{ placeName(claim) }}</template></span>
-        <strong>{{ eventTitle(claim.event_id) || claim.text }}</strong>
-        <span class="fact">{{ claim.text }}</span>
-      </router-link>
-    </aside>
+      <div class="search-wrap">
+        <input
+          v-model="query"
+          class="search"
+          type="search"
+          placeholder="搜人物、事件、地点"
+          @focus="searchOpen = true"
+          @input="searchOpen = true"
+          @keydown.enter.prevent="openBestHit"
+        />
+        <div v-if="searchOpen && needle && hits" class="search-pop">
+          <p v-if="hitCount === 0" class="muted">没有匹配。</p>
+          <template v-if="hits.people.length">
+            <p class="search-label">人物</p>
+            <button v-for="person in hits.people" :key="person.id" type="button" @click="openPerson(person.id, person.birth_year)">
+              <strong>{{ person.name }}</strong>
+              <span>{{ lifeSpan(person.birth_year, person.death_year) }}</span>
+            </button>
+          </template>
+          <template v-if="hits.events.length">
+            <p class="search-label">事件</p>
+            <button v-for="claim in hits.events" :key="claim.id" type="button" @click="openClaim(claim.id, claim.start_year)">
+              <strong>{{ eventTitle(claim.event_id) || claim.text }}</strong>
+              <span>{{ claim.time_label }}</span>
+            </button>
+          </template>
+          <template v-if="hits.places.length">
+            <p class="search-label">地点</p>
+            <button v-for="place in hits.places" :key="place.id" type="button" @click="openPlace(place.id, placeYear(place), true)">
+              <strong>{{ place.name }}</strong>
+              <span>{{ placeTrail(place) }}</span>
+            </button>
+          </template>
+        </div>
+      </div>
+      <label class="year-jump">
+        年份
+        <input type="number" :min="-3000" :max="2026" :value="year" @change="onYearInput" />
+      </label>
+      <button type="button" class="text-button shelf-toggle" @click="showBookmarks = !showBookmarks">收藏 {{ bookmarks.length }}</button>
+    </header>
+      <AtlasMap
+        ref="mapRef"
+        :year="year"
+        :places="places"
+        :labels="labels"
+        :active-polity="activePolity"
+        :active-country="activeCountry"
+        @polity="openPolity"
+        @country="openCountry"
+        @place="openPlaceFromMap"
+      />
+      <aside class="index">
+        <header class="index-head">
+          <p class="index-year">{{ yearFigures }}</p>
+          <p class="index-count">{{ claimCount === 0 ? '这一年还没有记述' : `${claimCount} 条记述` }}</p>
+        </header>
+        <div class="index-scroll">
+          <p v-if="claimCount === 0" class="muted">
+            附近有记载的年份：
+            <button v-for="near in nearbyYears" :key="near" type="button" class="text-button" @click="setYear(near)">{{ formatYear(near) }}</button>
+          </p>
+          <button
+            v-for="claim in focusedClaims"
+            :key="claim.id"
+            type="button"
+            class="index-row"
+            :class="[toneClass(claim), { on: claimOpen(claim.id) }]"
+            @click="openClaim(claim.id)"
+          >
+            <span class="index-title">{{ eventTitle(claim.event_id) || claim.text }}</span>
+            <span class="index-meta">{{ claim.time_label }}<template v-if="placeName(claim)">，{{ placeName(claim) }}</template></span>
+          </button>
+          <button v-if="backgroundClaims.length" type="button" class="text-button wide" @click="showBackground = !showBackground">
+            {{ showBackground ? '收起长时段' : `还有 ${backgroundClaims.length} 条跨了多年` }}
+          </button>
+          <button
+            v-for="claim in shownBackground"
+            :key="`bg-${claim.id}`"
+            type="button"
+            class="index-row quiet"
+            :class="toneClass(claim)"
+            @click="openClaim(claim.id)"
+          >
+            <span class="index-title">{{ eventTitle(claim.event_id) || claim.text }}</span>
+            <span class="index-meta">{{ claim.time_label }}</span>
+          </button>
+        </div>
+        <p class="index-credit">1911 年前的疆域来自 Cliopatria，其后的国界来自 Natural Earth。</p>
+      </aside>
+      <DetailSheet v-if="sheet" :sheet="sheet" @close="sheet = null" @open="sheet = $event" @look="look" />
+      <BookmarkShelf v-if="showBookmarks" @close="showBookmarks = false" @open="openBookmark" />
+    </div>
+
+    <Timeline v-show="sheet == null" :year="year" :counts="counts" @change="setYear" />
   </section>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useRoute, useRouter, type LocationQuery } from 'vue-router'
 import AtlasMap from '../components/AtlasMap.vue'
-import BookmarkButton from '../components/BookmarkButton.vue'
-import YearBar from '../components/YearBar.vue'
-import { HISTORICAL_BORDERS_END, briefExcerpt, claimOverlaps, claimTone, clampYear, formatSpan, formatYear } from '../lib/format'
+import BookmarkShelf from '../components/BookmarkShelf.vue'
+import DetailSheet, { type Sheet } from '../components/DetailSheet.vue'
+import Timeline from '../components/Timeline.vue'
+import { bookmarks } from '../lib/bookmarks'
+import { decadeCounts } from '../lib/density'
+import { HISTORICAL_BORDERS_END, claimOverlaps, claimTone, clampYear, formatYear, lifeSpan } from '../lib/format'
 import { ancestors, knowledge, knowledgeError, polityName } from '../lib/knowledge'
-import type { Claim, MapLabel, PlacePoint } from '../lib/types'
+import type { Claim, MapLabel, PlacePoint, Region } from '../lib/types'
 
 const route = useRoute()
 const router = useRouter()
 const year = ref(1521)
-const polityId = ref<number | null>(null)
-const placeId = ref<number | null>(null)
-const country = ref('')
+const sheet = ref<Sheet | null>(null)
+const query = ref('')
+const searchOpen = ref(false)
+const showBookmarks = ref(false)
 const showBackground = ref(false)
 const mapRef = ref<{ flyTo: (lon: number, lat: number, zoom: number) => void } | null>(null)
-const jumpYears = [
-  { name: '战国', year: -300 },
-  { name: '唐', year: 750 },
-  { name: '宋', year: 1100 },
-  { name: '明', year: 1521 },
-  { name: '清', year: 1750 },
-  { name: '1912', year: 1912 },
-  { name: '1949', year: 1949 },
-]
+let applyingRoute = false
 
 const data = computed(() => knowledge.value)
 const error = computed(() => knowledgeError.value)
+const needle = computed(() => query.value.trim())
+const counts = computed(() => decadeCounts(data.value?.claims ?? []))
+
+function queryOne(value: LocationQuery[string]): string {
+  if (Array.isArray(value)) return value[0] ?? ''
+  return value == null ? '' : String(value)
+}
+
+function sheetFromQuery(source: LocationQuery): Sheet | null {
+  const claim = Number(queryOne(source.claim))
+  if (claim) return { kind: 'claim', id: claim }
+  const person = Number(queryOne(source.person))
+  if (person) return { kind: 'person', id: person }
+  const place = Number(queryOne(source.place))
+  if (place) return { kind: 'place', id: place }
+  const polity = Number(queryOne(source.polity))
+  if (polity) return { kind: 'polity', id: polity }
+  const country = queryOne(source.country)
+  if (country) return { kind: 'country', name: country }
+  return null
+}
+
+function desiredQuery(): Record<string, string> {
+  const next: Record<string, string> = { year: String(year.value) }
+  const current = sheet.value
+  if (!current) return next
+  if (current.kind === 'country') next.country = current.name
+  else next[current.kind] = String(current.id)
+  return next
+}
+
+function sameQuery(next: Record<string, string>, source: LocationQuery): boolean {
+  const keys = ['year', 'claim', 'person', 'place', 'polity', 'country']
+  return keys.every((key) => (next[key] ?? '') === queryOne(source[key]))
+}
 
 watch(
-  () => route.query.year,
-  (value) => {
-    const next = Number(value)
-    if (Number.isFinite(next)) year.value = next
+  () => route.query,
+  (source) => {
+    applyingRoute = true
+    const rawYear = queryOne(source.year)
+    const nextYear = Number(rawYear)
+    if (rawYear !== '' && Number.isFinite(nextYear)) year.value = clampYear(nextYear)
+    sheet.value = sheetFromQuery(source)
+    applyingRoute = false
   },
   { immediate: true },
 )
 
-watch(year, (value) => {
-  if (String(route.query.year ?? '') === String(value)) return
-  void router.replace({ query: { ...route.query, year: String(value) } })
-})
+function publishQuery() {
+  if (applyingRoute) return
+  const next = desiredQuery()
+  if (sameQuery(next, route.query)) return
+  void router.replace({ query: next })
+}
+
+watch([year, sheet], publishQuery, { deep: true })
 
 const yearClaims = computed(() => {
   const pack = data.value
   if (!pack) return []
   return pack.claims.filter((claim) => claimOverlaps(claim, year.value, year.value))
 })
-
 const claimCount = computed(() => yearClaims.value.length)
+const yearFigures = computed(() => {
+  if (year.value > 0) return String(year.value)
+  if (year.value === 0) return '前1'
+  return `前${-year.value}`
+})
+
+function eventTitle(eventId: number | null): string {
+  if (eventId == null) return ''
+  return data.value?.eventById.get(eventId)?.title ?? ''
+}
+
+function toneWeight(claim: Claim): number {
+  const tone = claimTone(claim.text, eventTitle(claim.event_id), claim.topic_slugs)
+  if (tone === 'war' || tone === 'treaty' || tone === 'reign' || tone === 'politics') return 0
+  if (tone === 'birth') return 3
+  if (tone === 'culture') return 2
+  return 1
+}
 
 function rankClaim(claim: Claim): number {
   const span = claim.end_year - claim.start_year
   const point = span <= 30 || claim.start_year === year.value ? 0 : 1
-  return point * 100000 + span
+  return point * 100000 + toneWeight(claim) * 10000 + span
 }
 
 const orderedClaims = computed(() => yearClaims.value.slice().sort((left, right) => rankClaim(left) - rankClaim(right) || left.start_year - right.start_year))
@@ -215,25 +283,29 @@ const labels = computed<MapLabel[]>(() => {
     .slice(0, 18)
 })
 
-const polity = computed(() => (polityId.value == null ? null : data.value?.polityById.get(polityId.value) ?? null))
-const place = computed(() => (placeId.value == null ? null : data.value?.regionById.get(placeId.value) ?? null))
-const polityTitle = computed(() => (polity.value ? polityName(polity.value) : ''))
-const polityLatin = computed(() => {
-  const row = polity.value
-  if (!row || !row.name || row.name === polityTitle.value) return ''
-  return row.name
-})
-const placeTrail = computed(() => {
-  const row = place.value
+const hits = computed(() => {
   const pack = data.value
-  if (!row || !pack) return ''
-  return ancestors(row, pack.regionById).map((item) => item.name).join(' · ')
+  const q = needle.value
+  if (!pack || !q) return null
+  const people = pack.people
+    .filter((person) => person.name.includes(q) || (person.description ?? '').includes(q))
+    .sort((left, right) => Number(right.name.startsWith(q)) - Number(left.name.startsWith(q)) || left.name.localeCompare(right.name, 'zh'))
+    .slice(0, 6)
+  const events = pack.claims
+    .filter((claim) => {
+      const title = claim.event_id == null ? '' : pack.eventById.get(claim.event_id)?.title ?? ''
+      return `${claim.text} ${title}`.includes(q)
+    })
+    .slice(0, 6)
+  const foundPlaces = pack.regions
+    .filter((region) => region.level !== 'region' && (region.name.includes(q) || (region.description ?? '').includes(q)))
+    .slice(0, 6)
+  return { people, events, places: foundPlaces }
 })
+const hitCount = computed(() => (hits.value ? hits.value.people.length + hits.value.events.length + hits.value.places.length : 0))
 
-function eventTitle(eventId: number | null): string {
-  if (eventId == null) return ''
-  return data.value?.eventById.get(eventId)?.title ?? ''
-}
+const activePolity = computed(() => (sheet.value?.kind === 'polity' ? sheet.value.id : null))
+const activeCountry = computed(() => (sheet.value?.kind === 'country' ? sheet.value.name : ''))
 
 function placeName(claim: Claim): string {
   const id = claim.region_ids[0]
@@ -241,10 +313,19 @@ function placeName(claim: Claim): string {
   return data.value?.regionById.get(id)?.name ?? ''
 }
 
-function excerpt(claim: Claim): string {
-  const text = briefExcerpt(claim.brief)
-  if (!text || text === claim.text) return ''
-  return text
+function placeTrail(region: Region): string {
+  const pack = data.value
+  if (!pack) return ''
+  return ancestors(region, pack.regionById).slice(0, -1).map((item) => item.name).join(' / ')
+}
+
+function placeYear(region: Region): number {
+  const span = region.polity_spans.find((item) => item.length >= 2)
+  return span ? clampYear(span[0]) : year.value
+}
+
+function claimOpen(id: number): boolean {
+  return sheet.value?.kind === 'claim' && sheet.value.id === id
 }
 
 function toneClass(claim: Claim): string {
@@ -260,37 +341,118 @@ function onYearInput(event: Event) {
   setYear(Number((event.target as HTMLInputElement).value))
 }
 
+function fly(lon: number, lat: number) {
+  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return
+  if (lon === 0 && lat === 0) return
+  mapRef.value?.flyTo(lon, lat, 3.4)
+}
+
+function openBestHit() {
+  const found = hits.value
+  if (!found) return
+  const exact = found.people.find((person) => person.name === needle.value)
+  if (exact) {
+    openPerson(exact.id, exact.birth_year)
+    return
+  }
+  if (found.people.length === 1 && found.events.length === 0 && found.places.length === 0) {
+    openPerson(found.people[0].id, found.people[0].birth_year)
+    return
+  }
+  if (found.events.length === 1 && found.people.length === 0 && found.places.length === 0) {
+    openClaim(found.events[0].id, found.events[0].start_year)
+    return
+  }
+  if (found.places.length === 1 && found.people.length === 0 && found.events.length === 0) {
+    openPlace(found.places[0].id, placeYear(found.places[0]), true)
+  }
+}
+
+function openClaim(id: number, nextYear?: number) {
+  if (nextYear != null) setYear(nextYear)
+  sheet.value = { kind: 'claim', id }
+  searchOpen.value = false
+  query.value = ''
+}
+
+function openPerson(id: number, nextYear: number | null) {
+  if (nextYear != null) setYear(nextYear)
+  sheet.value = { kind: 'person', id }
+  searchOpen.value = false
+  query.value = ''
+  const regionId = data.value?.personById.get(id)?.region_id
+  const region = regionId == null ? null : data.value?.regionById.get(regionId)
+  if (region) fly(region.longitude, region.latitude)
+}
+
+function openPlace(id: number, nextYear = year.value, shouldFly = false) {
+  setYear(nextYear)
+  sheet.value = { kind: 'place', id }
+  searchOpen.value = false
+  query.value = ''
+  if (!shouldFly) return
+  const region = data.value?.regionById.get(id)
+  if (region) fly(region.longitude, region.latitude)
+}
+
+function openPlaceFromMap(id: number) {
+  const region = data.value?.regionById.get(id)
+  sheet.value = { kind: 'place', id }
+  if (region) fly(region.longitude, region.latitude)
+}
+
 function openPolity(id: number) {
-  polityId.value = id
-  placeId.value = null
-  country.value = ''
+  sheet.value = { kind: 'polity', id }
 }
 
 function openCountry(name: string) {
-  country.value = name
-  polityId.value = null
-  placeId.value = null
+  sheet.value = { kind: 'country', name }
 }
 
-function openPlace(id: number) {
-  placeId.value = id
-  polityId.value = null
-  country.value = ''
-  const region = data.value?.regionById.get(id)
-  if (region) mapRef.value?.flyTo(region.longitude, region.latitude, 3.4)
+function openBookmark(next: Sheet, nextYear: number) {
+  setYear(nextYear)
+  sheet.value = next
+  showBookmarks.value = false
 }
 
-function wikipediaHref(title: string): string {
-  if (title.startsWith('http')) return title
-  return `https://en.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(' ', '_'))}`
+function look(target: { year: number; lon: number; lat: number }) {
+  setYear(target.year)
+  fly(target.lon, target.lat)
 }
 
-watch(
-  () => route.query.place,
-  (value) => {
-    const id = Number(value)
-    if (Number.isFinite(id) && id) openPlace(id)
-  },
-  { immediate: true },
-)
+function closeFloats() {
+  searchOpen.value = false
+  if (showBookmarks.value) showBookmarks.value = false
+  else sheet.value = null
+}
+
+function onWindowKey(event: KeyboardEvent) {
+  const target = event.target as HTMLElement | null
+  if (target?.closest('input, textarea')) return
+  if (event.key === 'Escape') {
+    closeFloats()
+    return
+  }
+  if (target?.closest('.timeline')) return
+  const step = event.altKey ? 100 : event.shiftKey ? 10 : 1
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault()
+    setYear(year.value + (event.key === 'ArrowRight' ? step : -step))
+  }
+}
+
+function onPointerDown(event: PointerEvent) {
+  const target = event.target as HTMLElement | null
+  if (!target?.closest('.search-wrap')) searchOpen.value = false
+}
+
+onMounted(() => {
+  publishQuery()
+  window.addEventListener('keydown', onWindowKey)
+  window.addEventListener('pointerdown', onPointerDown)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onWindowKey)
+  window.removeEventListener('pointerdown', onPointerDown)
+})
 </script>

@@ -1,10 +1,11 @@
 <template>
-  <section class="browse">
+  <section v-if="!ready" class="page-message">正在载入知识库</section>
+  <section v-else class="browse">
     <header class="browse-head">
-      <h1>我的</h1>
-      <p class="muted">收藏和备注只存在这个浏览器里，不上传，也不同步到手机。</p>
+      <h1>收藏</h1>
+      <p class="muted">收藏和备注只留在这个浏览器里。</p>
     </header>
-    <p v-if="bookmarks.length === 0" class="muted">还没有收藏。</p>
+    <p v-if="bookmarks.length === 0" class="empty-note">还没有收藏。可以先从<router-link to="/">地图</router-link>上挑一条。</p>
     <section v-for="group in groups" :key="group.kind" class="stack">
       <h2>{{ group.label }} · {{ group.rows.length }}</h2>
       <article v-for="row in group.rows" :key="row.id" class="card">
@@ -46,6 +47,8 @@ interface Row {
   href: string | null
   map: { path: string; query: Record<string, string> } | null
 }
+
+const ready = computed(() => knowledge.value != null)
 
 const groups = computed(() => {
   const pack = knowledge.value

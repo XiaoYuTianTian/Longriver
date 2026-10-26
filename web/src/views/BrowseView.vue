@@ -2,8 +2,8 @@
   <section v-if="!data" class="page-message">正在载入知识库</section>
   <section v-else class="browse">
     <header class="browse-head">
-      <h1>览</h1>
-      <p class="muted">浏览已收录的内容。筛选不改地图上的年份，点「在地图上看」会带上对应时间。</p>
+      <h1>浏览</h1>
+      <p class="muted">按时代、人物、事件或地点往下读。打开地图时会带上对应年份。</p>
       <input v-model="query" class="search" type="search" placeholder="人名、事件、地点或时代" />
       <div class="chips">
         <button type="button" :class="{ on: section === 'era' }" @click="section = 'era'">时代</button>
@@ -14,13 +14,32 @@
       </div>
     </header>
 
-    <div v-if="section === 'era' || section === 'world'" class="stack">
-      <article v-for="era in visibleEras" :key="era.name" class="card">
+    <p v-if="(section === 'era' || section === 'world') && needle && visibleEras.length === 0" class="muted">
+      没有这个时代。下面是名称里带「{{ needle }}」的人物和事件。
+    </p>
+    <div v-if="(section === 'era' || section === 'world') && needle && visibleEras.length === 0" class="stack">
+      <router-link v-for="person in people.slice(0, 5)" :key="person.id" class="card link-card" :to="`/people/${person.id}`">
+        <strong>{{ person.name }}</strong>
+        <span class="muted">{{ lifeSpan(person.birth_year, person.death_year) || '人物' }}</span>
+      </router-link>
+      <article v-for="claim in events.slice(0, 5)" :key="claim.id" class="card entry" :class="toneClass(claim)">
+        <router-link :to="`/claims/${claim.id}`">
+          <span class="kicker">{{ claimLine(claim) }}</span>
+          <strong>{{ eventTitle(claim.event_id) || claim.text }}</strong>
+        </router-link>
+      </article>
+    </div>
+    <div v-if="section === 'era' || section === 'world'" class="era-grid">
+      <article v-for="era in visibleEras" :key="era.name" class="card era-card">
+        <p class="kicker">{{ formatSpan(era.start, era.end) }}</p>
         <h2>{{ era.name }}</h2>
-        <p class="muted">{{ formatSpan(era.start, era.end) }} · {{ eraCounts(era).claims }} 条记述 · {{ eraCounts(era).people }} 位人物</p>
+        <p class="era-stats">
+          <span>{{ eraCounts(era).claims }} 条记述</span>
+          <span>{{ eraCounts(era).people }} 位人物</span>
+        </p>
         <p class="actions">
           <router-link :to="{ path: '/', query: { year: String(era.start) } }">在地图上看</router-link>
-          <button type="button" class="text-button" @click="showPeople(era)">这个时代的人</button>
+          <button type="button" class="quiet-link" @click="showPeople(era)">这个时代的人</button>
         </p>
       </article>
     </div>
@@ -111,7 +130,7 @@ const people = computed(() => {
     ? pack.people.filter((person) => personVisible(person, eraLimit.value!.start, eraLimit.value!.end))
     : pack.people
   return pool
-    .filter((person) => !needle.value || person.name.includes(needle.value) || person.description.includes(needle.value))
+    .filter((person) => !needle.value || person.name.includes(needle.value) || (person.description ?? '').includes(needle.value))
     .slice()
     .sort((left, right) => (left.birth_year ?? 99999) - (right.birth_year ?? 99999) || left.name.localeCompare(right.name, 'zh'))
 })
@@ -141,7 +160,7 @@ const visibleEvents = computed(() => events.value.slice(0, limit.value))
 const placePool = computed(() => {
   const pack = data.value
   if (!pack) return []
-  const rows = pack.regions.filter((region) => region.level !== 'region' && (!needle.value || region.name.includes(needle.value) || region.description.includes(needle.value)))
+  const rows = pack.regions.filter((region) => region.level !== 'region' && (!needle.value || region.name.includes(needle.value) || (region.description ?? '').includes(needle.value)))
   if (needle.value) return rows.slice().sort((left, right) => left.sort_order - right.sort_order)
   return rows
     .filter((region) => (claimTotals.value.get(region.id) ?? 0) > 0)

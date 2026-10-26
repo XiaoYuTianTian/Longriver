@@ -1,19 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AtlasView from './views/AtlasView.vue'
-import BrowseView from './views/BrowseView.vue'
-import ClaimView from './views/ClaimView.vue'
-import MineView from './views/MineView.vue'
-import PersonView from './views/PersonView.vue'
-import PlaceView from './views/PlaceView.vue'
+
+function detailQuery(to: { params: Record<string, string | string[]> }, key: 'claim' | 'person' | 'place') {
+  const id = to.params.id
+  return { path: '/', query: { [key]: String(Array.isArray(id) ? id[0] : id) } }
+}
 
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'atlas', component: AtlasView },
-    { path: '/browse', name: 'browse', component: BrowseView },
-    { path: '/mine', name: 'mine', component: MineView },
-    { path: '/claims/:id', name: 'claim', component: ClaimView, props: true },
-    { path: '/people/:id', name: 'person', component: PersonView, props: true },
-    { path: '/places/:id', name: 'place', component: PlaceView, props: true },
+    { path: '/browse', redirect: '/' },
+    { path: '/mine', redirect: '/' },
+    { path: '/claims/:id', redirect: (to) => detailQuery(to, 'claim') },
+    { path: '/people/:id', redirect: (to) => detailQuery(to, 'person') },
+    { path: '/places/:id', redirect: (to) => detailQuery(to, 'place') },
   ],
 })

@@ -1,17 +1,24 @@
 <template>
   <section v-if="!data" class="page-message">正在载入知识库</section>
   <article v-else-if="!claim" class="page-message">这条陈述不在知识包中。</article>
-  <article v-else class="detail">
-    <p class="actions"><button type="button" class="text-button" @click="back">返回</button></p>
+  <article v-else class="detail" :class="toneClass">
+    <section class="reading">
+    <p class="actions">
+      <button type="button" class="text-button" @click="back">返回</button>
+      <BookmarkButton kind="claim" :target-id="claim.id" />
+      <router-link v-if="place" :to="{ path: '/', query: { year: String(claim.start_year), place: String(place.id) } }">在地图上看</router-link>
+    </p>
     <p class="kicker">{{ claim.time_label }}<template v-if="place"> · {{ place.name }}</template></p>
-      <h1>{{ title || claim.text }}</h1>
-    <p v-if="snapshot" class="muted">{{ snapshot }}</p>
-    <p class="lead">{{ claim.text }}</p>
+    <h1>{{ title || claim.text }}</h1>
+    <p v-if="snapshot && snapshot !== (title || claim.text)" class="muted">{{ snapshot }}</p>
+    <p v-if="lead" class="lead">{{ lead }}</p>
+    <p v-else-if="!brief.length" class="muted">知识包里这条只有一句话。可以接着看同时代的记述，或打开下面的出处。</p>
     <section v-for="(block, index) in brief" :key="index">
       <h2 v-if="block.heading">{{ block.heading }}</h2>
       <p>{{ block.text }}</p>
     </section>
     <p v-if="brief.length" class="muted">正文摘自维基百科，CC BY-SA 4.0</p>
+    </section>
 
     <section v-if="samePlace.length">
       <h2>同地</h2>
@@ -44,14 +51,10 @@
     <section>
       <h2>出处</h2>
       <p v-for="citation in claim.citations" :key="citation.id" class="muted">
-        {{ citationText(citation) }}
-        <a v-if="citation.stable_url" :href="citation.stable_url" target="_blank" rel="noreferrer">{{ citation.stable_url }}</a>
+        <a v-if="citation.stable_url" :href="citation.stable_url" target="_blank" rel="noreferrer">{{ citationText(citation) || '维基百科' }}</a>
+        <template v-else>{{ citationText(citation) }}</template>
       </p>
     </section>
-    <p class="actions">
-      <BookmarkButton kind="claim" :target-id="claim.id" />
-      <router-link v-if="place" :to="{ path: '/', query: { year: String(claim.start_year), place: String(place.id) } }">在地图上看</router-link>
-    </p>
   </article>
 </template>
 
@@ -59,7 +62,7 @@
 import { computed, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import BookmarkButton from '../components/BookmarkButton.vue'
-import { certaintyLabel, lifeSpan, mediaSrc, parseBrief, tidyCredit } from '../lib/format'
+import { certaintyLabel, claimTone, lifeSpan, mediaSrc, parseBrief, tidyCredit } from '../lib/format'
 import { knowledge } from '../lib/knowledge'
 import { contemporaryClaims, samePlaceClaims } from '../lib/reading'
 import type { Citation, Claim } from '../lib/types'
@@ -73,6 +76,20 @@ const title = computed(() => {
   const eventId = claim.value?.event_id
   if (eventId == null) return ''
   return data.value?.eventById.get(eventId)?.title ?? ''
+})
+const toneClass = computed(() => {
+  const row = claim.value
+  if (!row) return ''
+  return `tone-${claimTone(row.text, title.value, row.topic_slugs)}`
+})
+const lead = computed(() => {
+  const row = claim.value
+  if (!row) return ''
+  const text = row.text.trim()
+  const heading = title.value || text
+  const body = text.replace(/^[^，]{0,40}，\s*/, '').replace(/。$/, '')
+  if (!text || text === heading || body === heading) return ''
+  return text
 })
 const snapshot = computed(() => {
   const snapshotId = claim.value?.snapshot_id

@@ -79,11 +79,39 @@ function placeCollection(places: PlacePoint[]): FeatureCollection<Point> {
 function projectLabels() {
   if (!map) return
   const canvas = map.getCanvas()
-  placed.value = props.labels.flatMap((label) => {
-    const point = map!.project([label.lon, label.lat])
-    if (point.x < 0 || point.y < 0 || point.x > canvas.clientWidth || point.y > canvas.clientHeight) return []
-    return [{ ...label, x: point.x, y: point.y }]
-  })
+  const width = canvas.clientWidth
+  const height = canvas.clientHeight
+  if (width < 10 || height < 10) return
+  const boxes: Array<{ l: number; t: number; r: number; b: number }> = []
+  const next: Array<MapLabel & { x: number; y: number }> = []
+  const ordered = [...props.labels.filter((label) => !isActive(label)), ...props.labels.filter((label) => isActive(label))]
+  for (const label of ordered) {
+    const point = map.project([label.lon, label.lat])
+    const boxWidth = Math.min(168, label.name.length * 14 + 22)
+    const boxHeight = 28
+    const inside = point.x >= 8 && point.y >= 8 && point.x <= width - 8 && point.y <= height - 8
+    if (!inside && !isActive(label)) continue
+    const box = {
+      l: point.x - boxWidth / 2,
+      t: point.y - boxHeight / 2,
+      r: point.x + boxWidth / 2,
+      b: point.y + boxHeight / 2,
+    }
+    const hits = (other: { l: number; t: number; r: number; b: number }) =>
+      box.l < other.r + 8 && box.r > other.l - 8 && box.t < other.b + 8 && box.b > other.t - 8
+    if (isActive(label)) {
+      for (let index = boxes.length - 1; index >= 0; index -= 1) {
+        if (!hits(boxes[index])) continue
+        boxes.splice(index, 1)
+        next.splice(index, 1)
+      }
+    } else if (boxes.some(hits)) {
+      continue
+    }
+    boxes.push(box)
+    next.push({ ...label, x: point.x, y: point.y })
+  }
+  placed.value = next
 }
 
 function applyYear(year: number) {
@@ -103,7 +131,22 @@ function applyYear(year: number) {
     map.setFilter('borders-fill', filter)
     map.setFilter('borders-line', filter)
   }
+  applySelection()
   projectLabels()
+}
+
+function applySelection() {
+  if (!map || !ready) return
+  const modern = props.year > 1911
+  const polityId = props.activePolity
+  const activeBorders: FilterSpecification = polityId == null || modern
+    ? ['==', ['get', 'p'], -1]
+    : ['all', ['<=', ['get', 'f'], props.year], ['>=', ['get', 't'], props.year], ['==', ['get', 'p'], polityId]]
+  map.setFilter('borders-active', activeBorders)
+  map.setFilter(
+    'countries-active',
+    !modern || !props.activeCountry ? ['==', ['get', 'n'], ''] : ['==', ['get', 'n'], props.activeCountry],
+  )
 }
 
 function applyPlaces() {
@@ -172,6 +215,13 @@ onMounted(() => {
       layout: { visibility: modern ? 'none' : 'visible' },
       paint: { 'line-color': '#3F3428', 'line-width': 1.1, 'line-opacity': 0.95 },
     })
+    map.addLayer({
+      id: 'borders-active',
+      type: 'line',
+      source: 'borders',
+      filter: ['==', ['get', 'p'], -1],
+      paint: { 'line-color': '#1C1915', 'line-width': 2.8 },
+    })
     map.addSource('countries', { type: 'geojson', data: '/countries.geojson' })
     map.addLayer({
       id: 'countries-fill',
@@ -186,6 +236,13 @@ onMounted(() => {
       source: 'countries',
       layout: { visibility: modern ? 'visible' : 'none' },
       paint: { 'line-color': '#3F3428', 'line-width': 1.1 },
+    })
+    map.addLayer({
+      id: 'countries-active',
+      type: 'line',
+      source: 'countries',
+      filter: ['==', ['get', 'n'], ''],
+      paint: { 'line-color': '#1C1915', 'line-width': 2.8 },
     })
     map.addSource('places', { type: 'geojson', data: placeCollection(props.places) })
     map.addLayer({
@@ -211,22 +268,29 @@ onMounted(() => {
       const id = event.features?.[0]?.properties?.id
       if (id != null) emit('place', Number(id))
     })
-    map.on('mouseenter', 'borders-fill', () => {
-      if (map) map.getCanvas().style.cursor = 'pointer'
-    })
-    map.on('mouseleave', 'borders-fill', () => {
-      if (map) map.getCanvas().style.cursor = ''
-    })
+    for (const layer of ['borders-fill', 'countries-fill', 'places']) {
+      map.on('mouseenter', layer, () => {
+        if (map) map.getCanvas().style.cursor = 'pointer'
+      })
+      map.on('mouseleave', layer, () => {
+        if (map) map.getCanvas().style.cursor = ''
+      })
+    }
     map.on('move', projectLabels)
     ready = true
     applyYear(props.year)
     applyPlaces()
+    applySelection()
   })
 })
 
 watch(() => props.year, (year) => applyYear(year))
 watch(() => props.places, () => applyPlaces())
 watch(() => props.labels, () => projectLabels())
+watch(() => [props.activePolity, props.activeCountry], () => {
+  applySelection()
+  projectLabels()
+})
 
 onBeforeUnmount(() => {
   map?.remove()
